@@ -1,0 +1,6 @@
+[submodule "roldanjorge/hugo-PaperMod"]
+	path = roldanjorge/hugo-PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "roldanjorge/themes/PaperMod"]
+	path = roldanjorge/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod.git
