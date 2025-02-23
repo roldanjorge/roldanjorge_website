@@ -123,7 +123,7 @@ menu:
       url: /tags/
       weight: 20
     - identifier: categories 
-      name: categories
+      name: Categories
       url: /categories/
       weight: 20
     - identifier: search 
