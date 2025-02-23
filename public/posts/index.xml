@@ -14,6 +14,24 @@
     <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Setting up a Conda environment</title>
+      <link>http://localhost:1313/posts/setting-up-a-conda-environment/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setting-up-a-conda-environment/</guid>
+      <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create --name my_conda_env &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda env list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda activate my_conda_env
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install &amp;lt;package_name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pip install -r requirements.txt 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;whats-a-conda-environment&#34;&gt;What&amp;rsquo;s a conda environment?&lt;/h1&gt;
+&lt;p&gt;Knowing how to set up a Conda environment is an essential skill for any data scientist or Python developer.  Conda is
+an open source package management system  for Python.&lt;/p&gt;
+&lt;p&gt;In this post, I will show you how to set up a Conda environment for your project, doing this, will help you to easily install and use
+any dependency you will need.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Using hugo posts</title>
       <link>http://localhost:1313/posts/using-hugo-posts/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
