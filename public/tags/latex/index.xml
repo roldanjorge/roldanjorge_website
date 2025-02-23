@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Latex on Jorge Roldan</title>
+    <link>http://localhost:1313/tags/latex/</link>
+    <description>Recent content in Latex on Jorge Roldan</description>
+    <image>
+      <title>Jorge Roldan</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.144.2</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Mathjax for Latex support</title>
+      <link>http://localhost:1313/posts/using-mathjax-for-latex-support/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/using-mathjax-for-latex-support/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
+$$
+\begin{equation}
+    3x^2 = \int_i^s2b_2
+    \label{eq1test}
+\end{equation}
+$$&lt;p&gt;This is equation \(\eqref{eq1test}\)&lt;/p&gt;
+&lt;p&gt;This is an inline \(a^*=x-b^*\) equation.&lt;/p&gt;
+\[a^*=x-b^*\]\[ a^*=x-b^* \]\[
+a^*=x-b^*
+\]&lt;p&gt;These are also block equations:&lt;/p&gt;
+$$a^*=x-b^*$$$$ a^*=x-b^* $$$$
+a^*=x-b^*
+$$</description>
+    </item>
+  </channel>
+</rss>

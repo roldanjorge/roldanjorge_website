@@ -16,19 +16,23 @@ This is **bold** text, and this is *emphasized* text.
 
 Visit the [Hugo](https://gohugo.io) website!
 
-$$
-\begin{aligned} \label{eq1_test}
+<!-- $$
+\begin{aligned} 
 KL(\hat{y} || y) &= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\
 JS(\hat{y} || y) &= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))
+\label{eq1test}
 \end{aligned} 
-$$
-
-This is equation \(\eqref{eq1_test}\)
+$$ -->
 
 $$
 \begin{equation}
+    3x^2 = \int_i^s2b_2
+    \label{eq1test}
 \end{equation}
 $$
+
+This is equation \(\eqref{eq1test}\)
+
 
 
 This is an inline \(a^*=x-b^*\) equation.

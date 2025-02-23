@@ -23,7 +23,11 @@ params:
   DateFormat: "January 2, 2006"
   defaultTheme: dark, light
   disableThemeToggle: false
-  math: true
+  # math: true
+
+  math:
+    enable: true
+    mathjax: true
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true

@@ -32,15 +32,6 @@ an open source package management system  for Python.&lt;/p&gt;
 any dependency you will need.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Using hugo posts</title>
-      <link>http://localhost:1313/posts/using-hugo-posts/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/using-hugo-posts/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Using Mathjax for Latex support</title>
       <link>http://localhost:1313/posts/using-mathjax-for-latex-support/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
@@ -49,15 +40,12 @@ any dependency you will need.&lt;/p&gt;</description>
 &lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
 $$
-\begin{aligned} \label{eq1_test}
-KL(\hat{y} || y) &amp;= \sum_{c=1}^{M}\hat{y}_c \log{\frac{\hat{y}_c}{y_c}} \\
-JS(\hat{y} || y) &amp;= \frac{1}{2}(KL(y||\frac{y+\hat{y}}{2}) + KL(\hat{y}||\frac{y+\hat{y}}{2}))
-\end{aligned} 
-$$&lt;p&gt;This is equation \(\eqref{eq1_test}\)&lt;/p&gt;
-$$
 \begin{equation}
+    3x^2 = \int_i^s2b_2
+    \label{eq1test}
 \end{equation}
-$$&lt;p&gt;This is an inline \(a^*=x-b^*\) equation.&lt;/p&gt;
+$$&lt;p&gt;This is equation \(\eqref{eq1test}\)&lt;/p&gt;
+&lt;p&gt;This is an inline \(a^*=x-b^*\) equation.&lt;/p&gt;
 \[a^*=x-b^*\]\[ a^*=x-b^* \]\[
 a^*=x-b^*
 \]&lt;p&gt;These are also block equations:&lt;/p&gt;

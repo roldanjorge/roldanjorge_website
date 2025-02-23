@@ -21,17 +21,24 @@
       <description></description>
     </item>
     <item>
+      <title>Latex</title>
+      <link>http://localhost:1313/tags/latex/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/latex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathjax</title>
+      <link>http://localhost:1313/tags/mathjax/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mathjax/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sample1</title>
-      <link>http://localhost:1313/tags/sample1/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sample1/</guid>
       <description></description>
     </item>
   </channel>
