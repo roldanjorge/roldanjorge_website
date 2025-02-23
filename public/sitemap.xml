@@ -35,6 +35,9 @@
     <loc>http://localhost:1313/posts/using-hugo-posts/</loc>
     <lastmod>2025-02-22T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/using-mathjax-for-latex-support/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
