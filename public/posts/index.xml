@@ -32,6 +32,15 @@ an open source package management system  for Python.&lt;/p&gt;
 any dependency you will need.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Using hugo posts</title>
+      <link>http://localhost:1313/posts/using-hugo-posts/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/using-hugo-posts/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Using Mathjax for Latex support</title>
       <link>http://localhost:1313/posts/using-mathjax-for-latex-support/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
@@ -51,7 +60,7 @@ a^*=x-b^*
 \]&lt;p&gt;These are also block equations:&lt;/p&gt;
 $$a^*=x-b^*$$$$ a^*=x-b^* $$$$
 a^*=x-b^*
-$$</description>
+$$&lt;p&gt;\(\boxed{E = mc^2}\)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -55,3 +55,11 @@ $$ a^*=x-b^* $$
 $$
 a^*=x-b^*
 $$
+
+$$
+\boxed{\color{blue} E = mc^2}
+$$
+
+$$
+\boxed{\color{red} E = mc^2}
+$$
