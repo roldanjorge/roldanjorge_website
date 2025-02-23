@@ -17,7 +17,7 @@ params:
   title: roldanjorge
   description: "Jorge Roldan's website"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Me
+  author: Jorge Roldan
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
