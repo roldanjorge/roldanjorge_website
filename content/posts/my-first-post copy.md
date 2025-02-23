@@ -1,8 +1,7 @@
 +++
 date = '2025-02-22'
 title = 'My First Post'
-tag = 'test_tag'
-category = 'test_categogy'
+tag = 'test'
 +++
 
 ## Introduction
