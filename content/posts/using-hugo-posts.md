@@ -2,10 +2,8 @@
 author: "Jorge Roldan"
 date: '2025-02-22'
 title: 'Using hugo posts'
-tags: ['test_tag']
-FAtags: ["markdown", "css", "html", "themes"]
-FAcategories: ["themes", "syntax"]
-FAseries: ["Themes Guide"]
+tags: ['sample1']
+categories: ['post-test1']
 ShowToc: true
 ShowBreadCrumbs: true
 ---

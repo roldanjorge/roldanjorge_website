@@ -78,8 +78,6 @@ params:
   socialIcons:
     - name: x
       url: "https://x.com/roldanjrgl"
-    # - name: stackoverflow
-    #   url: "https://stackoverflow.com"
     - name: github
       url: "https://github.com/roldanjrgl"
     - name: linkedin
@@ -98,8 +96,8 @@ params:
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
-  editPost:
-    URL: "https://github.com/<path_to_repo>/content"
+  # editPost:
+  #   URL: "https://github.com/<path_to_repo>/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
@@ -123,6 +121,10 @@ menu:
     - identifier: tags
       name: Tags
       url: /tags/
+      weight: 20
+    - identifier: categories 
+      name: categories
+      url: /categories/
       weight: 20
     - identifier: search 
       name: Search
