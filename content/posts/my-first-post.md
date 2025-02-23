@@ -1,9 +1,15 @@
-+++
-date = '2025-02-22'
-title = 'My First Post'
-tag = 'test_tag'
-category = 'test_categogy'
-+++
+---
+author: "Jorge Roldan"
+date: '2025-02-22'
+title: 'Using hugo posts'
+tags: ['test_tag']
+FAtags: ["markdown", "css", "html", "themes"]
+FAcategories: ["themes", "syntax"]
+FAseries: ["Themes Guide"]
+ShowToc: true
+ShowBreadCrumbs: true
+---
+
 
 ## Introduction
 

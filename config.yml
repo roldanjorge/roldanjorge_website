@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://roldanjorge.com/"
 title: Jorge Roldan
 pagination.paperSize: 5
 theme: PaperMod
@@ -21,14 +21,14 @@ params:
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
+  defaultTheme: dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -37,8 +37,8 @@ params:
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
-  tocopen: false
+  showtoc: true 
+  tocopen: true 
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -116,13 +116,17 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: categories
-      name: categories
-      url: /categories/
+    - identifier: archives
+      name: Archives 
+      url: /archives/
       weight: 10
     - identifier: tags
-      name: tags
+      name: Tags
       url: /tags/
+      weight: 20
+    - identifier: search 
+      name: Search
+      url: /search/
       weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
