@@ -76,13 +76,13 @@ params:
 
   socialIcons:
     - name: x
-      url: "https://x.com/"
+      url: "https://x.com/roldanjrgl"
     # - name: stackoverflow
     #   url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/roldanjrgl"
     - name: linkedin
-      url: "https://linkedin.com/"
+      url: "https://www.linkedin.com/in/roldanjrgl/"
 
   analytics:
     google:
