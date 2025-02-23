@@ -6,7 +6,7 @@ tags: ['latex', 'mathjax']
 categories: ['tutorial']
 ShowToc: true
 ShowBreadCrumbs: true
-# draft: true
+draft: true
 ---
 
 
