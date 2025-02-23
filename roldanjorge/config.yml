@@ -1,5 +1,5 @@
 baseURL: "https://examplesite.com/"
-title: ExampleSite
+title: Jorge Roldan
 pagination.paperSize: 5
 theme: PaperMod
 
@@ -71,8 +71,9 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Jorge Roldan"
+    Content: I am a Machine Learning engineer with an interest in NLP, Large Language Models, and building robust and scalable GenAI products.
+        I have a Masters of Science in Computer Science from NYU - Courant Institute of Mathematical Sciences. I also studied Mechanical Engineering and Computer Science at The City College of New York's Grove School of Engineering.
 
   socialIcons:
     - name: x
