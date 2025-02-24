@@ -15,9 +15,9 @@
     <atom:link href="http://localhost:1313/tags/mathjax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Mathjax for Latex support</title>
-      <link>http://localhost:1313/posts/using-mathjax-for-latex-support/</link>
+      <link>http://localhost:1313/posts/x_using-mathjax-for-latex-support/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/using-mathjax-for-latex-support/</guid>
+      <guid>http://localhost:1313/posts/x_using-mathjax-for-latex-support/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
 &lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;
@@ -33,7 +33,11 @@ a^*=x-b^*
 \]&lt;p&gt;These are also block equations:&lt;/p&gt;
 $$a^*=x-b^*$$$$ a^*=x-b^* $$$$
 a^*=x-b^*
-$$&lt;p&gt;\(\boxed{E = mc^2}\)&lt;/p&gt;</description>
+$$$$
+\boxed{\color{blue} E = mc^2}
+$$$$
+\boxed{\color{red} E = mc^2}
+$$</description>
     </item>
   </channel>
 </rss>

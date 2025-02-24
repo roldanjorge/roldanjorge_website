@@ -15,9 +15,9 @@
     <atom:link href="http://localhost:1313/tags/conda/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up a Conda environment</title>
-      <link>http://localhost:1313/posts/setting-up-a-conda-environment/</link>
+      <link>http://localhost:1313/posts/1_setting-up-a-conda-environment/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/setting-up-a-conda-environment/</guid>
+      <guid>http://localhost:1313/posts/1_setting-up-a-conda-environment/</guid>
       <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create --name my_conda_env &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda env list
