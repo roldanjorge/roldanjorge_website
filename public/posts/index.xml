@@ -11,8 +11,24 @@
     </image>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>N-Gram Language Models</title>
+      <link>http://localhost:1313/posts/2_n_gram_language_models/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2_n_gram_language_models/</guid>
+      <description>&lt;h1 id=&#34;n-gram-language-models&#34;&gt;N-gram Language Models&lt;/h1&gt;
+&lt;h2 id=&#34;n-grams&#34;&gt;N-Grams&lt;/h2&gt;
+&lt;p&gt;N-gram models are the simplest type of language models. The N-gram term
+has two meanings. One meaning refers to a sequence of n words, so a
+2-gram, and 3-gram are sequences of 2, and 3 words, respectively. The
+second meaning refers to a probabilistic model that estimates the
+probability of a word given the n-1 previous words.&lt;/p&gt;
+&lt;p&gt;We represent a sequence of n words as $w_1 \dots w_n$ or $w_{1:n}$ , and
+the join probability of each word in a sequence having a value:
+$P(W_1 = w_1, X_2=w_2, X_3=w_3, \dots, X_n = w_n$&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Setting up a Conda environment</title>
       <link>http://localhost:1313/posts/1_setting-up-a-conda-environment/</link>
@@ -65,22 +81,6 @@ $$$$
 $$$$
 \boxed{\color{red} E = mc^2}
 $$</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://localhost:1313/posts/2_n_gram_language_models/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2_n_gram_language_models/</guid>
-      <description>&lt;h1 id=&#34;n-gram-language-models&#34;&gt;N-gram Language Models&lt;/h1&gt;
-&lt;h2 id=&#34;n-grams&#34;&gt;N-Grams&lt;/h2&gt;
-&lt;p&gt;N-gram models are the simplest type of language models. The N-gram term
-has two meanings. One meaning refers to a sequence of n words, so a
-2-gram, and 3-gram are sequences of 2, and 3 words, respectively. The
-second meaning refers to a probabilistic model that estimates the
-probability of a word given the n-1 previous words.&lt;/p&gt;
-&lt;p&gt;We represent a sequence of n words as $w_1 \dots w_n$ or $w_{1:n}$ , and
-the join probability of each word in a sequence having a value:
-$P(W_1 = w_1, X_2=w_2, X_3=w_3, \dots, X_n = w_n$&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
