@@ -11,33 +11,23 @@
     </image>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N-Gram Language Models</title>
       <link>http://localhost:1313/posts/2_n_gram_language_models/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2_n_gram_language_models/</guid>
-      <description>&lt;h1 id=&#34;equation&#34;&gt;Equation&lt;/h1&gt;
-$$
-\boxed{
-    P(X_1, \dots, X_n) = P(X_1) P(X_2 | X_1) P(X_3 | X_{1:2} \dots P(X_n | X_1:{n-1})
-}
-$$$$
-\begin{equation} P(X_1, \dots, X_n) = \prod_{k=1}^{n} P(X_k | X_{1:k-1})
-\end{equation}
-$$&lt;p&gt;We apply this to words:&lt;/p&gt;
-&lt;p&gt;\begin{equation}
-P(w_{1:n}) = P(w_1) P(w_2|w_1) P(w_3|w_{1:2}) \dots P(w_n|w_{1:n-1})
-\end{equation}&lt;/p&gt;
-&lt;p&gt;\begin{equation}
-P(w_{1:n}) = \prod_{k=1}^{n} P(w_k|w_{1:k-1})
-\end{equation}&lt;/p&gt;
-$$P(w_n|w_{n-1})$$&lt;p&gt;\begin{equation}
-P(w_n|w_{1:n-1}) \approx P(w_n|w_{n-1})
-\end{equation}&lt;/p&gt;
-&lt;p&gt;An example of a \textbf{Markov assumption} is when the probability of a word depends only on the previous word in the case of a bigram, a trigram, and a n-gram looks two words, and $n-1$
-words into the past, respectively.&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;n-gram-language-models&#34;&gt;N-gram Language Models&lt;/h1&gt;
+&lt;h2 id=&#34;n-grams&#34;&gt;N-Grams&lt;/h2&gt;
+&lt;p&gt;N-gram models are the simplest type of language models. The N-gram term
+has two meanings. One meaning refers to a sequence of n words, so a
+2-gram, and 3-gram are sequences of 2, and 3 words, respectively. The
+second meaning refers to a probabilistic model that estimates the
+probability of a word given the n-1 previous words.&lt;/p&gt;
+&lt;p&gt;We represent a sequence of n words as $w_1 \dots w_n$ or $w_{1:n}$ , and
+the join probability of each word in a sequence having a value:
+$P(W_1 = w_1, X_2=w_2, X_3=w_3, \dots, X_n = w_n$&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -71,8 +71,8 @@ $$</description>
       <link>http://localhost:1313/posts/2_n_gram_language_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/2_n_gram_language_models/</guid>
-      <description>&lt;h1 id=&#34;n-gram-language-models&#34; class=&#34;unnumbered&#34;&gt;3. N-gram Language Models&lt;/h1&gt;
-&lt;h2 id=&#34;n-grams&#34; class=&#34;unnumbered&#34;&gt;3.1. N-Grams&lt;/h2&gt;
+      <description>&lt;h1 id=&#34;n-gram-language-models&#34;&gt;N-gram Language Models&lt;/h1&gt;
+&lt;h2 id=&#34;n-grams&#34;&gt;N-Grams&lt;/h2&gt;
 &lt;p&gt;N-gram models are the simplest type of language models. The N-gram term
 has two meanings. One meaning refers to a sequence of n words, so a
 2-gram, and 3-gram are sequences of 2, and 3 words, respectively. The

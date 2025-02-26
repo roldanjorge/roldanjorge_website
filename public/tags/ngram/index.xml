@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Language_models on Jorge Roldan</title>
-    <link>http://localhost:1313/tags/language_models/</link>
-    <description>Recent content in Language_models on Jorge Roldan</description>
+    <title>Ngram on Jorge Roldan</title>
+    <link>http://localhost:1313/tags/ngram/</link>
+    <description>Recent content in Ngram on Jorge Roldan</description>
     <image>
       <title>Jorge Roldan</title>
       <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
     <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/language_models/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ngram/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N-Gram Language Models</title>
       <link>http://localhost:1313/posts/2_n_gram_language_models/</link>
