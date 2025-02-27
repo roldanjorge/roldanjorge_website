@@ -1,12 +1,12 @@
 ---
 author: "Jorge Roldan"
-date: '2025-02-26'
+date: '2025-02-27'
 title: 'N-Gram Language Models'
 tags: ['ngram', 'language_models', 'nlp']
 categories: ['notes']
 ShowToc: true
 ShowBreadCrumbs: false
-draft: true
+draft: false
 ---
 
 # N-gram Language Models {#n-gram-language-models}

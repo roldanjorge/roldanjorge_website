@@ -11,13 +11,13 @@
     </image>
     <generator>Hugo -- 0.144.2</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>N-Gram Language Models</title>
-      <link>http://localhost:1313/posts/2_n_gram_language_models/</link>
-      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/2_n_gram_language_models/</guid>
+      <link>http://localhost:1313/posts/2025_02_25_n_gram_language_models/2025_02_25_n_gram_language_models/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025_02_25_n_gram_language_models/2025_02_25_n_gram_language_models/</guid>
       <description>&lt;h1 id=&#34;n-gram-language-models&#34;&gt;N-gram Language Models&lt;/h1&gt;
 &lt;h2 id=&#34;n-grams&#34;&gt;N-Grams&lt;/h2&gt;
 &lt;p&gt;N-gram models are the simplest type of language models. The N-gram term
@@ -31,9 +31,9 @@ $P(W_1 = w_1, X_2=w_2, X_3=w_3, \dots, X_n = w_n$&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setting up a Conda environment</title>
-      <link>http://localhost:1313/posts/1_setting-up-a-conda-environment/</link>
+      <link>http://localhost:1313/posts/2025_02_22_setting_up_a_conda_environment/2025_02_22_setting_up_a_conda_environment.md/</link>
       <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/1_setting-up-a-conda-environment/</guid>
+      <guid>http://localhost:1313/posts/2025_02_22_setting_up_a_conda_environment/2025_02_22_setting_up_a_conda_environment.md/</guid>
       <description>&lt;h1 id=&#34;tldr&#34;&gt;TLDR&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda create --name my_conda_env &lt;span class=&#34;nv&#34;&gt;python&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;3.11
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;conda env list
