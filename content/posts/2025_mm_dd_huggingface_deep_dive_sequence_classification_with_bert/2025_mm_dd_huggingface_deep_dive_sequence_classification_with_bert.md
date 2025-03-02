@@ -15,6 +15,8 @@ draft: true
 - [sequence_classification.ipynb](https://github.com/roldanjrgl/huggingface_deep_dive/blob/main/sequence_classification.ipynb)
 - [Huggingface's NLP-course](https://huggingface.co/learn/nlp-course/chapter1/1)
 - [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt)
+- [BERT's Hugginface's model doc](https://huggingface.co/docs/transformers/model_doc/bert)
+
 
 # TL;DR
 ```py
@@ -41,12 +43,10 @@ for id, label in model.config.id2label.items():
     print(f"{label:<7}:\t{round(float(predictions[0][id]), 3)}")
 ```
 
-# Intro
-- Why do we care about BERT?
-- Why it's important to understand BERT in the age of Large Language Model?
+# Introduction
+Large Language models (LLMs) have revolutionized Natural Language Processing (NLP) and are still transforming the field and its applications as of 2025. These models excel at common NLP tasks such as summarization, question answering, and text generation. A common trend in state-of-the-art LLMs is that they base their architecture on the Transformer's architecture [^aiayn], and decoder-only models have gained favorability compared to encoder-only or encoder-decoder models [^yang_harness].
 
-Large language models have revolution
-
+In this article, I will discuss how to use the BERT model [^bert] for a sequence classification task with the [Huggingface's transformers library](https://huggingface.co/docs/transformers). So, why should we still care we care about BERT in 2025? First, its historical significance as one of the first models to showcase the power of the Transformer architecture, and anyone working with LLMs should be familiar with it. Second, smaller, encoder-only models such as BERT are better suited for powerful interpreability and explaniablity techniques including LIME [^lime], SHAP [^shap],  
 
 
 # Huggingface's transformers library
@@ -54,32 +54,33 @@ Large language models have revolution
 - Why is it important
 - Model card
 
+## Tokenizers
+
+## Model checkpoints and architectures
+
+
 # Using a pretrained BERT model for sequence classification
-## Model
+## Instantiate model and tokenizer
 
-Deep learning is a key AI technique Then [^1], [^2], [^3], [^4]
-This is the start of my citations ,[[^aiayn]][[^bert]]
+## Stage 1: Tokenize input
 
+## Stage 2: Model inference
 
-<!-- [^good_fellow]: Goodfellow, Ian, et al. *Deep Learning*. MIT Press, 2016. -->
+## Stage 3: Post process results
+
 
 # References
-- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805) 
-
 [^bert]: J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,” in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), J. Burstein, C. Doran, and T. Solorio, Eds., Minneapolis, Minnesota: Association for Computational Linguistics, Jun. 2019, pp. 4171–4186. doi: 10.18653/v1/N19-1423.
 
 [^aiayn]: A. Vaswani et al., “Attention Is All You Need,” Aug. 01, 2023, arXiv: arXiv:1706.03762. Accessed: Apr. 03, 2024. [Online]. Available: http://arxiv.org/abs/1706.03762
 
 
+[^behind_the_pipeline]: “Behind the pipeline.” [Online]. Available: https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt
 
-[^1]: S. Iyer et al., “OPT-IML: Scaling Language Model Instruction Meta Learning through the Lens of Generalization,” Jan. 30, 2023, arXiv: arXiv:2212.12017. Accessed: Apr. 03, 2024. [Online]. Available: http://arxiv.org/abs/2212.12017
 
-[^2]: D. G. Widder, S. West, and M. Whittaker, “Open (For Business): Big Tech, Concentrated Power, and the Political Economy of Open AI,” Aug. 17, 2023, Rochester, NY: 4543807. doi: 10.2139/ssrn.4543807.
+[^yang_harness]: J. Yang et al., “Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond,” Apr. 27, 2023, arXiv: arXiv:2304.13712. doi: 10.48550/arXiv.2304.13712.
 
-[^3]: R. Bommasani et al., “On the Opportunities and Risks of Foundation Models,” Jul. 12, 2022, arXiv: arXiv:2108.07258. Accessed: Apr. 03, 2024. [Online]. Available: http://arxiv.org/abs/2108.07258
 
-[^4]: F. Chollet, “On the Measure of Intelligence,” Nov. 25, 2019, arXiv:1911.01547. Accessed: Apr. 01, 2024. [Online]. Available: http://arxiv.org/abs/1911.01547
+[^lime]: M. T. Ribeiro, S. Singh, and C. Guestrin, “‘Why Should I Trust You?’: Explaining the Predictions of Any Classifier,” Aug. 09, 2016, arXiv: arXiv:1602.04938. doi: 10.48550/arXiv.1602.04938.
 
-[^5]: V. Udandarao et al., “No ‘Zero-Shot’ Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance,” Apr. 04, 2024, arXiv:2404.04125. Accessed: Apr. 08, 2024. [Online]. Available: http://arxiv.org/abs/2404.04125
-
+[^shap]: S. Lundberg and S.-I. Lee, “A Unified Approach to Interpreting Model Predictions,” Nov. 25, 2017, arXiv: arXiv:1705.07874. doi: 10.48550/arXiv.1705.07874.
