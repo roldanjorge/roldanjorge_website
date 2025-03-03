@@ -60,13 +60,48 @@ In this article, I will discuss how to use the BERT model [^bert] for a sequence
 
 
 # Using a pretrained BERT model for sequence classification
+
+To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjrgl/posts/blob/main/hf_deep_dive_seq_clas_with_bert/sequence_classification.ipynb). If you want to run it on your machine, just install the `transformers` package:
+
+```bash
+pip install transformers
+```
+
+For a detail guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
+
 ## Instantiate model and tokenizer
+```py
+import torch
+from transformers import AutoTokenizer, BertForSequenceClassification
+
+# Setup model and tokenizer
+checkpoint = "nlptown/bert-base-multilingual-uncased-sentiment"
+tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+model = BertForSequenceClassification.from_pretrained(checkpoint)
+```
 
 ## Stage 1: Tokenize input
+```py
+# stage - 1
+text = "I really love this book\n"
+print(f"text:\t{text}")
+inputs = tokenizer(text, return_tensors="pt")
+```
 
 ## Stage 2: Model inference
+```py
+# stage - 2
+with torch.no_grad():
+    logits = model(**inputs).logits
+```
 
 ## Stage 3: Post process results
+```py
+# stage - 3
+predictions = torch.nn.functional.softmax(logits, dim=-1)
+for id, label in model.config.id2label.items():
+    print(f"{label:<7}:\t{round(float(predictions[0][id]), 3)}")
+```
 
 
 # References
