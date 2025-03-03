@@ -47,17 +47,17 @@ for id, label in model.config.id2label.items():
 Large Language models (LLMs) have revolutionized Natural Language Processing (NLP) and are still transforming the field and its applications as of 2025. These models excel at common NLP tasks such as summarization, question answering, and text generation. A common trend in state-of-the-art LLMs is that they base their architecture on the Transformer's architecture [^aiayn], and decoder-only models have gained favorability compared to encoder-only or encoder-decoder models [^yang_harness].
 
 
-In this article, I will discuss how to use the BERT model [^bert] for a sequence classification task with the [Huggingface's transformers library](https://huggingface.co/docs/transformers). So, why should we still care we care about BERT in 2025? First, its historical significance as one of the first models to showcase the power of the Transformer architecture, and anyone working with LLMs should be familiar with it. Second, smaller, encoder-only models such as BERT are better suited for powerful interpretability and explainability techniques, including LIME [^lime], SHAP [^shap], and attention visualization using tools such as BERTViz [^bertviz_paper],[^bertviz_repo] , or exBERT [^exbert] . Third, BERT models excel at tasks such as sequence classification, i.e., intent classification or sentiment analysis, and name entity recognition, and for specific applications, it is a better option than modern LLMs. Finally, BERT models are more cost-efficient, require fewer computing resources, are more environment-friendly, and can be more easily deployed for large-scale applications than LLMs.
+In this article, I will discuss how to use the BERT model [^bert] for a sequence classification task with the [Huggingface's `transformers` library](https://huggingface.co/docs/transformers). So, why should we still care we care about BERT in 2025? First, its historical significance as one of the first models to showcase the power of the Transformer architecture, and anyone working with LLMs should be familiar with it. Second, smaller, encoder-only models such as BERT are better suited for powerful interpretability and explainability techniques, including LIME [^lime], SHAP [^shap], and attention visualization using tools such as BERTViz [^bertviz_paper],[^bertviz_repo] , or exBERT [^exbert] . Third, BERT models excel at tasks such as sequence classification, i.e., intent classification or sentiment analysis, and name entity recognition, and for specific applications, it is a better option than modern LLMs. Fourth, BERT models are more cost-efficient, require fewer computing resources, are more environment-friendly, and can be more easily deployed for large-scale applications than LLMs. Finally, if you learn how to use BERT with the `transformers` library, you can apply the same skills to other state-of-the-art open-source LLMs. 
 
 # Huggingface's transformers library
-- Explain why I love transformers library
-- Why is it important
-- Model card
+Huggingface's `transformers` is a wonderful open-source library to use pre-trained models for multiples tasks in modalities such as Natural Language Processing, Computer Vision, Audio, and Multimodel . One of its core advantages is its support, and interoperability between multiple frameworks such as PyTorch, TensorFlow, and JAX. [^transformers_doc] . You can find a list of the models supported here [Supported models and frameworks](https://huggingface.co/docs/transformers/index#supported-models-and-frameworks), and a comprehensive documentation for [BERT](https://huggingface.co/docs/transformers/model_doc/bert) [^bert_hf_docs]
 
-## Tokenizers
 
 ## Model checkpoints and architectures
+- [BERT's checkpoints](https://huggingface.co/models?other=bert)
+- [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt)
 
+Using BERT requires to use an architecture, and a checkpoint.
 
 # Using a pretrained BERT model for sequence classification
 ## Instantiate model and tokenizer
@@ -92,3 +92,9 @@ In this article, I will discuss how to use the BERT model [^bert] for a sequence
 
 
 [^exbert]: B. Hoover, bhoov/exbert. (Mar. 02, 2025). Python. Accessed: Mar. 02, 2025. [Online]. Available: https://github.com/bhoov/exbert
+
+
+[^transformers_doc]: “🤗 Transformers.” Accessed: Mar. 03, 2025. [Online]. Available: https://huggingface.co/docs/transformers/index
+
+
+[^bert_hf_docs]: “BERT.” Accessed: Mar. 03, 2025. [Online]. Available: https://huggingface.co/docs/transformers/model_doc/bert
