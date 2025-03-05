@@ -54,18 +54,37 @@ Huggingface's `transformers` is a wonderful open-source library to use pre-train
 
 
 ## Model checkpoints and architectures
-- [BERT's checkpoints](https://huggingface.co/models?other=bert)
-- [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt)
+<!-- - [BERT's checkpoints](https://huggingface.co/models?other=bert) -->
+<!-- - [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt) -->
 
-Using BERT requires to use an architecture, and a checkpoint.
+Using BERT requires to choose an architecture, and a checkpoint. A checkpoint indicates the state of a pre-trained model such as its weights and configuration. These are some examples of widely-used BERT's checkpoints.
+
+
+| Checkpoint (model-card)                                                                      | Notes                                         |
+| -------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| [bert-base-uncased](https://huggingface.co/bert-base-uncased)                                | Trained on lowercased English text            |
+| [bert-large-uncased](https://huggingface.co/bert-large-uncased)                              | Larger version of bert-base-uncased           |
+| [bert-base-cased](https://huggingface.co/google-bert/bert-base-uncased)                      | Account for capitalization                    |
+| [bert-large-cased](https://huggingface.co/bert-large-cased)                                  | Larger version of bert-base-case              |
+| [bert-base-multilingual-uncased-sentiment](nlptown/bert-base-multilingual-uncased-sentiment) | Finetuned for sentiment analysis              |
+| [bert-base-ner](https://huggingface.co/dslim/bert-base-NER)                                  | Fine-tuned for Named Entity Recognition (NER) |
+
+
+The choice of architecture depends on the task that you are planning to do. These are some of the main architetures used with BERT.
+
+
+| Task                    | Architecture                                                                                                                                   |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sequence Classification | [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) |
+| Token Classification    | [BertForTokenClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForTokenClassification)       |
+| Fill Mask               | [BertForMaskedLM](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForMaskedLM)                             |
+| Question Answering      | [BertForQuestionAnswering](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForQuestionAnswering)           |
+| Multiple choice         | [BertForMultipleChoice](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForMultipleChoice)                 |
+
 
 # Using a pretrained BERT model for sequence classification
 
-To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjrgl/posts/blob/main/hf_deep_dive_seq_clas_with_bert/sequence_classification.ipynb). If you want to run it on your machine, just install the `transformers` package:
-
-```bash
-pip install transformers
-```
+To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjrgl/posts/blob/main/hf_deep_dive_seq_clas_with_bert/sequence_classification.ipynb). If you want to run it on your machine, just install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
 
 For a detail guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
 
