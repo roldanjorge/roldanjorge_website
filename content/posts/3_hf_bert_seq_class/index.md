@@ -64,7 +64,13 @@ To easily run this code, please check [sequence_classification.ipynb](https://gi
 For a detailed guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
 
 ## Pipeline overview
+<!-- <a id="fig:myimage"></a>
 ![test](./pipeline_high_level.jpg)
+**Figure 1:** This is the image description. -->
+
+{{< img src="./pipeline_high_level.jpg" alt="My Example Image" >}}
+
+
 
 ## Instantiate model and tokenizer
 ```py
