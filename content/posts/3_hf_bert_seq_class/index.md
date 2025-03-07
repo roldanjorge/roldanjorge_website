@@ -6,42 +6,17 @@ tags: ['sequence_classification', 'nlp', 'huggingface', 'transformers']
 categories: ['tutorial']
 ShowToc: true
 ShowBreadCrumbs: true
-draft: true
 ---
 
-# Resources - tmp
+<!-- # Resources - tmp
 - [lms_with_huggingface](https://github.com/roldanjrgl/lms_with_huggingface)
 - [huggingface_deep_dive](https://github.com/roldanjrgl/huggingface_deep_dive/) 
 - [sequence_classification.ipynb](https://github.com/roldanjrgl/huggingface_deep_dive/blob/main/sequence_classification.ipynb)
 - [Huggingface's NLP-course](https://huggingface.co/learn/nlp-course/chapter1/1)
 - [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt)
-- [BERT's Hugginface's model doc](https://huggingface.co/docs/transformers/model_doc/bert)
+- [BERT's Hugginface's model doc](https://huggingface.co/docs/transformers/model_doc/bert) -->
 
 
-# TL;DR
-```py
-import torch
-from transformers import AutoTokenizer, BertForSequenceClassification
-
-# Setup model and tokenizer
-checkpoint = "nlptown/bert-base-multilingual-uncased-sentiment"
-tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-model = BertForSequenceClassification.from_pretrained(checkpoint)
-
-# stage - 1
-text = "I really love this book\n"
-print(f"text:\t{text}")
-inputs = tokenizer(text, return_tensors="pt")
-
-# stage - 2
-with torch.no_grad():
-    logits = model(**inputs).logits
-    
-# stage - 3
-predictions = torch.nn.functional.softmax(logits, dim=-1)
-for id, label in model.config.id2label.items():
-    print(f"{label:<7}:\t{round(float(predictions[0][id]), 3)}")
-```
 
 # Introduction
 Large Language models (LLMs) have revolutionized Natural Language Processing (NLP) and are still transforming the field and its applications as of 2025. These models excel at common NLP tasks such as summarization, question answering, and text generation. A common trend in state-of-the-art LLMs is that they base their architecture on the Transformer's architecture [^aiayn], and decoder-only models have gained favorability compared to encoder-only or encoder-decoder models [^yang_harness].
@@ -86,7 +61,10 @@ The choice of architecture depends on the task that you are planning to do. Thes
 
 To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjrgl/posts/blob/main/hf_deep_dive_seq_clas_with_bert/sequence_classification.ipynb). If you want to run it on your machine, just install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
 
-For a detail guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
+For a detailed guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
+
+## Pipeline overview
+![test](./pipeline_high_level.jpg)
 
 ## Instantiate model and tokenizer
 ```py
