@@ -61,9 +61,9 @@ The choice of architecture depends on the task that you are planning to do. Thes
 ## Pipeline overview
 <!-- ![test](./pipeline_high_level.jpg) -->
 
-{{< figure id="data" src="./pipeline_high_level.jpg" alt="Sample figure" caption="Sample data plot." >}}
+{{< figure id="pipeline_hl" src="./pipeline_high_level.jpg" alt="Sample figure" caption="Sample data plot." >}}
 
-As shown in {{< figref "data" >}}, the data illustrates...
+As shown in {{< figref "pipeline_hl" >}}, the data illustrates...
 
 
 ## Complete source code {#complete_source_code}
@@ -254,6 +254,14 @@ If you run the above script, you will see in {{< figref "model_files" >}} that t
 
 ## Stage 1: Tokenize input
 Note: Complete source code is included here [complete code](#complete_source_code)
+
+Transformer based models such as BERT cannot process raw utterances. We first need to convert a string into a multiple tensors which will be the actual inputs to the model as illustrated in {{< figref "pipeline_hl" >}}. These tensors are `inputs_ids`, `token_type_ids`, and the `attention_mask`.
+
+- `inputs_ids`: Represents each token with a token id based on the model's vocabulary.
+- `token_type_ids`: Indicates which tokens should be attended to, or ignored using 1, or 0, respectively. 
+- `attention_mask`: Distinguishes segments in an input, where each integer belongs to one specific segment. For inputs with one segment, all values will be 0.
+
+
 ```py
 print(f"\n{50*'='}\nRunning pipeline: \"{utterance}\"\n{50*'='}")
 
