@@ -61,9 +61,11 @@ The choice of architecture depends on the task that you are planning to do. Thes
 ## Pipeline overview
 <!-- ![test](./pipeline_high_level.jpg) -->
 
-{{< figure id="pipeline_hl" src="./pipeline_high_level.jpg" alt="Sample figure" caption="Sample data plot." >}}
+The three stages for sequence classification with BERT are stage 1: preprocessing, where we convert the utterance into tensors using the tokenizer. Next in stage 2 we use these tensors as inputs for the model, and the model outputs logits. Finally, these logits are converted into probabilities using the Softmax function.
 
-As shown in {{< figref "pipeline_hl" >}}, the data illustrates...
+{{< figure id="pipeline_hl" src="./pipeline_high_level.jpg" alt="Sample figure" caption="High-level stages for sequence classification with BERT" >}}
+
+{{< figref "pipeline_hl" >}} illustrated these three stages at a high-level. We will implement each stage and discuss the results in later sections.
 
 
 ## Complete source code {#complete_source_code}
