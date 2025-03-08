@@ -268,7 +268,7 @@ If you run the above script, you will see in {{< figref "model_files" >}} that t
 ## Stage 1: Tokenize input
 Note: Complete source code is included here [complete code](#complete_source_code)
 
-Transformer based models such as BERT cannot process raw utterances. We first need to convert a string into a multiple tensors which will be the actual inputs to the model as illustrated in {{< figref "pipeline_hl" >}}. These tensors are `inputs_ids`, `token_type_ids`, and the `attention_mask`.
+Transformer based models such as BERT cannot process raw utterances. We first need use the tokenizer to convert a string into multiple tensors which will be the actual inputs to the model as illustrated in {{< figref "pipeline_hl" >}}. These tensors are `inputs_ids`, `token_type_ids`, and the `attention_mask`.
 
 - `inputs_ids`: Represents each token with a token id based on the model's vocabulary.
 - `token_type_ids`: Indicates which tokens should be attended to, or ignored using 1, or 0, respectively. 
@@ -287,6 +287,8 @@ mapping = get_id_token_mapping(inputs=inputs, tokenizer=tokenizer)
 print(f"mapping: \n\t{mapping}")
 ```
 
+This is the output when using the positive review: `"I really loved that movie"`. Please note the token_id to token mapping at the end. This shows how the tokenizer splitted the utterance into tokens, and converted that token into a token id. Also note that `{'101': '[CLS]'}`, and `{'102': '[SEP]'}` are special tokens, corresponding to the classification, and separation tokens, respectively.
+
 <details>
 <summary>output</summary>
 
@@ -303,6 +305,10 @@ token_type_ids :
         tensor([[0, 0, 0, 0, 0, 0, 0]])
 attention_mask : 
         tensor([[1, 1, 1, 1, 1, 1, 1]])
+
+** Additional details (token_id to token mapping) **
+mapping: 
+        [{'101': '[CLS]'}, {'151': 'i'}, {'25165': 'really'}, {'46747': 'loved'}, {'10203': 'that'}, {'13113': 'movie'}, {'102': '[SEP]'}]
 ```
 </details>
 
@@ -316,8 +322,22 @@ logits = model(**inputs).logits
 print(f"logits: \n\t{logits}")
 ```
 
+<details>
+
+<summary>output</summary>
+
+```bash
+--------------------------------------------------
+Stage 2: Model inference 
+--------------------------------------------------
+logits: 
+        tensor([[-2.3669, -2.2634, -0.4449,  1.5619,  2.7230]])
+```
+</details>
+
 ## Stage 3: Post process results
-Note: Complete source code is included here [complete code](#complete_source_code)
+Note: Complete source code is included here [complete code](#complete_source_code) 
+
 ```py
 # Stage 3: Post-processing
 print(f"\n{50 * '-'}\nStage 3: Post-processing \n{50 * '-'}")
@@ -329,9 +349,31 @@ for _id, label in model.config.id2label.items():
 print(f"\t{label:<7}:\t{round(float(predictions[0][_id]), 3)}")
 ```
 
+
+<details>
+
+<summary>output</summary>
+
+```bash
+--------------------------------------------------
+Stage 3: Post-processing 
+--------------------------------------------------
+probabilities: 
+        tensor([[0.0045, 0.0050, 0.0308, 0.2289, 0.7309]])
+id2label: 
+        {0: '1 star', 1: '2 stars', 2: '3 stars', 3: '4 stars', 4: '5 stars'}
+predictions:
+        1 star :        0.005
+        2 stars:        0.005
+        3 stars:        0.031
+        4 stars:        0.229
+        5 stars:        0.731
+```
+</details>
+
 ## Examples
 ### Output: Positive review 
-You can see below the complete pipeline output when using a positive review such as "I really loved that movie".
+Complete pipeline's output when using a positive review such as "I really loved that movie".
 
 <details>
 <summary>positive_review_output</summary>
@@ -378,6 +420,7 @@ predictions:
 
 ### Output: Negative review 
 
+Complete pipeline's output when using a positive review such as "I really loved that movie".
 <details>
 <summary>negative_review_output</summary>
 
