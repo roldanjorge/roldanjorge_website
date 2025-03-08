@@ -81,6 +81,7 @@ This script demonstrates the pipeline for sequence classification using Huggingf
 """
 import os
 import torch
+from typing import List
 from transformers import AutoTokenizer, BertForSequenceClassification
 
 
@@ -95,23 +96,32 @@ def get_model_tokenizer(checkpoint: str, output_dir: str) -> (AutoTokenizer, Ber
         tokenizer: Tokenizer object
         model: Model object
     """
-    if not os.path.exists(output_dir):
-        print(f"Model directory {output_dir} does not exist. It will be downloaded from Huggingface")
-        os.makedirs(output_dir)
+    os.makedirs(output_dir, exist_ok=True)
 
-        # Download model and tokenizer
-        model = BertForSequenceClassification.from_pretrained(checkpoint)
-        tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    # Download model and tokenizer
+    model = BertForSequenceClassification.from_pretrained(checkpoint)
+    tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 
-        # Store model and tokenizer in output_dir
-        model.save_pretrained(output_dir)
-        tokenizer.save_pretrained(output_dir)
-    else:
-        print(f"Model {output_dir} stored locally. This local version will be uploaded")
-        model = BertForSequenceClassification.from_pretrained(checkpoint)
-        tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    # Store model and tokenizer in output_dir
+    model.save_pretrained(output_dir)
+    tokenizer.save_pretrained(output_dir)
 
     return tokenizer, model
+
+
+def get_id_token_mapping(inputs, tokenizer) -> List[dict]:
+    """ Get the mapping between the token id and its respective token
+
+        Args:
+            inputs: Output of tokenizer containing input_ids
+            tokenizer: The tokenizer object
+    """
+    _mapping = []
+    id2token = {value: str(key) for key, value in tokenizer.vocab.items()}
+    input_ids = inputs.input_ids[0].tolist()
+    for token_id in input_ids:
+        _mapping.append({str(token_id): id2token.get(token_id)})
+    return _mapping
 
 
 def run_pipeline(utterance: str, tokenizer, model: BertForSequenceClassification):
@@ -121,22 +131,26 @@ def run_pipeline(utterance: str, tokenizer, model: BertForSequenceClassification
             tokenizer: Tokenizer object
             model: Model object
     """
-    print(f"\n{50*'='}\nRunning pipeline: \"{utterance}\"\n{50*'='}")
+    print(f"\n{50 * '='}\nRunning pipeline: \"{utterance}\"\n{50 * '='}")
 
     # Stage 1: Preprocessing
-    print(f"{50*'-'}\nStage 1: Preprocessing \n{50*'-'}")
+    print(f"{50 * '-'}\nStage 1: Preprocessing \n{50 * '-'}")
     inputs = tokenizer(utterance, return_tensors="pt")
     for _input, value in inputs.items():
         print(f"{_input:<15}: \n\t{value}")
 
+    print(f"\n** Additional details (token_id to token mapping) **")
+    mapping = get_id_token_mapping(inputs=inputs, tokenizer=tokenizer)
+    print(f"mapping: \n\t{mapping}")
+
     # Stage 2: Model inference
-    print(f"\n{50*'-'}\nStage 2: Model inference \n{50*'-'}")
+    print(f"\n{50 * '-'}\nStage 2: Model inference \n{50 * '-'}")
     with torch.no_grad():
         logits = model(**inputs).logits
     print(f"logits: \n\t{logits}")
 
     # Stage 3: Post-processing
-    print(f"\n{50*'-'}\nStage 3: Preprocessing \n{50*'-'}")
+    print(f"\n{50 * '-'}\nStage 3: Post-processing \n{50 * '-'}")
     predictions = torch.nn.functional.softmax(logits, dim=-1)
     print(f"probabilities: \n\t{predictions}")
     print(f"id2label: \n\t{model.config.id2label}")
@@ -148,7 +162,7 @@ def run_pipeline(utterance: str, tokenizer, model: BertForSequenceClassification
 def main():
     # Setup tokenizer and model
     checkpoint = "nlptown/bert-base-multilingual-uncased-sentiment"
-    output_dir = 'hf_bert_seq_class/model'
+    output_dir = 'model'
     tokenizer, model = get_model_tokenizer(checkpoint=checkpoint, output_dir=output_dir)
 
     # Positive review
@@ -160,7 +174,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 ```
 </details>
 
@@ -169,7 +182,7 @@ Note: Complete source code is included here [complete code](#complete_source_cod
 
 
 ### Downloading and storing the model and tokenizer
-How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) to do sentiment analysis for product review, and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint.
+How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) to do sentiment analysis for product review, and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint. If you run the code, you will see that the tokenizer is a [BertTokenizerFast](https://huggingface.co/docs/transformers/en/model_doc/bert#transformers.BertTokenizerFast) object with a vocabulary size of **105,879**.
 
 
 
@@ -193,7 +206,7 @@ tokenizer.save_pretrained(output_dir)
 
 {{< figure id="model_files" src="./model_files.png" alt="Sample figure" caption="Model and tokenizer files" width="330" height="160" >}}
 
-If you run the above script, you will see in {{< figref "model_files" >}} that the model and tokenizer files are stored in a `model` directory. The `config.json` has the core information such as model name, architure, and output details. Also,  the model weights are store in the `model.safetensor`. In encourage you to go over these files to better understand the model we will be using.
+If you run the above script, you will see in {{< figref "model_files" >}} that the model and tokenizer files are stored in a `model` directory. The `config.json` has the core information such as model name, architure, and output details. Also,  the model weights are store in the `model.safetensor`. I encourage you to go over these files to better understand the model we will be using.
 
 
 <details>
@@ -263,22 +276,43 @@ Transformer based models such as BERT cannot process raw utterances. We first ne
 
 
 ```py
-print(f"\n{50*'='}\nRunning pipeline: \"{utterance}\"\n{50*'='}")
-
-# Stage 1: Preprocessing
-print(f"{50*'-'}\nStage 1: Preprocessing \n{50*'-'}")
+ # Stage 1: Preprocessing
+print(f"{50 * '-'}\nStage 1: Preprocessing \n{50 * '-'}")
 inputs = tokenizer(utterance, return_tensors="pt")
 for _input, value in inputs.items():
-    print(f"{_input:<15}: \n\t{value}")
+print(f"{_input:<15}: \n\t{value}")
+
+print(f"\n** Additional details (token_id to token mapping) **")
+mapping = get_id_token_mapping(inputs=inputs, tokenizer=tokenizer)
+print(f"mapping: \n\t{mapping}")
 ```
+
+<details>
+<summary>output</summary>
+
+```bash
+==================================================
+Running pipeline: "I really loved that movie"
+==================================================
+--------------------------------------------------
+Stage 1: Preprocessing 
+--------------------------------------------------
+input_ids      : 
+        tensor([[  101,   151, 25165, 46747, 10203, 13113,   102]])
+token_type_ids : 
+        tensor([[0, 0, 0, 0, 0, 0, 0]])
+attention_mask : 
+        tensor([[1, 1, 1, 1, 1, 1, 1]])
+```
+</details>
 
 ## Stage 2: Model inference
 Note: Complete source code is included here [complete code](#complete_source_code)
 ```py
 # Stage 2: Model inference
-print(f"\n{50*'-'}\nStage 2: Model inference \n{50*'-'}")
+print(f"\n{50 * '-'}\nStage 2: Model inference \n{50 * '-'}")
 with torch.no_grad():
-    logits = model(**inputs).logits
+logits = model(**inputs).logits
 print(f"logits: \n\t{logits}")
 ```
 
@@ -286,13 +320,13 @@ print(f"logits: \n\t{logits}")
 Note: Complete source code is included here [complete code](#complete_source_code)
 ```py
 # Stage 3: Post-processing
-print(f"\n{50*'-'}\nStage 3: Preprocessing \n{50*'-'}")
+print(f"\n{50 * '-'}\nStage 3: Post-processing \n{50 * '-'}")
 predictions = torch.nn.functional.softmax(logits, dim=-1)
 print(f"probabilities: \n\t{predictions}")
 print(f"id2label: \n\t{model.config.id2label}")
 print(f"predictions:")
 for _id, label in model.config.id2label.items():
-    print(f"\t{label:<7}:\t{round(float(predictions[0][_id]), 3)}")
+print(f"\t{label:<7}:\t{round(float(predictions[0][_id]), 3)}")
 ```
 
 ## Example 1: Positive review
@@ -311,6 +345,10 @@ token_type_ids :
 attention_mask : 
         tensor([[1, 1, 1, 1, 1, 1, 1]])
 
+** Additional details (token_id to token mapping) **
+mapping: 
+        [{'101': '[CLS]'}, {'151': 'i'}, {'25165': 'really'}, {'46747': 'loved'}, {'10203': 'that'}, {'13113': 'movie'}, {'102': '[SEP]'}]
+
 --------------------------------------------------
 Stage 2: Model inference 
 --------------------------------------------------
@@ -318,7 +356,7 @@ logits:
         tensor([[-2.3669, -2.2634, -0.4449,  1.5619,  2.7230]])
 
 --------------------------------------------------
-Stage 3: Preprocessing 
+Stage 3: Post-processing 
 --------------------------------------------------
 probabilities: 
         tensor([[0.0045, 0.0050, 0.0308, 0.2289, 0.7309]])
@@ -330,6 +368,7 @@ predictions:
         3 stars:        0.031
         4 stars:        0.229
         5 stars:        0.731
+
 ```
 
 ## Example 2: Negative review
@@ -349,6 +388,10 @@ token_type_ids :
 attention_mask : 
         tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])
 
+** Additional details (token_id to token mapping) **
+mapping: 
+        [{'101': '[CLS]'}, {'151': 'i'}, {'39487': 'hate'}, {'12495': 'very'}, {'19443': 'cold'}, {'117': ','}, {'10110': 'and'}, {'28419': 'cloud'}, {'10158': '##y'}, {'14690': 'winter'}, {'12889': 'days'}, {'102': '[SEP]'}]
+
 --------------------------------------------------
 Stage 2: Model inference 
 --------------------------------------------------
@@ -356,7 +399,7 @@ logits:
         tensor([[ 0.7603,  0.8743, -0.0698, -0.7666, -0.7647]])
 
 --------------------------------------------------
-Stage 3: Preprocessing 
+Stage 3: Post-processing 
 --------------------------------------------------
 probabilities: 
         tensor([[0.3343, 0.3746, 0.1457, 0.0726, 0.0727]])
