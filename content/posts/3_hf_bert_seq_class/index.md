@@ -466,6 +466,8 @@ predictions:
         5 stars:        0.073
 ```
 
+# Conclusion 
+You now have all the tools to use BERT for sequence classification. I encourage you to check the vast amount of checkpoints and architectures that you could use for a wide range of applications. You can see some of the most common ones [here](#model_checkpoints_and_architectures). Furthermore, if you want to better understand this material, one great of doing it is to run the scripts provided with a debugger, and see the results by yourself. 
 
 # References
 [^bert]: J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,” in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), J. Burstein, C. Doran, and T. Solorio, Eds., Minneapolis, Minnesota: Association for Computational Linguistics, Jun. 2019, pp. 4171–4186. doi: 10.18653/v1/N19-1423.
