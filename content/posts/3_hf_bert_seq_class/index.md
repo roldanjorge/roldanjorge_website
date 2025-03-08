@@ -329,8 +329,13 @@ for _id, label in model.config.id2label.items():
 print(f"\t{label:<7}:\t{round(float(predictions[0][_id]), 3)}")
 ```
 
-## Example 1: Positive review
-### Output
+## Examples
+### Output: Positive review 
+You can see below the complete pipeline output when using a positive review such as "I really loved that movie".
+
+<details>
+<summary>positive_review_output</summary>
+
 ```bash
 ==================================================
 Running pipeline: "I really loved that movie"
@@ -368,12 +373,15 @@ predictions:
         3 stars:        0.031
         4 stars:        0.229
         5 stars:        0.731
-
 ```
+</details>
 
-## Example 2: Negative review
-### Output
-```
+### Output: Negative review 
+
+<details>
+<summary>negative_review_output</summary>
+
+```bash
 ==================================================
 Running pipeline: "I hate very cold, and cloudy winter days"
 ==================================================
@@ -412,6 +420,7 @@ predictions:
         4 stars:        0.073
         5 stars:        0.073
 ```
+</details>
 
 
 # References
