@@ -188,6 +188,11 @@ model.save_pretrained(output_dir)
 tokenizer.save_pretrained(output_dir)
 ```
 
+If you run this script, you will see the following files are stored in a `model` directory.
+
+
+{{< figure id="model_files" src="./model_files.png" alt="Sample figure" caption="Model and tokenizer files" width="400" height="200" >}}
+
 
 ## Stage 1: Tokenize input
 Note: Complete source code is included here [complete code](#complete_source_code)

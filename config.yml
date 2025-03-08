@@ -52,6 +52,7 @@ params:
     favicon32x32: "<link / abs url>"
     apple_touch_icon: "<link / abs url>"
     safari_pinned_tab: "<link / abs url>"
+    disableHLJS: true
 
   label:
     text: "Home"
