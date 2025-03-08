@@ -169,7 +169,9 @@ Note: Complete source code is included here [complete code](#complete_source_cod
 
 
 ### Downloading and storing the model and tokenizer
-How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](), and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint.
+How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) to do sentiment analysis for product review, and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint.
+
+
 
 ```py
 import os
