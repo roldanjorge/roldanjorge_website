@@ -52,6 +52,7 @@ params:
     favicon32x32: "<link / abs url>"
     apple_touch_icon: "<link / abs url>"
     safari_pinned_tab: "<link / abs url>"
+    disableHLJS: true
 
   label:
     text: "Home"
@@ -134,16 +135,21 @@ menu:
       name: Search
       url: /search/
       weight: 20
+    # - identifier: resources 
+    #   name: Resources 
+    #   url: /resources/
+    #   weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
   highlight:
     noClasses: false
     # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+    lineNumbers: true
   goldmark:
     extensions:
       passthrough:
@@ -157,6 +163,8 @@ markup:
           - - \(
             - \)
         enable: true
+    renderer:
+      unsafe: true
 
 
 outputs:

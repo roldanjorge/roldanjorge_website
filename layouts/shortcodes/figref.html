@@ -1,0 +1,3 @@
+{{ $id := .Get 0 }}
+{{ $number := index (.Page.Scratch.Get "figureRefs") $id }}
+<a href="#fig-{{ $number }}">Figure {{ $number }}</a>

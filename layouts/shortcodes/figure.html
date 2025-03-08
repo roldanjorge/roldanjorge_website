@@ -1,0 +1,26 @@
+{{/* Initialize the figure counter if not set */}}
+{{ if not (.Page.Scratch.Get "figureCounter") }}
+  {{ .Page.Scratch.Set "figureCounter" 0 }}
+{{ end }}
+
+{{/* Increment the counter */}}
+{{ $figureNumber := add (.Page.Scratch.Get "figureCounter") 1 }}
+{{ .Page.Scratch.Set "figureCounter" $figureNumber }}
+
+{{/* Store the figure number for referencing */}}
+{{ $refs := (.Page.Scratch.Get "figureRefs") | default (dict) }}
+{{ $refs = merge $refs (dict (.Get "id") $figureNumber) }}
+{{ .Page.Scratch.Set "figureRefs" $refs }}
+
+<figure id="fig-{{ $figureNumber }}" style="text-align: center;">
+  <img 
+    src="{{ .Get "src" }}" 
+    alt="{{ .Get "alt" }}" 
+    width="{{ .Get "width" | default "" }}"
+    height="{{ .Get "height" | default "" }}" 
+    style="display: block; margin-left: auto; margin-right: auto;" 
+  />
+  <figcaption>
+    Figure {{ $figureNumber }}: {{ .Get "caption" }}
+  </figcaption>
+</figure>
