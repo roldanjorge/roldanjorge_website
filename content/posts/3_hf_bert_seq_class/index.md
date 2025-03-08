@@ -28,7 +28,7 @@ In this article, I will discuss how to use the BERT model [^bert] for a sequence
 Huggingface's `transformers` is a wonderful open-source library to use pre-trained models for multiples tasks in modalities such as Natural Language Processing, Computer Vision, Audio, and Multimodel . One of its core advantages is its support, and interoperability between multiple frameworks such as PyTorch, TensorFlow, and JAX. [^transformers_doc] . You can find a list of the models supported here [Supported models and frameworks](https://huggingface.co/docs/transformers/index#supported-models-and-frameworks), and a comprehensive documentation for [BERT](https://huggingface.co/docs/transformers/model_doc/bert) [^bert_hf_docs]
 
 
-## Model checkpoints and architectures
+## Model checkpoints and architectures {#model_checkpoints_and_architectures}
 <!-- - [BERT's checkpoints](https://huggingface.co/models?other=bert) -->
 <!-- - [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt) -->
 
@@ -66,7 +66,7 @@ The choice of architecture depends on the task that you are planning to do. Thes
 As shown in {{< figref "data" >}}, the data illustrates...
 
 
-## Complete source code
+## Complete source code {#complete_source_code}
 
 To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.ipynb) or [sequence_classification.py](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.py). If you want to run it on your machine, just install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
 
@@ -165,46 +165,32 @@ if __name__ == "__main__":
 </details>
 
 ## Instantiate model and tokenizer
+Note: Complete source code is included here [complete code](#complete_source_code)
+
+
+### Downloading and storing model and tokenizer
+How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](), and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint.
+
 ```py
-"""
-This script demonstrates the pipeline for sequence classification using Huggingface transformers.
-"""
 import os
 import torch
+from transformers import AutoTokenizer, BertForSequenceClassification
 
+checkpoint = "nlptown/bert-base-multilingual-uncased-sentiment"
+output_dir = 'model'
 
-def get_model_tokenizer(checkpoint: str, output_dir: str) -> (AutoTokenizer, BertForSequenceClassification):
-    """ Download or load from local and return the model and its tokenizer
+# Download model and tokenizer
+model = BertForSequenceClassification.from_pretrained(checkpoint)
+tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 
-    Args:
-        checkpoint: Huggingface checkpoint
-        output_dir: Directory to store model and tokenizer file
-
-    Returns:
-        tokenizer: Tokenizer object
-        model: Model object
-    """
-    if not os.path.exists(output_dir):
-        print(f"Model directory {output_dir} does not exist. It will be downloaded from Huggingface")
-        os.makedirs(output_dir)
-
-        # Download model and tokenizer
-        model = BertForSequenceClassification.from_pretrained(checkpoint)
-        tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-
-        # Store model and tokenizer in output_dir
-        model.save_pretrained(output_dir)
-        tokenizer.save_pretrained(output_dir)
-    else:
-        print(f"Model {output_dir} stored locally. This local version will be uploaded")
-        model = BertForSequenceClassification.from_pretrained(checkpoint)
-        tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-
-    return tokenizer, model
+# Store model and tokenizer in output_dir
+model.save_pretrained(output_dir)
+tokenizer.save_pretrained(output_dir)
 ```
-</details>
+
 
 ## Stage 1: Tokenize input
+Note: Complete source code is included here [complete code](#complete_source_code)
 ```py
 print(f"\n{50*'='}\nRunning pipeline: \"{utterance}\"\n{50*'='}")
 
@@ -216,6 +202,7 @@ for _input, value in inputs.items():
 ```
 
 ## Stage 2: Model inference
+Note: Complete source code is included here [complete code](#complete_source_code)
 ```py
 # Stage 2: Model inference
 print(f"\n{50*'-'}\nStage 2: Model inference \n{50*'-'}")
@@ -225,6 +212,7 @@ print(f"logits: \n\t{logits}")
 ```
 
 ## Stage 3: Post process results
+Note: Complete source code is included here [complete code](#complete_source_code)
 ```py
 # Stage 3: Post-processing
 print(f"\n{50*'-'}\nStage 3: Preprocessing \n{50*'-'}")
