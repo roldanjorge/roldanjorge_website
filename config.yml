@@ -135,10 +135,10 @@ menu:
       name: Search
       url: /search/
       weight: 20
-    - identifier: resources 
-      name: Resources 
-      url: /resources/
-      weight: 20
+    # - identifier: resources 
+    #   name: Resources 
+    #   url: /resources/
+    #   weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
