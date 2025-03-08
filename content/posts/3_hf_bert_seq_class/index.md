@@ -8,16 +8,6 @@ ShowToc: true
 ShowBreadCrumbs: true
 ---
 
-<!-- # Resources - tmp
-- [lms_with_huggingface](https://github.com/roldanjrgl/lms_with_huggingface)
-- [huggingface_deep_dive](https://github.com/roldanjrgl/huggingface_deep_dive/) 
-- [sequence_classification.ipynb](https://github.com/roldanjrgl/huggingface_deep_dive/blob/main/sequence_classification.ipynb)
-- [Huggingface's NLP-course](https://huggingface.co/learn/nlp-course/chapter1/1)
-- [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt)
-- [BERT's Hugginface's model doc](https://huggingface.co/docs/transformers/model_doc/bert) -->
-
-
-
 # Introduction
 Large Language models (LLMs) have revolutionized Natural Language Processing (NLP) and are still transforming the field and its applications as of 2025. These models excel at common NLP tasks such as summarization, question answering, and text generation. A common trend in state-of-the-art LLMs is that they base their architecture on the Transformer's architecture [^aiayn], and decoder-only models have gained favorability compared to encoder-only or encoder-decoder models [^yang_harness].
 
@@ -29,9 +19,6 @@ Huggingface's `transformers` is a wonderful open-source library to use pre-train
 
 
 ## Model checkpoints and architectures {#model_checkpoints_and_architectures}
-<!-- - [BERT's checkpoints](https://huggingface.co/models?other=bert) -->
-<!-- - [Transformer's pipeline](https://huggingface.co/learn/nlp-course/chapter2/2?fw=pt) -->
-
 Using BERT requires to choose an architecture, and a checkpoint. A checkpoint indicates the state of a pre-trained model such as its weights and configuration. These are some examples of widely-used BERT's checkpoints.
 
 
@@ -59,11 +46,10 @@ The choice of architecture depends on the task that you are planning to do. Thes
 
 # Using a pretrained BERT model for sequence classification
 ## Pipeline overview
-<!-- ![test](./pipeline_high_level.jpg) -->
 
 The three stages for sequence classification with BERT are stage 1: preprocessing, where we convert the utterance into tensors using the tokenizer. Next in stage 2 we use these tensors as inputs for the model, and the model outputs logits. Finally, these logits are converted into probabilities using the Softmax function.
 
-{{< figure id="pipeline_hl" src="./pipeline_high_level.jpg" alt="Sample figure" caption="High-level stages for sequence classification with BERT" >}}
+{{< figure id="pipeline_hl" src="./pipeline_high_level.png" alt="Sample figure" caption="High-level stages for sequence classification with BERT" >}}
 
 {{< figref "pipeline_hl" >}} illustrated these three stages at a high-level. We will implement each stage and discuss the results in later sections.
 
@@ -391,8 +377,11 @@ predictions:
 ### Output: Positive review 
 Complete pipeline's output when using a positive review such as "I really loved that movie".
 
+{{< figure id="pipeline_positive_review" src="./pipeline_positive_review.png" alt="pipeline_positive_review" caption="Negative review example" >}}
+
 <details>
 <summary>positive_review_output</summary>
+
 
 ```bash
 ==================================================
@@ -437,6 +426,10 @@ predictions:
 ### Output: Negative review 
 
 Complete pipeline's output when using a positive review such as "I really loved that movie".
+
+
+{{< figure id="pipeline_negative_review" src="./pipeline_negative_review.png" alt="pipeline_negative_review" caption="Negative review example" >}}
+
 <details>
 <summary>negative_review_output</summary>
 
