@@ -59,18 +59,12 @@ The choice of architecture depends on the task that you are planning to do. Thes
 
 # Using a pretrained BERT model for sequence classification
 
-To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjrgl/posts/blob/main/hf_deep_dive_seq_clas_with_bert/sequence_classification.ipynb). If you want to run it on your machine, just install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
+To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.ipynb). If you want to run it on your machine, just install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
 
 For a detailed guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
 
 ## Pipeline overview
-<!-- <a id="fig:myimage"></a>
 ![test](./pipeline_high_level.jpg)
-**Figure 1:** This is the image description. -->
-
-{{< img src="./pipeline_high_level.jpg" alt="My Example Image" >}}
-
-
 
 ## Instantiate model and tokenizer
 ```py
