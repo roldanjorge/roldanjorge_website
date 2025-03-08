@@ -314,6 +314,9 @@ mapping:
 
 ## Stage 2: Model inference
 Note: Complete source code is included here [complete code](#complete_source_code)
+
+Model inference is the stage where we use the model weights to get a result. In this case, we want to predict the rating (star (s) from 1 to 5) based on a user utterance. 
+
 ```py
 # Stage 2: Model inference
 print(f"\n{50 * '-'}\nStage 2: Model inference \n{50 * '-'}")
@@ -337,6 +340,17 @@ logits:
 
 ## Stage 3: Post process results
 Note: Complete source code is included here [complete code](#complete_source_code) 
+
+The raw output of the model in stage 2 are called logits. We need to apply the [softmax fuction](https://pytorch.org/docs/stable/generated/torch.nn.functional.softmax.html#torch-nn-functional-softmax) to get the probability distribution over the 5 stars ratings. Softmax in the context of PyTorch is defined as
+
+$$ 
+\begin{equation}
+Softmax(x_i) = \frac{exp(x_i)}{\sum_j exp(x_j)}
+\label{softmax}
+\end{equation}
+$$
+
+Where Softmax  \eqref{softmax} is applied to all the slices along dim, in our case `dim=-1 (5)` since we have 5 stars (1 -> 5).
 
 ```py
 # Stage 3: Post-processing
