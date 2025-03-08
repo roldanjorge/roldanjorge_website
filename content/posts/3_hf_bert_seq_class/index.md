@@ -1,6 +1,6 @@
 ---
 author: "Jorge Roldan"
-date: '2025-02-28'
+date: '2025-03-08'
 title: 'Huggingface deep dive: Sequence Classification with BERT'
 tags: ['sequence_classification', 'nlp', 'huggingface', 'transformers']
 categories: ['tutorials']
