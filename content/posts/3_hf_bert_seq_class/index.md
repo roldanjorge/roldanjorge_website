@@ -66,10 +66,13 @@ For a detailed guide on how to install packages on a conda environment, please c
 ## Pipeline overview
 <!-- ![test](./pipeline_high_level.jpg) -->
 
-{{< figure id="1" src="./pipeline_high_level.jpg" alt="Sample figure" caption="This is a sample figure." >}}
+{{< figure id="data" src="./pipeline_high_level.jpg" alt="Sample figure" caption="Sample data plot." >}}
 
-As shown in {{< figref 1 >}}, the data illustrates...
+As shown in {{< figref "data" >}}, the data illustrates...
 
+{{< figure id="data1" src="./pipeline_high_level.jpg" alt="Sample figure" caption="Sample data plot." >}}
+
+As shown in {{< figref "data1" >}}, the data illustrates...
 
 ## Instantiate model and tokenizer
 ```py
