@@ -141,6 +141,81 @@ for _id, label in model.config.id2label.items():
     print(f"\t{label:<7}:\t{round(float(predictions[0][_id]), 3)}")
 ```
 
+## Example 1: Positive review
+### Output
+```bash
+==================================================
+Running pipeline: "I really loved that movie"
+==================================================
+--------------------------------------------------
+Stage 1: Preprocessing 
+--------------------------------------------------
+input_ids      : 
+        tensor([[  101,   151, 25165, 46747, 10203, 13113,   102]])
+token_type_ids : 
+        tensor([[0, 0, 0, 0, 0, 0, 0]])
+attention_mask : 
+        tensor([[1, 1, 1, 1, 1, 1, 1]])
+
+--------------------------------------------------
+Stage 2: Model inference 
+--------------------------------------------------
+logits: 
+        tensor([[-2.3669, -2.2634, -0.4449,  1.5619,  2.7230]])
+
+--------------------------------------------------
+Stage 3: Preprocessing 
+--------------------------------------------------
+probabilities: 
+        tensor([[0.0045, 0.0050, 0.0308, 0.2289, 0.7309]])
+id2label: 
+        {0: '1 star', 1: '2 stars', 2: '3 stars', 3: '4 stars', 4: '5 stars'}
+predictions:
+        1 star :        0.005
+        2 stars:        0.005
+        3 stars:        0.031
+        4 stars:        0.229
+        5 stars:        0.731
+```
+
+## Example 2: Negative review
+### Output
+```
+==================================================
+Running pipeline: "I hate very cold, and cloudy winter days"
+==================================================
+--------------------------------------------------
+Stage 1: Preprocessing 
+--------------------------------------------------
+input_ids      : 
+        tensor([[  101,   151, 39487, 12495, 19443,   117, 10110, 28419, 10158, 14690,
+         12889,   102]])
+token_type_ids : 
+        tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
+attention_mask : 
+        tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])
+
+--------------------------------------------------
+Stage 2: Model inference 
+--------------------------------------------------
+logits: 
+        tensor([[ 0.7603,  0.8743, -0.0698, -0.7666, -0.7647]])
+
+--------------------------------------------------
+Stage 3: Preprocessing 
+--------------------------------------------------
+probabilities: 
+        tensor([[0.3343, 0.3746, 0.1457, 0.0726, 0.0727]])
+id2label: 
+        {0: '1 star', 1: '2 stars', 2: '3 stars', 3: '4 stars', 4: '5 stars'}
+predictions:
+        1 star :        0.334
+        2 stars:        0.375
+        3 stars:        0.146
+        4 stars:        0.073
+        5 stars:        0.073
+```
+
 
 # References
 [^bert]: J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,” in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), J. Burstein, C. Doran, and T. Solorio, Eds., Minneapolis, Minnesota: Association for Computational Linguistics, Jun. 2019, pp. 4171–4186. doi: 10.18653/v1/N19-1423.
