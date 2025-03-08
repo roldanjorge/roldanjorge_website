@@ -15,11 +15,11 @@ Large Language models (LLMs) have revolutionized Natural Language Processing (NL
 In this article, I will discuss how to use the BERT model [^bert] for a sequence classification task with the [Huggingface's `transformers` library](https://huggingface.co/docs/transformers). So, why should we still care we care about BERT in 2025? First, its historical significance as one of the first models to showcase the power of the Transformer architecture, and anyone working with LLMs should be familiar with it. Second, smaller, encoder-only models such as BERT are better suited for powerful interpretability and explainability techniques, including LIME [^lime], SHAP [^shap], and attention visualization using tools such as BERTViz [^bertviz_paper],[^bertviz_repo] , or exBERT [^exbert] . Third, BERT models excel at tasks such as sequence classification, i.e., intent classification or sentiment analysis, and name entity recognition, and for specific applications, it is a better option than modern LLMs. Fourth, BERT models are more cost-efficient, require fewer computing resources, are more environment-friendly, and can be more easily deployed for large-scale applications than LLMs. Finally, if you learn how to use BERT with the `transformers` library, you can apply the same skills to other state-of-the-art open-source LLMs. 
 
 # Huggingface's transformers library
-Huggingface's `transformers` is a wonderful open-source library to use pre-trained models for multiples tasks in modalities such as Natural Language Processing, Computer Vision, Audio, and Multimodel . One of its core advantages is its support, and interoperability between multiple frameworks such as PyTorch, TensorFlow, and JAX. [^transformers_doc] . You can find a list of the models supported here [Supported models and frameworks](https://huggingface.co/docs/transformers/index#supported-models-and-frameworks), and a comprehensive documentation for [BERT](https://huggingface.co/docs/transformers/model_doc/bert) [^bert_hf_docs]
+Huggingface's `transformers` is a wonderful open-source library that empowers users to use pre-trained models for multiple tasks in modalities such as Natural Language Processing, Computer Vision, Audio, and Multimodel. One of its core advantages is its support and interoperability between various frameworks such as PyTorch, TensorFlow, and JAX. [^transformers_doc] . You can find a list of the models supported here [Supported models and frameworks](https://huggingface.co/docs/transformers/index#supported-models-and-frameworks), and comprehensive documentation for [BERT](https://huggingface.co/docs/transformers/model_doc/bert) [^bert_hf_docs]
 
 
 ## Model checkpoints and architectures {#model_checkpoints_and_architectures}
-Using BERT requires to choose an architecture, and a checkpoint. A checkpoint indicates the state of a pre-trained model such as its weights and configuration. These are some examples of widely-used BERT's checkpoints.
+Using BERT requires choosing an architecture and a checkpoint. A checkpoint indicates the state of a pre-trained model, such as its weights and configuration. These are some examples of widely used BERT checkpoints.
 
 
 | Checkpoint (model-card)                                                                      | Notes                                         |
@@ -47,7 +47,7 @@ The choice of architecture depends on the task that you are planning to do. Thes
 # Using a pretrained BERT model for sequence classification
 ## Pipeline overview
 
-The three stages for sequence classification with BERT are stage 1: preprocessing, where we convert the utterance into tensors using the tokenizer. Next in stage 2 we use these tensors as inputs for the model, and the model outputs logits. Finally, these logits are converted into probabilities using the Softmax function.
+The three stages for sequence classification with BERT are as follows: stage 1: preprocessing, where we convert the utterance into tensors using the tokenizer. Next, in stage 2, we use these tensors as inputs for the model, and the model outputs logits. Finally, these logits are converted into probabilities using the Softmax function.
 
 {{< figure id="pipeline_hl" src="./pipeline_high_level.png" alt="Sample figure" caption="High-level stages for sequence classification with BERT" >}}
 
@@ -56,9 +56,9 @@ The three stages for sequence classification with BERT are stage 1: preprocessin
 
 ## Complete source code {#complete_source_code}
 
-To easily run this code, please check [sequence_classification.ipynb](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.ipynb) or [sequence_classification.py](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.py). If you want to run it on your machine, just install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
+To efficiently run this code, please check [sequence_classification.ipynb](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.ipynb) or [sequence_classification.py](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.py). If you want to run it on your machine, install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
 
-For a detailed guide on how to install packages on a conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
+For a detailed guide on how to install packages on a Conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_environment/setting_up_a_conda_environment/).
 
 <details>
   <summary>Show Code</summary>
@@ -170,8 +170,7 @@ Note: Complete source code is included here [complete code](#complete_source_cod
 
 
 ### Downloading and storing the model and tokenizer
-How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) to do sentiment analysis for product review, and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint. If you run the code, you will see that the tokenizer is a [BertTokenizerFast](https://huggingface.co/docs/transformers/en/model_doc/bert#transformers.BertTokenizerFast) object with a vocabulary size of **105,879**.
-
+How do we download a Hugginface's model and its respective tokenizer? We only need a checkpoint and its respective architecture, as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) to do sentiment analysis for product review, and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Remember that we use the AutoTokenizer class to download the correct tokenizer automatically using the checkpoint. If you run the code, you will see that the tokenizer is a [BertTokenizerFast](https://huggingface.co/docs/transformers/en/model_doc/bert#transformers.BertTokenizerFast) object with a vocabulary size of **105,879**.
 
 
 ```py
@@ -194,7 +193,7 @@ tokenizer.save_pretrained(output_dir)
 
 {{< figure id="model_files" src="./model_files.png" alt="Sample figure" caption="Model and tokenizer files" width="330" height="160" >}}
 
-If you run the above script, you will see in {{< figref "model_files" >}} that the model and tokenizer files are stored in a `model` directory. The `config.json` has the core information such as model name, architure, and output details. Also,  the model weights are store in the `model.safetensor`. I encourage you to go over these files to better understand the model we will be using.
+If you run the above script, you will see in {{< figref "model_files" >}} that the model and tokenizer files are stored in a `model` directory. The `config.json` has the core information, such as model name, architecture, and output details. Also,  the model weights are stored in the `model.safetensor`. Please review these files to understand the model we will use better.
 
 
 <details>
@@ -256,10 +255,10 @@ If you run the above script, you will see in {{< figref "model_files" >}} that t
 ## Stage 1: Tokenize input
 Note: Complete source code is included here [complete code](#complete_source_code)
 
-Transformer based models such as BERT cannot process raw utterances. We first need use the tokenizer to convert a string into multiple tensors which will be the actual inputs to the model as illustrated in {{< figref "pipeline_hl" >}}. These tensors are `inputs_ids`, `token_type_ids`, and the `attention_mask`.
+Transformer-based models such as BERT cannot process raw utterances. We first need to use the tokenizer to convert a string into multiple tensors, which will be the actual inputs to the model as illustrated in {{< figref "pipeline_hl" >}}. These tensors are `inputs_ids`, `token_type_ids`, and the `attention_mask`.
 
-- `inputs_ids`: Represents each token with a token id based on the model's vocabulary.
-- `token_type_ids`: Indicates which tokens should be attended to, or ignored using 1, or 0, respectively. 
+- `inputs_ids`: Represents each token with an id based on the model's vocabulary.
+- `token_type_ids`: Indicates which tokens should be attended to or ignored using 1 or 0, respectively. 
 - `attention_mask`: Distinguishes segments in an input, where each integer belongs to one specific segment. For inputs with one segment, all values will be 0.
 
 
@@ -329,7 +328,7 @@ logits:
 ## Stage 3: Post process results
 Note: Complete source code is included here [complete code](#complete_source_code) 
 
-The raw output of the model in stage 2 are called logits. We need to apply the [softmax fuction](https://pytorch.org/docs/stable/generated/torch.nn.functional.softmax.html#torch-nn-functional-softmax) to get the probability distribution over the 5 stars ratings. Softmax in the context of PyTorch is defined as
+The raw output of the model in stage 2 is called logits. We need to apply the [softmax fuction](https://pytorch.org/docs/stable/generated/torch.nn.functional.softmax.html#torch-nn-functional-softmax) to get the probability distribution over the 5 stars ratings. Softmax in the context of PyTorch is defined as
 
 $$ 
 \begin{equation}
@@ -338,7 +337,7 @@ Softmax(x_i) = \frac{exp(x_i)}{\sum_j exp(x_j)}
 \end{equation}
 $$
 
-Where Softmax  \eqref{softmax} is applied to all the slices along dim, in our case `dim=-1 (5)` since we have 5 stars (1 -> 5).
+Where Softmax  \eqref{softmax} is applied to all the slices along dim, in our case, `dim=-1 (5)` since we have 5 stars (1 -> 5).
 
 ```py
 # Stage 3: Post-processing
@@ -467,7 +466,7 @@ predictions:
 ```
 
 # Conclusion 
-You now have all the tools to use BERT for sequence classification. I encourage you to check the vast amount of checkpoints and architectures that you could use for a wide range of applications. You can see some of the most common ones [here](#model_checkpoints_and_architectures). Furthermore, if you want to better understand this material, one great of doing it is to run the scripts provided with a debugger, and see the results by yourself. 
+You now have all the tools to use BERT for sequence classification. Please check the vast number of checkpoints and architectures you could use for various applications. You can see some of the most common ones [here](#model_checkpoints_and_architectures). Furthermore, if you want to better understand this material, one great way to do it is to run the scripts provided with a debugger and see the results yourself. Finally, remember that you can apply these skills to download and start using some of the state-of-the-art LLM models listed [here](https://huggingface.co/docs/transformers/index#supported-models-and-frameworks).
 
 # References
 [^bert]: J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, “BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,” in Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), J. Burstein, C. Doran, and T. Solorio, Eds., Minneapolis, Minnesota: Association for Computational Linguistics, Jun. 2019, pp. 4171–4186. doi: 10.18653/v1/N19-1423.
