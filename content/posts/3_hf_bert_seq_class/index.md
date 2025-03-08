@@ -168,7 +168,7 @@ if __name__ == "__main__":
 Note: Complete source code is included here [complete code](#complete_source_code)
 
 
-### Downloading and storing model and tokenizer
+### Downloading and storing the model and tokenizer
 How do we download a Hugginface's model and its respective tokenizer? All we need is a checkpoint, and its respective architecture as mentioned in [here](#model_checkpoints_and_architectures). For this post, we will be using the checkpoint [nlptown/bert-base-multilingual-uncased-sentiment](), and the [BertForSequenceClassification](https://huggingface.co/docs/transformers/v4.49.0/en/model_doc/bert#transformers.BertForSequenceClassification) architecture. Keep in mind that we use the `AutoTokenizer` class to automatically download the correct tokenizer by just using the checkpoint.
 
 ```py
@@ -188,10 +188,66 @@ model.save_pretrained(output_dir)
 tokenizer.save_pretrained(output_dir)
 ```
 
-If you run this script, you will see the following files are stored in a `model` directory.
+
+{{< figure id="model_files" src="./model_files.png" alt="Sample figure" caption="Model and tokenizer files" width="330" height="160" >}}
+
+If you run the above script, you will see in {{< figref "model_files" >}} that the model and tokenizer files are stored in a `model` directory. The `config.json` has the core information such as model name, architure, and output details. Also,  the model weights are store in the `model.safetensor`. In encourage you to go over these files to better understand the model we will be using.
 
 
-{{< figure id="model_files" src="./model_files.png" alt="Sample figure" caption="Model and tokenizer files" width="400" height="200" >}}
+<details>
+  <summary>config.json</summary>
+
+```json
+{
+  "_name_or_path": "nlptown/bert-base-multilingual-uncased-sentiment",
+  "_num_labels": 5,
+  "architectures": [
+    "BertForSequenceClassification"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "classifier_dropout": null,
+  "directionality": "bidi",
+  "finetuning_task": "sentiment-analysis",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "1 star",
+    "1": "2 stars",
+    "2": "3 stars",
+    "3": "4 stars",
+    "4": "5 stars"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "label2id": {
+    "1 star": 0,
+    "2 stars": 1,
+    "3 stars": 2,
+    "4 stars": 3,
+    "5 stars": 4
+  },
+  "layer_norm_eps": 1e-12,
+  "max_position_embeddings": 512,
+  "model_type": "bert",
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "output_past": true,
+  "pad_token_id": 0,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "position_embedding_type": "absolute",
+  "torch_dtype": "float32",
+  "transformers_version": "4.49.0",
+  "type_vocab_size": 2,
+  "use_cache": true,
+  "vocab_size": 105879
+}
+```
+</details>
 
 
 ## Stage 1: Tokenize input
