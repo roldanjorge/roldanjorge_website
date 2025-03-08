@@ -28,7 +28,7 @@ Using BERT requires choosing an architecture and a checkpoint. A checkpoint indi
 | [bert-large-uncased](https://huggingface.co/bert-large-uncased)                              | Larger version of bert-base-uncased           |
 | [bert-base-cased](https://huggingface.co/google-bert/bert-base-uncased)                      | Account for capitalization                    |
 | [bert-large-cased](https://huggingface.co/bert-large-cased)                                  | Larger version of bert-base-case              |
-| [bert-base-multilingual-uncased-sentiment](nlptown/bert-base-multilingual-uncased-sentiment) | Finetuned for sentiment analysis              |
+| [bert-base-multilingual-uncased-sentiment](https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) | Finetuned for sentiment analysis              |
 | [bert-base-ner](https://huggingface.co/dslim/bert-base-NER)                                  | Fine-tuned for Named Entity Recognition (NER) |
 
 
