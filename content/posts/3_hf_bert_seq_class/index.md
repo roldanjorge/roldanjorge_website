@@ -379,9 +379,6 @@ Complete pipeline's output when using a positive review such as "I really loved 
 
 {{< figure id="pipeline_positive_review" src="./pipeline_positive_review.png" alt="pipeline_positive_review" caption="Negative review example" >}}
 
-<details>
-<summary>positive_review_output</summary>
-
 
 ```bash
 ==================================================
@@ -421,7 +418,6 @@ predictions:
         4 stars:        0.229
         5 stars:        0.731
 ```
-</details>
 
 ### Output: Negative review 
 
@@ -429,9 +425,6 @@ Complete pipeline's output when using a positive review such as "I really loved 
 
 
 {{< figure id="pipeline_negative_review" src="./pipeline_negative_review.png" alt="pipeline_negative_review" caption="Negative review example" >}}
-
-<details>
-<summary>negative_review_output</summary>
 
 ```bash
 ==================================================
@@ -472,7 +465,6 @@ predictions:
         4 stars:        0.073
         5 stars:        0.073
 ```
-</details>
 
 
 # References
