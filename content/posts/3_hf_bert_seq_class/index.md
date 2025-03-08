@@ -376,7 +376,7 @@ predictions:
 ### Output: Positive review 
 Complete pipeline's output when using a positive review such as "I really loved that movie".
 
-{{< figure id="pipeline_positive_review" src="./pipeline_positive_review.png" alt="pipeline_positive_review" caption="Negative review example" >}}
+{{< figure id="pipeline_positive_review" src="./pipeline_positive_review.png" alt="pipeline_positive_review" caption="Positive review example" >}}
 
 
 ```bash
