@@ -86,7 +86,7 @@ params:
     - name: github
       url: "https://github.com/roldanjorge"
     - name: linkedin
-      url: "https://www.linkedin.com/in/roldanjrgl/"
+      url: "https://www.linkedin.com/in/roldanjorge/"
 
   analytics:
     google:
