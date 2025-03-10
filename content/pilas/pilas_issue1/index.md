@@ -17,7 +17,7 @@ The ACM A.M. Turing Award 2024, commonly referred to as the "Nobel Prize in Comp
 OpenAI pushes the frontier of unsupervised learning with the new GPT-4.5 model, which builds on GPT-4o. This model scales the learning paradigm instead of the reasoning paradigm like OpenAI o1 or o3-mini [^gpt4_5] . OpenAI published additional details about this model in the [OpenAI GPT-4.5 System Card](https://cdn.openai.com/gpt-4-5-system-card-2272025.pdf?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email). Regarding training, OpenAI "developed new, scalable alignment techniques", combined with supervised fine-tuning (SFT), as well as Reinforcement Learning from Human Feedback (RLHF). Unfortunately, no further details are included on model architecture or size. The system card presents multiple benchmark results showing promising overall improvements but also some risk increases. Finally, GPT 4.5 shows promising results in accuracy and reduction in hallucinations, being the largest and most knowledgeable model so far.
 
 
-{{< figure id="model_files" src="./gpt_4_5.png" alt="gpt_4_5" caption="Accuracy and Hallucination rate of GPT-4.5" width="500" height="250" >}}
+{{< figure id="model_files" src="./gpt_4_5.png" alt="gpt_4_5" caption="Accuracy and Hallucination rate of GPT-4.5" >}}
 
 
 
