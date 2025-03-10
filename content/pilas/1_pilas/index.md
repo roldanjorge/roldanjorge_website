@@ -8,7 +8,6 @@ layout: "pilas"
 #  1. Pioneers of Reinforcement Learning recieve the ACM A.M. Turing Award 2024
 The ACM A.M. Turing Award 2024, commonly referred to as the "Nobel Prize in Computing",  was announced on March 5th, 2025 and it was awarded to [Andrew Barto](https://people.cs.umass.edu/~barto/), and [Richard Sutton](http://incompleteideas.net/) recognizing them as the pioneers of RL (Reinforcement Learning). Reinforcement Learning is one of the core pilars of AI and it studies how agents interacts with an environment to learn how to make better decisions. RL, and deep reinforcement learning have been at the core of many advancements including AlphaGo, ChatGPT, and other state-of-the-art LLMs. [^acm_turing_award]
 
-<!-- {{< tweet user="TheOfficialACM"  id="1897225672935735579">}} -->
 
 {{< figure id="model_files" src="./acm_2024_award.png" alt="acm_2024_award" caption="X announcement of The ACM A.M. Turing Award 2024" width="" height="500" >}}
 
@@ -31,7 +30,11 @@ Anthropic announced Claude 3.7 Sonnet, their best model to date with hybrid reas
 {{< figure id="model_files" src="./claude_3_7.png" alt="claude_3_7" caption="Performance of Claude 3.7" >}}
 
 # 4. Mistral OCR
+
+ref: [^mistral_ocr]
+
 - [Mistral OCR](https://mistral.ai/en/news/mistral-ocr)
+
 
 
 # 5. $DEMO^3$
@@ -59,3 +62,6 @@ Anthropic announced Claude 3.7 Sonnet, their best model to date with hybrid reas
 
 
 [^claude_3_7]: “Claude 3.7 Sonnet and Claude Code.” Accessed: Mar. 09, 2025. [Online]. Available: https://www.anthropic.com/news/claude-3-7-sonnet
+
+
+[^mistral_ocr]: “Mistral OCR | Mistral AI.” Accessed: Mar. 09, 2025. [Online]. Available: https://mistral.ai/en/news/mistral-ocr
