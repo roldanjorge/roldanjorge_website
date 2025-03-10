@@ -45,8 +45,12 @@ These are some of the highlights:
 - Faster performancing processing up to 2000 pages per minute.
 
 
+#  5. Advancing healthcare and scientific discovery with AI
+- [How Google Research is making healthcare more accessible and personalized with AI](https://blog.google/technology/health/google-research-healthcare-ai/?utm_source=tldrai)
 
-# 5. $DEMO^3$
+ref: [^google_healthcare_ai]
+
+# 6. $DEMO^3$
 - [Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning](https://adrialopezescoriza.github.io/demo3/?utm_source=tldrai)
 
 
@@ -61,8 +65,6 @@ These are some of the highlights:
 - [2502.20321 - UniTok: A Unified Tokenizer for Visual Generation and Understanding](https://arxiv.org/abs/2502.20321?utm_source=tldrai)
 
 
-#  10. Advancing healthcare and scientific discovery with AI
-- [How Google Research is making healthcare more accessible and personalized with AI](https://blog.google/technology/health/google-research-healthcare-ai/?utm_source=tldrai)
 
 # References
 [^acm_turing_award]: “ACM A.M. Turing Award Honors Two Researchers Who Led the Development of Cornerstone AI Technology.” Accessed: Mar. 09, 2025. [Online]. Available: https://www.acm.org/media-center/2025/march/turing-award-2024?utm_source=tldrai
@@ -74,3 +76,6 @@ These are some of the highlights:
 
 
 [^mistral_ocr]: “Mistral OCR | Mistral AI.” Accessed: Mar. 09, 2025. [Online]. Available: https://mistral.ai/en/news/mistral-ocr
+
+
+[^google_healthcare_ai]: “Advancing healthcare and scientific discovery with AI,” Google. Accessed: Mar. 10, 2025. [Online]. Available: https://blog.google/technology/health/google-research-healthcare-ai/
