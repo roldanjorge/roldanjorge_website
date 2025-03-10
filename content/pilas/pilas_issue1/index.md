@@ -39,7 +39,7 @@ These are some of the highlights:
 
 - Mistral OCR's astonishing overall performance is 94.89, followed by Gemini-1.5-Flash-002 at 90.23 as shown in {{< figref "mistral_ocr_performance" >}}. I am particularly impressed by the 94.29 performance in math, considering how hard it is to recognize Latex expressions correctly.
 
-Given its impressive performance, Mistral OCR shows promising potential for Retrieval Augment Generation (RAG) use cases that leverage multimodal documents as inputs.
+- Given its impressive performance, Mistral OCR shows promising potential for Retrieval Augment Generation (RAG) use cases that leverage multimodal documents as inputs.
 
 - Support for multiple languages includes ru, fr, hi, zh, pt, de, es, tr, uk, it, ro with an performance of at least 90. 
 
@@ -57,7 +57,8 @@ Google is also betting on leveraging Generative AI for personalized healthcare w
 {{< figure id="med_gemini" src="./med_gemini.png" alt="med_gemini" caption="Med-Gemini Development and benchmarking (K. Saab et al., “Capabilities of Gemini Models in Medicine”)" >}}
 
 # Aya Vision
-Cohere announced on March 3rd 2025 the release of a state-of-the-art open-weights vision model with focusing on bridging the gap between the performance of models in different languages. Aya Vision outperforms other models such as Gemini-Flash, Llama-3.2 , and Pistral with smaller, and computing efficient alternatives [^aya_vision] . You can access both the [8b](https://huggingface.co/CohereForAI/aya-vision-8b?ref=cohere-ai.ghost.io) and [32b](https://huggingface.co/CohereForAI/aya-vision-32b?ref=cohere-ai.ghost.io) the open-weights models in [Huggingface](https://huggingface.co/collections/CohereForAI/c4ai-aya-vision-67c4ccd395ca064308ee1484). 
+Cohere announced on March 3rd, 2025, the release of a state-of-the-art open-weights vision model focusing on bridging the gap between the performance of models in different languages. Aya Vision outperforms other models such as Gemini-Flash, Llama-3.2, and Pistral with smaller and computing efficient alternatives [^aya_vision] . You can access both the [8b](https://huggingface.co/CohereForAI/aya-vision-8b?ref=cohere-ai.ghost.io) and [32b](https://huggingface.co/CohereForAI/aya-vision-32b?ref=cohere-ai.ghost.io) the open-weights models in [Huggingface](https://huggingface.co/collections/CohereForAI/c4ai-aya-vision-67c4ccd395ca064308ee1484). 
+
 
 
 
