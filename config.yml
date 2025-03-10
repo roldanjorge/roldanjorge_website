@@ -83,7 +83,7 @@ params:
 
 
 
-        [🔋 Pilas Newsletter](http://www.roldanjorge.com/pilas/)
+        [🔋 Pilas Newsletter](http://www.roldanjorge.com/categories/newsletter/)
 
   socialIcons:
     - name: x
@@ -124,26 +124,26 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: archives
-      name: Archives 
-      url: /archives/
+    - identifier: pilas 
+      name:  🔋 Pilas Newsletter
+      url: /categories/newsletter/
       weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
     - identifier: categories 
       name: Categories
       url: /categories/
       weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
     - identifier: search 
       name: Search
       url: /search/
-      weight: 20
-    - identifier: pilas 
-      name:  🔋 Pilas Newsletter
-      url: /pilas/
-      weight: 20
+      weight: 40
+    - identifier: archives
+      name: Archives 
+      url: /archives/
+      weight: 50
     # - identifier: resources 
       # name: Resources 
       # url: /resources/
