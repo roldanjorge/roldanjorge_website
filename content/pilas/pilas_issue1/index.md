@@ -45,10 +45,12 @@ These are some of the highlights:
 - Faster performancing processing up to 2000 pages per minute.
 
 
-#  5. Advancing healthcare and scientific discovery with AI
-- [How Google Research is making healthcare more accessible and personalized with AI](https://blog.google/technology/health/google-research-healthcare-ai/?utm_source=tldrai)
+#  5. Google's push to advance healthcare with AI
 
-ref: [^google_healthcare_ai]
+Yossi Matias, Google's VP & head of Google Research discussed during the [Lake Nona Impact Forum](https://lakenonaimpactforum.org/event/overview/) the AI breakthroughts by the company in healthcare as it relates to accessibility, personalization, and effectiveness: [^google_healthcare_ai]
+
+-  Google is improving the access of high-quality medical content to all its users by working in AI tools to help Youtube's health creators with their video creation process [^youtube_ai_tools_healthcare] . With [Google Lens](https://blog.google/products/google-lens/google-lens-features/), users can check their own skin to identify skin-related conditions  [^google_lens], and tools like [MedLM](https://cloud.google.com/blog/topics/healthcare-life-sciences/introducing-medlm-for-the-healthcare-industry) and [Search for Healthcare](https://www.googlecloudpresscorner.com/2024-10-17-Google-Cloud-Launches-General-Availability-of-Vertex-AI-Search-for-Healthcare-and-Healthcare-Data-Engine) can directly answer user's questions.
+- Google is also betting on leveraging Generative AI for personalized healthcare including Med-Gemini [^med_gemini], a fine-tuned version of the Gemini models for medical applications and multimodal support. Promising performance on 14 medical benchmarks illustrate the power of these models to augment medical doctor's effective to give more personalized medicine around the globe.
 
 # 6. $DEMO^3$
 - [Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning](https://adrialopezescoriza.github.io/demo3/?utm_source=tldrai)
@@ -79,3 +81,12 @@ ref: [^google_healthcare_ai]
 
 
 [^google_healthcare_ai]: “Advancing healthcare and scientific discovery with AI,” Google. Accessed: Mar. 10, 2025. [Online]. Available: https://blog.google/technology/health/google-research-healthcare-ai/
+
+
+[^youtube_ai_tools_healthcare]: “Exploring how AI tools can help increase high-quality health content,” blog.youtube. Accessed: Mar. 10, 2025. [Online]. Available: https://blog.youtube/inside-youtube/ai-tools-high-quality-health-content/
+
+
+[^google_lens]: “8 ways Google Lens can help make your life easier,” Google. Accessed: Mar. 10, 2025. [Online]. Available: https://blog.google/products/google-lens/google-lens-features/
+
+
+[^med_gemini]: “Advancing medical AI with Med-Gemini.” Accessed: Mar. 10, 2025. [Online]. Available: https://research.google/blog/advancing-medical-ai-with-med-gemini/
