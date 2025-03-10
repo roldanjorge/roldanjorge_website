@@ -109,3 +109,9 @@ ref: [^must3r]
 [^must3r]: Y. Cabon et al., “MUSt3R: Multi-view Network for Stereo 3D Reconstruction,” Mar. 03, 2025, arXiv: arXiv:2503.01661. doi: 10.48550/arXiv.2503.01661.
 
 [^aya_vision]: “Aya Vision: Expanding the worlds AI can see,” Cohere. Accessed: Mar. 10, 2025. [Online]. Available: https://cohere.com/blog/aya-vision
+
+
+[demo3_paper]: A. L. Escoriza, N. Hansen, S. Tao, T. Mu, and H. Su, “Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning,” Mar. 03, 2025, arXiv: arXiv:2503.01837. doi: 10.48550/arXiv.2503.01837.
+
+
+[demo3_website]: “DEMO³.” Accessed: Mar. 10, 2025. [Online]. Available: https://adrialopezescoriza.github.io/demo3/?utm_source=tldrai
