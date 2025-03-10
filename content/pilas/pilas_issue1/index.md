@@ -50,7 +50,10 @@ These are some of the highlights:
 Yossi Matias, Google's VP & head of Google Research discussed during the [Lake Nona Impact Forum](https://lakenonaimpactforum.org/event/overview/) the AI breakthroughts by the company in healthcare as it relates to accessibility, personalization, and effectiveness: [^google_healthcare_ai]
 
 -  Google is improving the access of high-quality medical content to all its users by working in AI tools to help Youtube's health creators with their video creation process [^youtube_ai_tools_healthcare] . With [Google Lens](https://blog.google/products/google-lens/google-lens-features/), users can check their own skin to identify skin-related conditions  [^google_lens], and tools like [MedLM](https://cloud.google.com/blog/topics/healthcare-life-sciences/introducing-medlm-for-the-healthcare-industry) and [Search for Healthcare](https://www.googlecloudpresscorner.com/2024-10-17-Google-Cloud-Launches-General-Availability-of-Vertex-AI-Search-for-Healthcare-and-Healthcare-Data-Engine) can directly answer user's questions.
-- Google is also betting on leveraging Generative AI for personalized healthcare including Med-Gemini [^med_gemini], a fine-tuned version of the Gemini models for medical applications and multimodal support. Promising performance on 14 medical benchmarks illustrate the power of these models to augment medical doctor's effective to give more personalized medicine around the globe.
+- Google is also betting on leveraging Generative AI for personalized healthcare with Med-Gemini [^med_gemini], a fine-tuned version of the Gemini models for medical applications and multimodal support. Promising performance on 14 medical benchmarks illustrate the power of these models to augment medical doctor's effective to give more personalized medicine around the globe [^med_gemini_capabilities] .
+- Google's work on improving healthcare expand multiple streams such as developing technologies for better detecting [breast cancer](https://blog.google/technology/ai/icad-partnership-breast-cancer-screening/), [lung cancer](https://research.google/blog/computer-aided-diagnosis-for-lung-cancer-screening/) and [diabetic retinopathy](https://blog.google/around-the-globe/google-asia/arda-diabetic-retinopathy-india-thailand/) and other initiatives such as the [Health AI Developer Foundations](https://research.google/blog/helping-everyone-build-ai-for-healthcare-applications-with-open-foundation-models/), and the [Open Health Stack](https://blog.google/technology/health/open-health-stack-developers/).
+
+{{< figure id="med_gemini" src="./med_gemini.png" alt="med_gemini" caption="Med-Gemini Development and benchmarking (K. Saab et al., “Capabilities of Gemini Models in Medicine”)" >}}
 
 # 6. $DEMO^3$
 - [Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning](https://adrialopezescoriza.github.io/demo3/?utm_source=tldrai)
@@ -90,3 +93,6 @@ Yossi Matias, Google's VP & head of Google Research discussed during the [Lake N
 
 
 [^med_gemini]: “Advancing medical AI with Med-Gemini.” Accessed: Mar. 10, 2025. [Online]. Available: https://research.google/blog/advancing-medical-ai-with-med-gemini/
+
+
+[^med_gemini_capabilities]: K. Saab et al., “Capabilities of Gemini Models in Medicine,” May 01, 2024, arXiv: arXiv:2404.18416. doi: 10.48550/arXiv.2404.18416.
