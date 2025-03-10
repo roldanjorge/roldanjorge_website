@@ -3,7 +3,4 @@ title: "Toolbox"
 layout: "toolbox"
 ---
 
-# Python 
-- pandas
-- scikit-learn 
-- matplotlib
+# Work in progress 🏗️
