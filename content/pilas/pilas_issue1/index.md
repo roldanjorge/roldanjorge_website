@@ -5,7 +5,7 @@ title: 'Pilas Issue 1'
 layout: "pilas"
 ---
 
-#  1. Pioneers of Reinforcement Learning recieve the ACM A.M. Turing Award 2024
+#  1. Pioneers of Reinforcement Learning recieve the 2024 ACM A.M. Turing Award
 The ACM A.M. Turing Award 2024, commonly referred to as the "Nobel Prize in Computing",  was announced on March 5th, 2025 and it was awarded to [Andrew Barto](https://people.cs.umass.edu/~barto/), and [Richard Sutton](http://incompleteideas.net/) recognizing them as the pioneers of RL (Reinforcement Learning). Reinforcement Learning is one of the core pilars of AI and it studies how agents interacts with an environment to learn how to make better decisions. RL, and deep reinforcement learning have been at the core of many advancements including AlphaGo, ChatGPT, and other state-of-the-art LLMs. [^acm_turing_award]
 
 
@@ -55,20 +55,30 @@ Yossi Matias, Google's VP & head of Google Research discussed during the [Lake N
 
 {{< figure id="med_gemini" src="./med_gemini.png" alt="med_gemini" caption="Med-Gemini Development and benchmarking (K. Saab et al., “Capabilities of Gemini Models in Medicine”)" >}}
 
-# 6. $DEMO^3$
+# 6. Aya Vision
+- [Aya Vision: Expanding the worlds AI can see](https://cohere.com/blog/aya-vision?utm_source=tldrai)
+
+Cohere announced on March 3rd 2025 the release of a state-of-the-art open-weights vision model with focusing on bridging the gap between the performance of models in different languages. Aya Vision outperforms other models such as Gemini-Flash, Llama-3.2 , and Pistral with smaller, and computing efficient alternatives [^aya_vision] . You can access both the [8b](https://huggingface.co/CohereForAI/aya-vision-8b?ref=cohere-ai.ghost.io) and [32b](https://huggingface.co/CohereForAI/aya-vision-32b?ref=cohere-ai.ghost.io) the open-weights models in [Huggingface](https://huggingface.co/collections/CohereForAI/c4ai-aya-vision-67c4ccd395ca064308ee1484). 
+
+
+
+{{< figure id="aya_vision" src="./aya_vision.png" alt="aya_vision" caption="Aya Vision 8B Win Rates" >}}
+
+
+# 7. DEMO$^3$
 - [Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning](https://adrialopezescoriza.github.io/demo3/?utm_source=tldrai)
 
 
-# 7. Llama Stack
+# 8. Llama Stack
 - [llama-stack/docs/zero_to_hero_guide at main · meta-llama/llama-stack](https://github.com/meta-llama/llama-stack/tree/main/docs/zero_to_hero_guide?utm_source=tldrai)
 
-
-# 8. Aya Vision
-- [Aya Vision: Expanding the worlds AI can see](https://cohere.com/blog/aya-vision?utm_source=tldrai)
 
 # 9. UniTok
 - [2502.20321 - UniTok: A Unified Tokenizer for Visual Generation and Understanding](https://arxiv.org/abs/2502.20321?utm_source=tldrai)
 
+
+# 10. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
+ref: [^must3r]
 
 
 # References
@@ -96,3 +106,8 @@ Yossi Matias, Google's VP & head of Google Research discussed during the [Lake N
 
 
 [^med_gemini_capabilities]: K. Saab et al., “Capabilities of Gemini Models in Medicine,” May 01, 2024, arXiv: arXiv:2404.18416. doi: 10.48550/arXiv.2404.18416.
+
+
+[^must3r]: Y. Cabon et al., “MUSt3R: Multi-view Network for Stereo 3D Reconstruction,” Mar. 03, 2025, arXiv: arXiv:2503.01661. doi: 10.48550/arXiv.2503.01661.
+
+[^aya_vision]: “Aya Vision: Expanding the worlds AI can see,” Cohere. Accessed: Mar. 10, 2025. [Online]. Available: https://cohere.com/blog/aya-vision
