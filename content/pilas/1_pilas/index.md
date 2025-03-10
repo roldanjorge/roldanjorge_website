@@ -36,10 +36,13 @@ These are some of the highlights:
  
 {{< figure id="mistral_ocr_performance" src="./mistral_ocr_performance.png" alt="mistral_ocr_performance" caption="Performance of Mistral OCR" >}}
 
-- Mistral OCR's astonishing overall performance is 94.89, followed by Gemini-1.5-Flash-002 at 90.23. I am particular impressed by the 94.29 performance in math considering how hard it is to correctly recognize Latex expressions.
+- Mistral OCR's astonishing overall performance is 94.89, followed by Gemini-1.5-Flash-002 at 90.23 as shown in {{< figref "mistral_ocr_performance" >}}. I am particular impressed by the 94.29 performance in math considering how hard it is to correctly recognize Latex expressions.
 
-- Given its impressive performance, Mistral OCR's shows promising potential for Retrieval Augment Generation (RAG) uses cases that leverage multimodal documents
+- Given its impressive performance, Mistral OCR's shows promising potential for Retrieval Augment Generation (RAG) uses cases that leverage multimodal documents as inputs.
 
+- Support for multiple languages includes ru, fr, hi, zh, pt, de, es, tr, uk, it, ro with an performance of at least 90. 
+
+- Faster performancing processing up to 2000 pages per minute.
 
 
 
