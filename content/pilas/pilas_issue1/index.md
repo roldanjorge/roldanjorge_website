@@ -5,14 +5,14 @@ title: 'Pilas Issue 1'
 layout: "pilas"
 ---
 
-#  1. Pioneers of Reinforcement Learning recieve the 2024 ACM A.M. Turing Award
+#  Pioneers of Reinforcement Learning recieve the 2024 ACM A.M. Turing Award
 The ACM A.M. Turing Award 2024, commonly referred to as the "Nobel Prize in Computing",  was announced on March 5th, 2025 and it was awarded to [Andrew Barto](https://people.cs.umass.edu/~barto/), and [Richard Sutton](http://incompleteideas.net/) recognizing them as the pioneers of RL (Reinforcement Learning). Reinforcement Learning is one of the core pilars of AI and it studies how agents interacts with an environment to learn how to make better decisions. RL, and deep reinforcement learning have been at the core of many advancements including AlphaGo, ChatGPT, and other state-of-the-art LLMs. [^acm_turing_award]
 
 
 {{< figure id="model_files" src="./acm_2024_award.png" alt="acm_2024_award" caption="X announcement of The ACM A.M. Turing Award 2024" width="" height="500" >}}
 
 
-# 2. OpenAI launches GPT-4.5
+# OpenAI launches GPT-4.5
 
 OpenAI pushes the frontier of unsupervised learning with the new GPT-4.5 model which builds on GPT-4o. This model scales the learning paradigm as opposed to the reasoning paradigm like OpenAI o1, or o3-mini [^gpt4_5] . OpenAI published additional details about this model in the [OpenAI GPT-4.5 System Card](https://cdn.openai.com/gpt-4-5-system-card-2272025.pdf?utm_campaign=The%20Batch&utm_source=hs_email&utm_medium=email). Regarding training, OpenAI "developed new, scalable alignment techniques", combined with supervised fine-tuning (SFT), as well as Reinforcement Learning from Human Feedback (RLHF). Unfortunately, not further details are included on model architecture or size. The system card presents multiple benchmark results showing promising overall improvements but also some risk increases. Finally, GPT 4.5 shows promising results in accuracy and reduction in hallucinations being the largest, and most knowledgeable model so far.
 
@@ -20,7 +20,7 @@ OpenAI pushes the frontier of unsupervised learning with the new GPT-4.5 model w
 
 
 
-# 3. Anthropic's Claude 3.7  Sonnet
+# Anthropic's Claude 3.7  Sonnet
 
 Anthropic announced Claude 3.7 Sonnet, their best model to date with hybrid reasonining capabilities. Anthropic also introduced Claude Code, a command line tool for agentic coding. Some details include [^claude_3_7] :
 - Combined LLM capabilities and reasoning functionality allowing the user when to take longer while reasoning. Claude 3.7 Sonnet leverages  "extended thinking" mode by generating tokens to reason about a problem in depth before generating the final answer. 
@@ -29,7 +29,7 @@ Anthropic announced Claude 3.7 Sonnet, their best model to date with hybrid reas
 
 {{< figure id="model_files" src="./claude_3_7.png" alt="claude_3_7" caption="Performance of Claude 3.7" >}}
 
-# 4. Mistral OCR
+# Mistral OCR
 
 Mistral announced on March 6th, 2025 their state-of-the-art Optical Character Recognition (OCR) model offered through the *mistral-ocr-latest*  API at a cost of 1000 pages / $ [^mistral_ocr] . 
 These are some of the highlights:
@@ -45,7 +45,7 @@ These are some of the highlights:
 - Faster performancing processing up to 2000 pages per minute.
 
 
-#  5. Google's push to advance healthcare with AI
+#  Google's push to advance healthcare with AI
 
 Yossi Matias, Google's VP & head of Google Research discussed during the [Lake Nona Impact Forum](https://lakenonaimpactforum.org/event/overview/) the AI breakthroughts by the company in healthcare as it relates to accessibility, personalization, and effectiveness: [^google_healthcare_ai]
 
@@ -55,9 +55,7 @@ Yossi Matias, Google's VP & head of Google Research discussed during the [Lake N
 
 {{< figure id="med_gemini" src="./med_gemini.png" alt="med_gemini" caption="Med-Gemini Development and benchmarking (K. Saab et al., “Capabilities of Gemini Models in Medicine”)" >}}
 
-# 6. Aya Vision
-- [Aya Vision: Expanding the worlds AI can see](https://cohere.com/blog/aya-vision?utm_source=tldrai)
-
+# Aya Vision
 Cohere announced on March 3rd 2025 the release of a state-of-the-art open-weights vision model with focusing on bridging the gap between the performance of models in different languages. Aya Vision outperforms other models such as Gemini-Flash, Llama-3.2 , and Pistral with smaller, and computing efficient alternatives [^aya_vision] . You can access both the [8b](https://huggingface.co/CohereForAI/aya-vision-8b?ref=cohere-ai.ghost.io) and [32b](https://huggingface.co/CohereForAI/aya-vision-32b?ref=cohere-ai.ghost.io) the open-weights models in [Huggingface](https://huggingface.co/collections/CohereForAI/c4ai-aya-vision-67c4ccd395ca064308ee1484). 
 
 
@@ -65,19 +63,19 @@ Cohere announced on March 3rd 2025 the release of a state-of-the-art open-weight
 {{< figure id="aya_vision" src="./aya_vision.png" alt="aya_vision" caption="Aya Vision 8B Win Rates" >}}
 
 
-# 7. DEMO$^3$
+# DEMO$^3$
 - [Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model Learning](https://adrialopezescoriza.github.io/demo3/?utm_source=tldrai)
 
 
-# 8. Llama Stack
+# Llama Stack
 - [llama-stack/docs/zero_to_hero_guide at main · meta-llama/llama-stack](https://github.com/meta-llama/llama-stack/tree/main/docs/zero_to_hero_guide?utm_source=tldrai)
 
 
-# 9. UniTok
+# UniTok
 - [2502.20321 - UniTok: A Unified Tokenizer for Visual Generation and Understanding](https://arxiv.org/abs/2502.20321?utm_source=tldrai)
 
 
-# 10. MUSt3R: Multi-view Network for Stereo 3D Reconstruction
+# MUSt3R: Multi-view Network for Stereo 3D Reconstruction
 ref: [^must3r]
 
 
