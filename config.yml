@@ -23,8 +23,7 @@ params:
   DateFormat: "January 2, 2006"
   defaultTheme: dark, light
   disableThemeToggle: false
-  # math: true
-
+  disableHomePosts: true
   math:
     enable: true
     mathjax: true
@@ -55,7 +54,7 @@ params:
     disableHLJS: true
 
   label:
-    text: "Home"
+    text: "Jorge Roldan"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -77,12 +76,18 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Jorge Roldan"
-    Content: I am a Machine Learning engineer with an interest in NLP, Large Language Models, and building robust and scalable GenAI products.
-        I have a Masters of Science in Computer Science from NYU - Courant Institute of Mathematical Sciences. I also studied Mechanical Engineering and Computer Science at The City College of New York's Grove School of Engineering.
+    Content: > 
+        I am a Machine Learning engineer with an interest in NLP, Large Language Models, and building robust and scalable GenAI products.
+        I have a Masters of Science in Computer Science from NYU - Courant Institute of Mathematical Sciences. 
+        I also studied Mechanical Engineering and Computer Science at The City College of New York's Grove School of Engineering.
+
+
+
+        [🔋 Pilas Newsletter](http://www.roldanjorge.com/pilas/)
 
   socialIcons:
     - name: x
-      url: "https://x.com/roldanjrgl"
+      url: "https://x.com/roldan__jorge"
     - name: github
       url: "https://github.com/roldanjorge"
     - name: linkedin
@@ -136,13 +141,13 @@ menu:
       url: /search/
       weight: 20
     - identifier: pilas 
-      name: Pilas Newsletter 🔋
+      name:  🔋 Pilas Newsletter
       url: /pilas/
       weight: 20
-    - identifier: resources 
-      name: Resources 
-      url: /resources/
-      weight: 20
+    # - identifier: resources 
+      # name: Resources 
+      # url: /resources/
+      # weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

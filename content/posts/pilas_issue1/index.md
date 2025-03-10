@@ -1,8 +1,9 @@
 ---
 author: "Jorge Roldan"
-date: '2025-03-08'
-title: 'Pilas Issue 1'
+date: '2025-03-10'
+title: '🔋 Pilas: Issue 1'
 layout: "pilas"
+categories: "newsletter"
 ---
 
 #  Pioneers of Reinforcement Learning receive the 2024 ACM A.M. Turing Award
