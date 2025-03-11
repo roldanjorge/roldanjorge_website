@@ -75,20 +75,24 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Jorge Roldan"
+    Title: "Jorge Roldán"
     Content: >
+      I am a machine learning engineer. I care about building safe, robust, and awesome AI-powered tools, applications, and services.
+      I have an M.S. in Computer Science with a focus on Machine Learning from New York University — [Courant Institute of Mathematical Sciences](https://cs.nyu.edu/home/index.html).
+      I also studied Computer Science and Mechanical Engineering at The City College of New York - [Grove School of Engineering](https://www.ccny.cuny.edu/engineering).
 
-      > - I am a machine learning engineer. I care about building safe, robust, and awesome AI-powered tools, applications, and services. 
+      > 
 
-      > - I have an M.S. in Computer Science with a focus on Machine Learning from New York University — [Courant Institute of Mathematical Sciences](https://cs.nyu.edu/home/index.html).
+      My interests lie at the intersection of Mathematics, Machine Learning, and Software Engineering. I am cautiously excited about the potential of Generative AI. 
+      I believe that to responsibily build and leverage technology, we must understand its inner workings to the best of our ability so that we fully understand its limitations.
       
-      > - I also studied Computer Science and Mechanical Engineering at The City College of New York - [Grove School of Engineering](https://www.ccny.cuny.edu/engineering).
-
-      > - My interests lie at the intersection of Mathematics, Machine Learning, and Software Engineering. 
-
-      > - I am originally from Santa Rosa de Osos, Colombia 🇨🇴 and currently living in New York City 🗽
-
-      > - Check out my newsletter at [🔋 Pilas Newsletter](http://www.roldanjorge.com/categories/newsletter/)
+      > 
+      
+      I am originally from Santa Rosa de Osos, Colombia 🇨🇴 and currently living in New York City 🗽.
+        
+      > 
+      
+      Check out my newsletter at [🔋 Pilas Newsletter](http://www.roldanjorge.com/categories/newsletter/)
 
   socialIcons:
     - name: x
