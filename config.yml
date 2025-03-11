@@ -77,8 +77,7 @@ params:
   homeInfoParams:
     Title: "Jorge Roldán"
     Content: >
-     I am a machine learning engineer. I love building safe, robust, and awesome AI-powered tools, applications, and services. I have an M.S. in Computer Science with a focus on Machine Learning from New York University—Courant Institute of Mathematical Sciences. I also studied Computer Science and Mechanical Engineering at The City College of New York—Grove School of Engineering. I am originally from Santa Rosa de Osos, Colombia 🇨🇴, and currently live in New York City 🗽.
-
+     I am a machine learning engineer. I love building safe, robust, and awesome AI-powered tools, applications, and services. I have an M.S. in Computer Science with a focus on Machine Learning from [New York University—Courant Institute of Mathematical Sciences](https://cs.nyu.edu/home/index.html). I also studied Computer Science and Mechanical Engineering at [The City College of New York—Grove School of Engineering](https://www.ccny.cuny.edu/engineering). I am originally from Santa Rosa de Osos, Colombia 🇨🇴, and currently live in New York City 🗽.
 
       > 
 
@@ -87,7 +86,10 @@ params:
       > 
 
       With this blog and newsletter, I want to share what I care about, what I learn, what I build, what I want to see more of in the world, and what I would like to see less of.
-      
+
+      > 
+
+      🔋 Pilas, the newsletter's name, is a slang term commonly used in Colombia to mean 'watch out,' 'be alert,' or 'stay sharp.' However, it also means 'battery.' I chose this name because now, more than ever, we need to stay engaged and vigilant to keep up with the changes. I hope this content energizes you to do so.
 
 
   socialIcons:
