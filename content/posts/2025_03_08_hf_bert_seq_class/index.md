@@ -58,7 +58,7 @@ The three stages for sequence classification with BERT are as follows: stage 1: 
 
 To efficiently run this code, please check [sequence_classification.ipynb](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.ipynb) or [sequence_classification.py](https://github.com/roldanjorge/posts/blob/main/hf_bert_seq_class/sequence_classification.py). If you want to run it on your machine, install the [transformers](https://huggingface.co/docs/transformers/en/installation) and [torch](https://pytorch.org/get-started/locally/#linux-pip) packages.
 
-For a detailed guide on how to install packages on a Conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/1_setting_up_a_conda_env/index).
+For a detailed guide on how to install packages on a Conda environment, please check this article: [Setting up a Conda environment](https://www.roldanjorge.com/posts/2025_02_22_setting_up_a_conda_env/).
 
 <details>
   <summary>Show Code</summary>
