@@ -54,7 +54,7 @@ params:
     disableHLJS: true
 
   label:
-    text: "Jorge Roldan"
+    text: "Home"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -76,14 +76,19 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Jorge Roldan"
-    Content: > 
-        I am a Machine Learning engineer with an interest in NLP, Large Language Models, and building robust and scalable GenAI products.
-        I have a Masters of Science in Computer Science from NYU - Courant Institute of Mathematical Sciences. 
-        I also studied Mechanical Engineering and Computer Science at The City College of New York's Grove School of Engineering.
+    Content: >
 
+      > - I am a machine learning engineer. I care about building safe, robust, and awesome AI-powered tools, applications, and services. 
 
+      > - I have an M.S. in Computer Science with a focus on Machine Learning from New York University — [Courant Institute of Mathematical Sciences](https://cs.nyu.edu/home/index.html).
+      
+      > - I also studied Computer Science and Mechanical Engineering at The City College of New York - [Grove School of Engineering](https://www.ccny.cuny.edu/engineering).
 
-        [🔋 Pilas Newsletter](http://www.roldanjorge.com/categories/newsletter/)
+      > - My interests lie at the intersection of Mathematics, Machine Learning, and Software Engineering. 
+
+      > - I am originally from Santa Rosa de Osos, Colombia 🇨🇴 and currently living in New York City 🗽
+
+      > - Check out my newsletter at [🔋 Pilas Newsletter](http://www.roldanjorge.com/categories/newsletter/)
 
   socialIcons:
     - name: x
