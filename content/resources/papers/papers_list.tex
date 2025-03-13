@@ -2,28 +2,16 @@
 \usepackage[a4paper,margin=1in]{geometry} % Wider margins
 \usepackage{enumitem} % Better list formatting
 
-% Load IEEE style and bibliography file (enable 'citations' for \usebibentry)
+% Load IEEE style and bibliography file
 \usepackage[style=ieee,citestyle=numeric-comp]{biblatex}
 \addbibresource{papers.bib}
 
-% Allow direct citation extraction
-\DeclareCiteCommand{\customcite}
-  {}
-  {\printnames{author}}
-  {\multicitedelim}
-  {}
-
-% Define custom command to format paper info
-\newcommand{\printpaper}[1]{%
-    \nocite{#1}%
-    \begin{itemize}[left=0pt, label=•] % Main bullet as dash
-        \item \textbf{\citefield{#1}{title}}
-        \begin{itemize}[left=1.5em, label=-] % Indented bullets
-            \item \textbf{author:} \customcite{#1}
-            \item \textbf{year:} \citefield{#1}{year}
-            \item \textbf{url:} \citefield{#1}{url}
-        \end{itemize}
-    \end{itemize}
+% Define custom command to print a single paper's bibliography entry
+\newcommand{\printpaperbib}[1]{%
+  \begin{refsection} % Start a new reference section
+    \nocite{#1}  % Add only the specified paper to the bibliography
+    \printbibliography[heading=none]  % Print only the cited paper
+  \end{refsection}
 }
 
 \begin{document}
@@ -33,13 +21,19 @@
 \date{}
 
 \maketitle
+\section*{2025}
+\printpaperbib{jiang2025tokenefficientlongvideounderstanding}
 
-\section*{Papers}
+\section*{2023}
 
-% Example calls to custom command
-\printpaper{example2023}
-\printpaper{another2022}
-\printpaper{jiang2025tokenefficientlongvideounderstanding}
+% Print the bibliography for a single paper
+\printpaperbib{example2023}
+
+
+\section*{2022}
+% You can add other papers here with similar commands
+% Print the bibliography for another specific paper
+\printpaperbib{another2022}
 
 \end{document}
 
