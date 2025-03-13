@@ -1,0 +1,31 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage[backend=biber,style=ieee,sorting=ynt]{biblatex}
+
+% Import the bibliography file
+\addbibresource{papers.bib}
+
+\title{List of Papers}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+% 2025 Section
+\begin{refsection}
+    \nocite{john2025deep}  % Manually add all entries for 2025
+    \printbibliography[heading=subbibliography, title={2025}]
+\end{refsection}
+
+% 2024 Section
+\begin{refsection}
+    \nocite{alice2024transformer}  % Manually add all entries for 2024
+    \printbibliography[heading=subbibliography, title={2024}]
+\end{refsection}
+
+\end{document}
