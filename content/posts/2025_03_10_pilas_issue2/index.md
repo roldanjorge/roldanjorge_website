@@ -13,6 +13,7 @@ categories: "newsletter"
 - [^machines_of_loving_grace] 
 
 # Protocols not platforms
+[^protocols_not_platforms]
 
 # Google releases Gemma 3
 - [Gemma 3 Technical Report](https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf) 
@@ -32,6 +33,9 @@ categories: "newsletter"
 # How i use llms - Andrej Karpathy 
 - [^how_i_use_llms] 
 
+
+# OpenAI's New tools for building agents 
+[^openai_agent_tools] 
 
 
 
@@ -62,4 +66,7 @@ categories: "newsletter"
 [^machines_of_loving_grace]: D. Amodei, “Dario Amodei — Machines of Loving Grace.” Accessed: Mar. 12, 2025. [Online]. Available: https://darioamodei.com/machines-of-loving-grace
 
 
-[^protocols_not_platforms] “Protocols, Not Platforms: A Technological Approach to Free Speech,” Knight First Amendment Institute. Accessed: Mar. 12, 2025. [Online]. Available: http://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech
+[^protocols_not_platforms]: “Protocols, Not Platforms: A Technological Approach to Free Speech,” Knight First Amendment Institute. Accessed: Mar. 12, 2025. [Online]. Available: http://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech
+
+
+[^openai_agent_tools]: “New tools for building agents.” Accessed: Mar. 12, 2025. [Online]. Available: https://openai.com/index/new-tools-for-building-agents/
