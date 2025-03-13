@@ -6,10 +6,11 @@ layout: "pilas"
 categories: "newsletter"
 ---
 
+# Signal's President Meredith Whittaker warns about the security risks of AI Agents
+- [^agent_risks]
+
 # Google releases Gemma 3
-## Resources
 - [Gemma 3 Technical Report](https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf) 
-- 
 
 [^gemma_technical_report]
 [^gemma3_developer_guide]
@@ -19,7 +20,18 @@ categories: "newsletter"
 # Token-Efficient Long Video Understanding for Multimodal LLMs
 - ref [^video_understanding]
 
+# MCP - Model context Protocol
+-  [^mcp]
+
+
+# How i use llms - Andrej Karpathy 
+- [^how_i_use_llms] 
+
+
+
 # References
+[^agent_risks]: SXSW, The State of Personal Online Security and Confidentiality | SXSW LIVE, (Mar. 07, 2025). Accessed: Mar. 12, 2025. [Online Video]. Available: https://www.youtube.com/watch?v=AyH7zoP-JOg
+
 
 
 [^video_understanding]: J. Jiang et al., “Token-Efficient Long Video Understanding for Multimodal LLMs,” Mar. 06, 2025, arXiv: arXiv:2503.04130. doi: 10.48550/arXiv.2503.04130.
@@ -32,3 +44,9 @@ categories: "newsletter"
 [^gemma3_developer_guide]: “Introducing Gemma 3: The Developer Guide- Google Developers Blog.” Accessed: Mar. 12, 2025. [Online]. Available: https://developers.googleblog.com/en/introducing-gemma3/
 
 [^gemma_announcement]:“Introducing Gemma 3: The most capable model you can run on a single GPU or TPU,” Google. Accessed: Mar. 12, 2025. [Online]. Available: https://blog.google/technology/developers/gemma-3/
+
+
+[^mcp]: “Introducing the Model Context Protocol.” Accessed: Mar. 12, 2025. [Online]. Available: https://www.anthropic.com/news/model-context-protocol
+
+
+[^how_i_use_llms]: Andrej Karpathy, How I use LLMs, (Feb. 27, 2025). Accessed: Mar. 12, 2025. [Online Video]. Available: https://www.youtube.com/watch?v=EWvNQjAaOHw
