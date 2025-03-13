@@ -16,11 +16,12 @@
 % Define custom command to format paper info
 \newcommand{\printpaper}[1]{%
     \nocite{#1}%
-    \begin{itemize}[left=0pt, label=--] % Main bullet as dash
+    \begin{itemize}[left=0pt, label=•] % Main bullet as dash
         \item \textbf{\citefield{#1}{title}}
-        \begin{itemize}[left=1.5em, label=•] % Indented bullets
-            \item \textbf{Author(s):} \customcite{#1}
-            \item \textbf{Year:} \citefield{#1}{year}
+        \begin{itemize}[left=1.5em, label=-] % Indented bullets
+            \item \textbf{author:} \customcite{#1}
+            \item \textbf{year:} \citefield{#1}{year}
+            \item \textbf{url:} \citefield{#1}{url}
         \end{itemize}
     \end{itemize}
 }
