@@ -9,6 +9,11 @@ categories: "newsletter"
 # Signal's President Meredith Whittaker warns about the security risks of AI Agents
 - [^agent_risks]
 
+# Machines of Loving Grace 
+- [^machines_of_loving_grace] 
+
+# Protocols not platforms
+
 # Google releases Gemma 3
 - [Gemma 3 Technical Report](https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf) 
 
@@ -26,6 +31,8 @@ categories: "newsletter"
 
 # How i use llms - Andrej Karpathy 
 - [^how_i_use_llms] 
+
+
 
 
 
@@ -50,3 +57,9 @@ categories: "newsletter"
 
 
 [^how_i_use_llms]: Andrej Karpathy, How I use LLMs, (Feb. 27, 2025). Accessed: Mar. 12, 2025. [Online Video]. Available: https://www.youtube.com/watch?v=EWvNQjAaOHw
+
+
+[^machines_of_loving_grace]: D. Amodei, “Dario Amodei — Machines of Loving Grace.” Accessed: Mar. 12, 2025. [Online]. Available: https://darioamodei.com/machines-of-loving-grace
+
+
+[^protocols_not_platforms] “Protocols, Not Platforms: A Technological Approach to Free Speech,” Knight First Amendment Institute. Accessed: Mar. 12, 2025. [Online]. Available: http://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech
