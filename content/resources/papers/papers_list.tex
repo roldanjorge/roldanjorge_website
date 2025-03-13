@@ -1,33 +1,36 @@
 \documentclass[12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{geometry}
-\geometry{margin=1in}
-\usepackage{hyperref}
-\usepackage[backend=biber,style=ieee,sorting=ynt]{biblatex}
+\usepackage[a4paper,margin=1in]{geometry} % Wider margins
+\usepackage{enumitem} % Better list formatting
 
-% Import the bibliography file
+% Load IEEE style and bibliography file
+\usepackage[style=ieee]{biblatex}
 \addbibresource{papers.bib}
 
-\title{List of Papers}
-\author{}
-\date{\today}
+% Define custom command to format paper info
+\newcommand{\printpaper}[1]{%
+    \nocite{#1}%
+    \begin{itemize}[left=0pt, label=•] % Main bullet as dash
+        \item \textbf{\citefield{#1}{title}}
+        \begin{itemize}[left=1.5em, label=-] % Indented bullets
+            \item \textbf{Author(s):} \citefield{#1}{author}
+            \item \textbf{Year:} \citefield{#1}{year}
+        \end{itemize}
+    \end{itemize}
+}
 
 \begin{document}
 
+\title{\Large My Paper Collection}
+\author{}
+\date{}
+
 \maketitle
 
-% 2025 Section
-\begin{refsection}
-    \nocite{john2025deep}  % Manually add all entries for 2025
-    \nocite{jiang2025tokenefficientlongvideounderstanding}
-    \printbibliography[heading=subbibliography, title={2025}]
-\end{refsection}
+\section*{Papers}
 
-% 2024 Section
-\begin{refsection}
-    \nocite{alice2024transformer}  % Manually add all entries for 2024
-    \nocite{openai2024gpt4technicalreport}
-    \printbibliography[heading=subbibliography, title={2024}]
-\end{refsection}
+% Example calls to custom command
+\printpaper{example2023}
+\printpaper{another2022}
+\printpaper{jiang2025tokenefficientlongvideounderstanding}
 
 \end{document}
