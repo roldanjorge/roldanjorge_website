@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[a4paper,margin=1in]{geometry} % Wider margins
 \usepackage{enumitem} % Better list formatting
+\usepackage{tcolorbox}
 
 % Load IEEE style and bibliography file
 \usepackage[style=ieee,citestyle=numeric-comp]{biblatex}
@@ -42,10 +43,12 @@
 % ------------------------------------------------
 \subsection{January}
 % ------------------------------------------------
+% \begin{tcolorbox} [colback=blue!5!white,colframe=blue!75!black]
 \begin{refsection}
     \nocite{deepseek-ai_deepseek-r1_2025}
     \printbibliography[heading=none]
 \end{refsection}
+% \end{tcolorbox}
 
 
 \newpage
