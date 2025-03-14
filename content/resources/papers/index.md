@@ -4,7 +4,7 @@ layout: "papers"
 ---
 
 # Milestones
-Curation of milestone papers was based on [Hannibal046/Awesome-LLM: Awesome-LLM: a curated list of Large Language Model](https://github.com/Hannibal046/Awesome-LLM) [^awesome_llms] .
+Curation of milestone papers was based on and inspired by [Hannibal046/Awesome-LLM: Awesome-LLM: a curated list of Large Language Model](https://github.com/Hannibal046/Awesome-LLM) [^awesome_llms] .
 
 {{< pdf "./milestones/milestones.pdf" >}}
 
