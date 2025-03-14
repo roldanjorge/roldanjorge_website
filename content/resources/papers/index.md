@@ -3,6 +3,6 @@ title: "Papers"
 layout: "papers"
 ---
 
-# Papers timeline
+# All 
 
-{{< pdf "./papers_timeline.pdf" >}}
+{{< pdf "./all/all.pdf" >}}
