@@ -4,21 +4,23 @@
 
 % Load IEEE style and bibliography file
 \usepackage[style=ieee,citestyle=numeric-comp]{biblatex}
+\usepackage[hidelinks]{hyperref}
 \addbibresource{papers.bib}
 
 % Define custom command to print a single paper's bibliography entry
-\newcommand{\printpaperbib}[1]{%
-  \begin{refsection} % Start a new reference section
-    \nocite{#1}  % Add only the specified paper to the bibliography
-    \printbibliography[heading=none]  % Print only the cited paper
-  \end{refsection}
-}
+% \newcommand{\printpaperbib}[1]{%
+%   \begin{refsection} % Start a new reference section
+%     \nocite{#1}  % Add only the specified paper to the bibliography
+%     \printbibliography[heading=none]  % Print only the cited paper
+%   \end{refsection}
+% }
 
 \begin{document}
 
 \title{\Large Papers timeline}
 \author{JR}
 \date{\today}
+
 \maketitle
 
 \tableofcontents
@@ -36,18 +38,18 @@
     \printbibliography[heading=none]
 \end{refsection}
 
-% ------------------------------------------------
-\subsection{February}
-% ------------------------------------------------
+% % ------------------------------------------------
+% \subsection{February}
+% % ------------------------------------------------
 
 
-% ------------------------------------------------
-\subsection{January}
-% ------------------------------------------------
+% % ------------------------------------------------
+% \subsection{January}
+% % ------------------------------------------------
 
-% ================================================
-\section{2024}
-% ================================================
+% % ================================================
+% \section{2024}
+% % ================================================
 % % ------------------------------------------------
 % \subsection{May}
 % % ------------------------------------------------
@@ -68,18 +70,18 @@
 % \subsection{January}
 % % ------------------------------------------------
 
-% ================================================
-\section{2023}
-% ================================================
+% % ================================================
+% \section{2023}
+% % ================================================
 
 
-% ================================================
-\section{2022}
-% ================================================
+% % ================================================
+% \section{2022}
+% % ================================================
 
-% ================================================
-\section{2019}
-% ================================================
+% % ================================================
+% \section{2019}
+% % ================================================
 
 % ================================================
 \section{2018}
