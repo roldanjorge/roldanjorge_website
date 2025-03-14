@@ -1,6 +1,6 @@
 ---
 author: "Jorge Roldan"
-date: '2025-03-17'
+date: '2025-03-13'
 title: '🔋 Pilas: Issue 2'
 layout: "pilas"
 categories: "newsletter"
