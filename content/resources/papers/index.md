@@ -3,11 +3,15 @@ title: "Papers"
 layout: "papers"
 ---
 
-# Papers timeline
-
-Curation of milestones papers was based on [Hannibal046/Awesome-LLM: Awesome-LLM: a curated list of Large Language Model](https://github.com/Hannibal046/Awesome-LLM) [^awesome_llms] .
+# Milestones
+Curation of milestone papers was based on and inspired by [Hannibal046/Awesome-LLM: Awesome-LLM: a curated list of Large Language Model](https://github.com/Hannibal046/Awesome-LLM) [^awesome_llms] .
 
 {{< pdf "./milestones/milestones.pdf" >}}
+
+# All 
+Collection of all the papers that I have read, plan to read, or that I consider relevant.
+
+{{< pdf "./all/all.pdf" >}}
 
 
 # References
