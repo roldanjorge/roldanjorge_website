@@ -3,6 +3,6 @@ title: "Papers"
 layout: "papers"
 ---
 
-# Work in progress 🏗️
+# Papers timeline
 
 {{< pdf "./papers_timeline.pdf" >}}
