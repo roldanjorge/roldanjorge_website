@@ -8,13 +8,7 @@ draft: true
 ---
 
 # Signal's President Meredith Whittaker warns about the security risks of AI Agents
-- [^agent_risks]
-
-# Machines of Loving Grace 
-- [^machines_of_loving_grace] 
-
-# Protocols not platforms
-[^protocols_not_platforms]
+Signal's president Meredith Whittaker raised concerns about the imminent dangers that AI agents pose to privacy and security of devices. Meredith argueed that granting AI agents access to multiple crucial services, apps,  and data in our devices could eventually threaten "to break blood brain barrier between the application, and the Operating Sytem (OS) layer potentially undermining the privacy of secure applications such as Signal [^agent_risks] .  
 
 # Google releases Gemma 3
 - [Gemma 3 Technical Report](https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf) 
@@ -23,21 +17,26 @@ draft: true
 [^gemma3_developer_guide]
 [^gemma_announcement]
 
+# OpenAI's New tools for building agents 
+[^openai_agent_tools] 
 
-# Token-Efficient Long Video Understanding for Multimodal LLMs
-- ref [^video_understanding]
+
+# Machines of Loving Grace 
+- [^machines_of_loving_grace] 
+
+# Protocols not platforms
+[^protocols_not_platforms]
 
 # MCP - Model context Protocol
 -  [^mcp]
 
 
+# Token-Efficient Long Video Understanding for Multimodal LLMs
+- ref [^video_understanding]
+
+
 # How i use llms - Andrej Karpathy 
 - [^how_i_use_llms] 
-
-
-# OpenAI's New tools for building agents 
-[^openai_agent_tools] 
-
 
 
 
