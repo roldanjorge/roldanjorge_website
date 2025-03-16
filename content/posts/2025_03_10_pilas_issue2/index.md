@@ -20,15 +20,18 @@ Signal's president Meredith Whittaker raised concerns about the imminent dangers
 # OpenAI's New tools for building agents 
 [^openai_agent_tools] 
 
+# MCP - Model context Protocol
+-  [^mcp]
 
-# Machines of Loving Grace 
-- [^machines_of_loving_grace] 
+# Manus
+- [^manus]
+
 
 # Protocols not platforms
 [^protocols_not_platforms]
 
-# MCP - Model context Protocol
--  [^mcp]
+# Machines of Loving Grace 
+- [^machines_of_loving_grace] 
 
 
 # Token-Efficient Long Video Understanding for Multimodal LLMs
