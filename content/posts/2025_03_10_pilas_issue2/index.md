@@ -8,19 +8,18 @@ draft: true
 ---
 
 # Signal's President Meredith Whittaker warns about the security risks of AI Agents
-Signal's president Meredith Whittaker raised concerns about the imminent dangers that AI agents pose to privacy and security of devices. Meredith argueed that granting AI agents access to multiple crucial services, apps,  and data in our devices could eventually threaten "to break blood brain barrier between the application, and the Operating Sytem (OS) layer" potentially undermining the privacy of secure applications such as Signal [^agent_risks] .  
+Signal's president Meredith Whittaker raised concerns about the imminent dangers that AI agents pose to privacy and security of devices. Meredith argueed that granting AI agents access to multiple crucial services, apps,  and data in our devices could eventually threaten "to break the blood brain barrier between the application, and the Operating Sytem (OS) layer" potentially undermining the privacy of secure applications such as Signal [^agent_risks] .  
 
 # Google releases Gemma 3
-Google released Gemma 3 on March 12, 2025. This lightweight model was designed to run on a single Graphical Processing Unit (GPU) or Tensor Processing Unit (GPU) which means they can potentially run locally in a device and offers support of more than 140 languages. These are some highlights  [^gemma_announcement] [^gemma_technical_report] [^gemma3_developer_guide] .
-
+Google released Gemma 3 on March 12, 2025. This lightweight model was designed to run on a single Graphical Processing Unit (GPU) or Tensor Processing Unit (GPU) which means they can potentially run locally in a device. It offers support of more than 140 languages. These are some highlights  [^gemma_announcement] [^gemma_technical_report] [^gemma3_developer_guide] .
 
 
 {{< figure id="gemma3_1" src="./gemma3_1.png" alt="gemma3_1" caption="Gemma 3 sizes and capabilities"  >}}
 
--  Gemma 3 comes in 4 sizes: 1B, 4B, 12B, and 27B. Context length, languages, and input modalities are shown in {{< figref "gemma3_1" >}}.
--   Gemma 3 still uses a decoder-only transformer architecture leveraging Grouped-Query Attention [^gqa] with post-norm and pre-norm with RMSNorm [^rmsnorm] . Starting with a local layer, it uses a pattern of 5 local layers for every global layer. Gemma 3 uses a 400M vision encoder based on SigLIP encoder [^sigmoid_loss_language_image] . 
-- The amount of tokens in Trillions (T) for the pre-training of the versions 1B, 4B, 12B, 27B was 2T, 4T, 12T, and 14T, respectively. Gemma 3 uses a SentencePiece otkenizer and leverages distillation. 
--  Instruction tuning for Gemma 3 involved using knowledge distillation [^agarwal_distill] and Reinforcement Learning (RL) finetuning techniques based on BOND [^sessa_bond], WARM [^rame_warm], and WARP [^rame_warp] .
+-  **Sizes**: Gemma 3 comes in 4 sizes: 1B, 4B, 12B, and 27B. Context length, languages, and input modalities are shown in {{< figref "gemma3_1" >}}.
+-   **Architecture**: Gemma 3 still uses a decoder-only transformer architecture leveraging Grouped-Query Attention [^gqa] with post-norm and pre-norm with RMSNorm [^rmsnorm] . Starting with a local layer, it uses a pattern of 5 local layers for every global layer. Gemma 3 uses a 400M vision encoder based on SigLIP encoder [^sigmoid_loss_language_image] . 
+- **Pre-training**: The amount of tokens in Trillions (T) for the pre-training of the versions 1B, 4B, 12B, 27B was 2T, 4T, 12T, and 14T, respectively. Gemma 3 uses a SentencePiece tokenizer and leverages distillation. 
+-  **Post-training**: Instruction tuning for Gemma 3 involved using knowledge distillation [^agarwal_distill] and Reinforcement Learning (RL) finetuning techniques based on BOND [^sessa_bond], WARM [^rame_warm], and WARP [^rame_warp] .
 
 
 {{< figure id="gemma3_2" src="./gemma3_2.png" alt="gemma3_2" caption="Gemma 3 Benchmarking results"  >}}
@@ -28,10 +27,15 @@ Google released Gemma 3 on March 12, 2025. This lightweight model was designed t
 - Gemma 3 ranks very well for its relatively small size compared to other models achieving a 9th spot with a 1338 score in Chatbot Arena [^chiang_chatbot_arena] as of March 8th 2025.  Other benchmark results are shown in {{< figref "gemma3_2" >}}. 
 
 
-# OpenAI's New tools for building agents 
-[^openai_agent_tools] 
+# OpenAI announces new tools for building AI agents 
+OpenAI released on March 11th, 2025 a set of very powerful tools for building agents. The tools encompass  new [Responses API](https://platform.openai.com/docs/quickstart?api-mode=responses), built-in tools for search, and computer use, a new agents sdk, and other observability tools [^openai_agent_tools] .
 
+{{< figure id="openai_agent_tools" src="./openai_agent_tools.png" alt="openai_agent_tools" caption="OpenAI new tools to build AI Agents"  >}}
 
+- **Response API**: New API primitive combining chat-completions with tool-use capabilities of the Assistants API and will support web search, file search, and computer use.
+- **Built-in tools**: With web-search, developers can make sure model responses are relevant and up-to-date and can also retrieve information for documents using the file-search tool. Finally, computer use empowers developers to use [Computer-Using Agent (CUA)](https://openai.com/index/computer-using-agent/) to create very power agents.
+- **Agents SDK**: Allows developer to orchestrate workflows by allowing easy configuratable LLMs with instructions and built-in tools. Includes mechanisms to transfer control between agents, provides guardrails, and tracing and observability tools. 
+ 
 
 # MCP - Model context Protocol
 -  [^mcp]
