@@ -38,7 +38,7 @@ OpenAI released on March 11th, 2025, a set of very powerful tools for building a
 
 
 # Anthropic's new open protocol to connect LLMs with data sources and tools
-- On Nov 25th, 2025, Anthropic announced a new open protocol that empowers developers to integrate LLMs with data sources and other tools. This protocol has gained popularity because of its power and simplicity [^mcp] [^mcp_intro] . The architecture consists of 5 components: MCP hosts, MCP clients, MCP servers, local data sources, and remote services. For a detailed over, visit [MCP's get started guide](https://modelcontextprotocol.io/introduction)
+- On Nov 25th, 2025, Anthropic announced a new open protocol that empowers developers to integrate LLMs with data sources and other tools. This protocol has gained popularity because of its power and simplicity [^mcp] [^mcp_intro] . The architecture consists of 5 components: MCP hosts, MCP clients, MCP servers, local data sources, and remote services. For a detailed overview, visit [MCP's get started guide](https://modelcontextprotocol.io/introduction)
 
 {{< figure id="mcp_architecture" src="./mcp_architecture.png" alt="mcp_architecture" caption="MCP Architecture "  >}}
 
