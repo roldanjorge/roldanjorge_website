@@ -59,7 +59,6 @@ OpenAI released on March 11th, 2025 a set of very powerful tools for building ag
 - [^how_i_use_llms] 
 
 
-
 # References
 [^agent_risks]: SXSW, The State of Personal Online Security and Confidentiality | SXSW LIVE, (Mar. 07, 2025). Accessed: Mar. 12, 2025. [Online Video]. Available: https://www.youtube.com/watch?v=AyH7zoP-JOg
 
