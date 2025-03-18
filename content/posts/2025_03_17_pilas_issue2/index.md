@@ -1,6 +1,6 @@
 ---
 author: "Jorge Roldan"
-date: '2025-03-13'
+date: '2025-03-17'
 title: '🔋 Pilas: Issue 2'
 layout: "pilas"
 categories: "newsletter"
@@ -37,31 +37,17 @@ OpenAI released on March 11th, 2025 a set of very powerful tools for building ag
 - **Agents SDK**: Allows developer to orchestrate workflows by allowing easy configuratable LLMs with instructions and built-in tools. Includes mechanisms to transfer control between agents, provides guardrails, and tracing and observability tools. 
  
 
-# MCP - Model context Protocol
--  [^mcp]
+# Anthropic's new open protocol to connect LLMs with data sources and tools
+- Back in Nov 25th, 2025, Anthropic announced a new open protocol that empowers developers to integrate LLMs with data sources, and other tools. This protocol has gained popularity because of its power and simplicity [^mcp] [^mcp_intro] . The architecture consists of 5 components: MCP hosts, MCP clients, MCP servers, local data sources, and remote services. For a detailed over, visit [MCP's get started guide](https://modelcontextprotocol.io/introduction)
 
-# Manus
-- [^manus]
-
-
-# Protocols not platforms
-[^protocols_not_platforms]
-
-# Machines of Loving Grace 
-- [^machines_of_loving_grace] 
-
-
-# Token-Efficient Long Video Understanding for Multimodal LLMs
-- ref [^video_understanding]
-
+{{< figure id="mcp_architecture" src="./mcp_architecture.png" alt="mcp_architecture" caption="MCP Architecture "  >}}
 
 # How i use llms - Andrej Karpathy 
-- [^how_i_use_llms] 
+It's always inspiring, and energizing to watch Andrej Karpathy's lectures. This time, Andrej shares how he leverages LLMs in [^how_i_use_llms] 
 
 
 # References
 [^agent_risks]: SXSW, The State of Personal Online Security and Confidentiality | SXSW LIVE, (Mar. 07, 2025). Accessed: Mar. 12, 2025. [Online Video]. Available: https://www.youtube.com/watch?v=AyH7zoP-JOg
-
 
 
 [^video_understanding]: J. Jiang et al., “Token-Efficient Long Video Understanding for Multimodal LLMs,” Mar. 06, 2025, arXiv: arXiv:2503.04130. doi: 10.48550/arXiv.2503.04130.
@@ -108,3 +94,6 @@ OpenAI released on March 11th, 2025 a set of very powerful tools for building ag
 
 
 [^chiang_chatbot_arena]: W.-L. Chiang et al., “Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference,” Mar. 07, 2024, arXiv: arXiv:2403.04132. doi: 10.48550/arXiv.2403.04132.
+
+
+[^mcp_intro]: “Introduction,” Model Context Protocol. Accessed: Mar. 17, 2025. [Online]. Available: https://modelcontextprotocol.io/introduction
