@@ -17,7 +17,7 @@ Google released Gemma 3 on March 12, 2025. This lightweight model was designed t
 
 {{< figure id="gemma3_1" src="./gemma3_1.png" alt="gemma3_1" caption="Gemma 3 sizes and capabilities"  >}}
 
--  Gemma 3 comes in 4 sizes: 1B, 4B, 12B, and 27B. Context length, languages, and input modalities are shown in {{< figref "gemma3_1" >}}
+-  Gemma 3 comes in 4 sizes: 1B, 4B, 12B, and 27B. Context length, languages, and input modalities are shown in {{< figref "gemma3_1" >}}.
 -   Gemma 3 still uses a decoder-only transformer architecture leveraging Grouped-Query Attention [^gqa] with post-norm and pre-norm with RMSNorm [^rmsnorm] . Starting with a local layer, it uses a pattern of 5 local layers for every global layer. Gemma 3 uses a 400M vision encoder based on SigLIP encoder [^sigmoid_loss_language_image] . 
 - The amount of tokens in Trillions (T) for the pre-training of the versions 1B, 4B, 12B, 27B was 2T, 4T, 12T, and 14T, respectively. Gemma 3 uses a SentencePiece otkenizer and leverages distillation. 
 -  Instruction tuning for Gemma 3 involved using knowledge distillation [^agarwal_distill] and Reinforcement Learning (RL) finetuning techniques based on BOND [^sessa_bond], WARM [^rame_warm], and WARP [^rame_warp] .
@@ -25,7 +25,7 @@ Google released Gemma 3 on March 12, 2025. This lightweight model was designed t
 
 {{< figure id="gemma3_2" src="./gemma3_2.png" alt="gemma3_2" caption="Gemma 3 Benchmarking results"  >}}
 
-- Gemma 3 ranks very well for its relatively small size compared to other models. 
+- Gemma 3 ranks very well for its relatively small size compared to other models achieving a 9th spot with a 1338 score in Chatbot Arena [^chiang_chatbot_arena] as of March 8th 2025.  Other benchmark results are shown in {{< figref "gemma3_2" >}}. 
 
 
 # OpenAI's New tools for building agents 
@@ -102,3 +102,6 @@ Google released Gemma 3 on March 12, 2025. This lightweight model was designed t
 [^rame_warm]: A. Ramé et al., “WARM: On the Benefits of Weight Averaged Reward Models,” Jan. 22, 2024, arXiv: arXiv:2401.12187. doi: 10.48550/arXiv.2401.12187.
 
 [^sessa_bond]: P. G. Sessa et al., “BOND: Aligning LLMs with Best-of-N Distillation,” Jul. 19, 2024, arXiv: arXiv:2407.14622. doi: 10.48550/arXiv.2407.14622.
+
+
+[^chiang_chatbot_arena]: W.-L. Chiang et al., “Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference,” Mar. 07, 2024, arXiv: arXiv:2403.04132. doi: 10.48550/arXiv.2403.04132.
