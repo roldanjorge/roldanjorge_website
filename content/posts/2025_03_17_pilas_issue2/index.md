@@ -42,8 +42,8 @@ OpenAI released on March 11th, 2025 a set of very powerful tools for building ag
 
 {{< figure id="mcp_architecture" src="./mcp_architecture.png" alt="mcp_architecture" caption="MCP Architecture "  >}}
 
-# How i use llms - Andrej Karpathy 
-It's always inspiring, and energizing to watch Andrej Karpathy's lectures. This time, Andrej shares how he leverages LLMs in [^how_i_use_llms] 
+# Andrej Karpathy shares how he uses LLMs 
+It's always inspiring, and energizing to watch Andrej Karpathy's lectures. This time, Andrej shares [how he leverages for day-to-day tasks](https://www.youtube.com/watch?v=EWvNQjAaOHw&t=147s) [^how_i_use_llms] . Some of the tools and services he covers are ChatGPT, Claude, Gemini, Cursor, NotebookLM, DALL-E, Sora, and many others.
 
 
 # References
