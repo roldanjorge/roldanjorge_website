@@ -18,7 +18,7 @@ Google released Gemma 3 on March 12th, 2025. This lightweight model runs on a si
 
 -  **Sizes**: Gemma 3 comes in 4 sizes: 1B, 4B, 12B, and 27B. Context length, languages, and input modalities are shown in {{< figref "gemma3_1" >}}.
 -   **Architecture**: Gemma 3 uses a decoder-only transformer architecture leveraging Grouped-Query Attention [^gqa] with post-norm and pre-norm with RMSNorm [^rmsnorm] . Starting with a local layer, it uses a pattern of 5 local layers for every global layer. Gemma 3 uses a 400M vision encoder based on SigLIP encoder [^sigmoid_loss_language_image] . 
-- **Pre-training**: The amount of tokens in Trillions (T) for the pre-training of versions 1B, 4B, 12B, and 27B was 2T, 4T, 12T, and 14T, respectively. Gemma 3 uses a SentencePiece tokenizer and leverages distillation. 
+- **Pre-training**: The amount of tokens in Trillions (T) for the pre-training of versions 1B, 4B, 12B, and 27B was 2T, 4T, 12T, and 14T, respectively. Gemma 3 also uses a SentencePiece tokenizer and leverages distillation. 
 -  **Post-training**: Instruction tuning for Gemma 3 involved using knowledge distillation [^agarwal_distill] and Reinforcement Learning (RL) finetuning techniques based on BOND [^sessa_bond], WARM [^rame_warm], and WARP [^rame_warp] .
 
 
