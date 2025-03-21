@@ -7,4 +7,27 @@ categories: "newsletter"
 draft: true
 ---
 
-# inp
+# Mistral releases new Model
+- Mistral Small 3.1
+
+
+# GTC March 2025 Highlights
+
+
+
+# Dynamo
+Open Source NVIDIA's inference tool 
+
+
+# BERTopic
+- An awesome tool for ... 
+- 
+- 
+
+
+
+# DeepSeek's innovative Techniques
+
+
+# Microsoft's Phi-4
+ 
