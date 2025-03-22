@@ -51,6 +51,7 @@ RSS(\beta) = (\pmb{y}  -  \pmb{X}\beta)^T(\pmb{y} - \pmb{X}\beta)
 \end{equation}
 $$
 
+{{< rawhtml >}}
 $$
 \begin{equation}
 %\label{rss_matrix_ext}
@@ -95,7 +96,7 @@ x_{N1} & \cdots & x_{N(p+1)} \\
 \right)
 \end{equation}
 $$
-
+{{< /rawhtml >}}
 
 - ✅
 
