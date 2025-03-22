@@ -17,16 +17,16 @@ Linear regression is represented by equation $\ref{lin_reg_eq}$ where $x^T = (x_
 
 $$
 \begin{equation} 
-% \label{lin_reg_eq}
+\label{lin_reg_eq}
 f(x) = \beta_0 + \sum^{p}_{j = 1} x_j \beta_j
 \end{equation}
 $$
 
-The least squares method is commonly used to determine the  parameters $\beta_j$'s  by minimizing the difference $y_i - f(x_i)$ for each of the points in the training dataset $(x_1, y_1), \dots, (x_N, y_N)$ as in equation $\ref{rss_1}$, where RSS stands for residual sum-of-squares.
+The least squares method is commonly used to determine the  parameters $\beta_j$'s  by minimizing the difference $y_i - f(x_i)$ for each of the points in the training dataset $(x_1, y_1), \dots, (x_N, y_N)$ as in equation $\eqref{rss_1}$, where RSS stands for residual sum-of-squares.
 
 $$
 \begin{equation}
-% \label{rss_1}
+\label{rss_1}
 RSS(\beta) = \sum_{i=1}^{N} (y_i - f(x_i))^2
 \end{equation}
 $$
@@ -35,7 +35,7 @@ Substituting $\ref{lin_reg_eq}$ into $\ref{rss_1}$ we obtain $\ref{rss_2}$
 
 $$
 \begin{equation}
-% \label{rss_2}
+\label{rss_2}
 RSS(\beta) = \sum_{i=1}^{N} (y_i - \beta_0 - \sum^{p}_{j = 1} X_j \beta_j )^2
 \end{equation}
 $$
@@ -46,7 +46,7 @@ We can represent  equation $\ref{rss_2}$  in matrix form by using all the sample
 
 $$
 \begin{equation}
-%\label{rss_matrix}
+\label{rss_matrix}
 RSS(\beta) = (\pmb{y}  -  \pmb{X}\beta)^T(\pmb{y} - \pmb{X}\beta)
 \end{equation}
 $$
@@ -54,7 +54,7 @@ $$
 {{< rawhtml >}}
 $$
 \begin{equation}
-%\label{rss_matrix_ext}
+\label{rss_matrix_ext}
 RSS(\beta) =
 \left(\left[ {\begin{array}{cc}
 y_{1}  \\
@@ -98,13 +98,12 @@ x_{N1} & \cdots & x_{N(p+1)} \\
 $$
 {{< /rawhtml >}}
 
-- ✅
 
-Now that we have equation $\ref{rss_matrix}$ in terms of $\pmb{X}$, $\pmb{y}$, and $\beta$. To find the value of $\beta$ that  minimizes RSS we take the derivative with respect to $\beta$, set it equal to zero and solve for $\beta$ as shown  next.
+Now that we have equation $\eqref{rss_matrix}$ in terms of $\pmb{X}$, $\pmb{y}$, and $\beta$. To find the value of $\beta$ that  minimizes RSS we take the derivative with respect to $\beta$, set it equal to zero and solve for $\beta$ as shown  next.
 
 $$
 \begin{equation}
-%\label{drdbeta}
+\label{drdbeta}
 \frac{\partial RSS}{\partial \beta} = -2 \pmb{X}^T(y - \pmb{X})
 \end{equation}
 $$
@@ -124,7 +123,7 @@ The solution would be equation $\ref{beta_opt}$. For more details on this deriva
 $$
 \begin{equation}
 \color{green}
-%\label{beta_opt}
+\label{beta_opt}
 \hat{\beta} = (\pmb{X^T} \pmb{X})^{-1} \pmb{X}^T  \pmb{y}
 \end{equation}
 $$
@@ -134,7 +133,7 @@ We can use $\hat{\beta}$   back in equation  $\ref{lin_reg_eq}$. We result with 
 
 $$
 \begin{equation}
-%\label{y_pred}
+\label{y_pred}
 \hat{y} = \pmb{X} \hat{\beta} = \pmb{X}
 (\pmb{X^T} \pmb{X})^{-1} \pmb{X}^T \pmb{y}
 \end{equation}
@@ -147,7 +146,6 @@ $$
 \end{equation}
 $$
 
-- ✅
 
 - Explain how to use previous equation with one input
 To determine the 
