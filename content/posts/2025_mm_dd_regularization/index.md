@@ -1,6 +1,6 @@
 ---
 author: "Jorge Roldan"
-date: '2025-03-08'
+date: '2025-03-23'
 title: 'Regularization'
 tags: ['regularization']
 categories: ['notes']
@@ -8,92 +8,105 @@ ShowToc: true
 ShowBreadCrumbs: true
 ---
 
-## Intro to Regularization and why it is important
+# Notation
+| Symbol         | Name                                   |
+| -------------- | -------------------------------------- |
+| $\textbf{X}^T$ | Input vector: $(X_1, X_2, \dots, X_p)$ |
+| $RSS$            | Residual sum of squares                |
+
+
+# Intro to Regularization and why it is important
 
 Linear regression is a foundational model in Statistics and Machine Learning. However, it has
 
-## Linear regression models  and Least squares
-Linear regression is represented by equation $\ref{lin_reg_eq}$ where $x^T = (x_1, x_2, \dots, x_p)$ is a vector with dimension p,  $y$ is a real-valued output, and the values for $\beta_j$'s  are the unknown parameters of the model. [1]
+[^the_elements_of_stat_learning_ch3]
+
+
+# Linear regression models  and Least squares
+Let's assume we have the following training data $(x_1, y_1), \dots, (x_N, y_N)$.
+Linear regression is represented by equation $\ref{lin_reg_eq}$ where $x^T = (x_1, x_2, \dots, x_p)$ is a vector with dimension $p$,  $y$ is a real-valued output, and the values for $\beta_j$'s  are the unknown parameters of the model. [1]
 
 $$
 \begin{equation} 
-\label{lin_reg_eq}
-f(x) = \beta_0 + \sum^{p}_{j = 1} x_j \beta_j
+    \label{lin_reg_eq}
+    f(x) = \beta_0 + \sum^{p}_{j = 1} x_j \beta_j
 \end{equation}
 $$
 
-The least squares method is commonly used to determine the  parameters $\beta_j$'s  by minimizing the difference $y_i - f(x_i)$ for each of the points in the training dataset $(x_1, y_1), \dots, (x_N, y_N)$ as in equation $\eqref{rss_1}$, where RSS stands for residual sum-of-squares.
+The least squares method is commonly used to determine the  parameters $\beta_j$'s  by minimizing the difference $y_i - f(x_i)$ for each of the points in the training dataset $(x_1, y_1), \dots, (x_N, y_N)$ as in equation $\eqref{rss_1}$, where the Residual sum-of-squares (RSS) is defined as: 
 
 $$
 \begin{equation}
-\label{rss_1}
-RSS(\beta) = \sum_{i=1}^{N} (y_i - f(x_i))^2
+    \label{rss_1}
+    RSS(\beta) = \sum_{i=1}^{N} (y_i - f(x_i))^2
 \end{equation}
 $$
 
-Substituting $\ref{lin_reg_eq}$ into $\ref{rss_1}$ we obtain $\ref{rss_2}$
+Substituting ($\ref{lin_reg_eq}$) into ($\ref{rss_1}$) we obtain ($\ref{rss_2}$):
 
 $$
 \begin{equation}
-\label{rss_2}
-RSS(\beta) = \sum_{i=1}^{N} (y_i - \beta_0 - \sum^{p}_{j = 1} X_j \beta_j )^2
+    \label{rss_2}
+    RSS(\beta) = \sum_{i=1}^{N} (y_i - \beta_0 - \sum^{p}_{j = 1} X_j \beta_j )^2
 \end{equation}
 $$
 
+
+{{< figure id="rss_visualization" src="./rss_visualization.png" alt="rss_visualization" caption="Visualization of RSS when."  footnote="[^the_elements_of_stat_learning_ch3]"  >}}
 
 
 We can represent  equation $\ref{rss_2}$  in matrix form by using all the samples in our training set at once. We stack all the $N$ inputs of $p+1$-dimensional $x_i$ vectors in our training data to create $\pmb{X}$, all the  $N$  $y_i$ outputs into  a $\pmb{y}$ vector, and the  $p + 1$ parameters into $\beta$ . Note that  the  first element $x_{i1}$  is  always a 1 which multiplies with $\beta_0$.  The matrix equation are shown in equation $\ref{rss_matrix}$ and the extended version on $\ref{rss_matrix_ext}$
 
 $$
 \begin{equation}
-\label{rss_matrix}
-RSS(\beta) = (\pmb{y}  -  \pmb{X}\beta)^T(\pmb{y} - \pmb{X}\beta)
+    \label{rss_matrix}
+    RSS(\beta) = (\pmb{y}  -  \pmb{X}\beta)^T(\pmb{y} - \pmb{X}\beta)
 \end{equation}
 $$
 
 {{< rawhtml >}}
 $$
 \begin{equation}
-\label{rss_matrix_ext}
-RSS(\beta) =
-\left(\left[ {\begin{array}{cc}
-y_{1}  \\
-\vdots \\
-y_{N}  \\
-\end{array} } \right] 
-- 
+    \label{rss_matrix_ext}
+    RSS(\beta) =
+    \left(\left[ {\begin{array}{cc}
+    y_{1}  \\
+    \vdots \\
+    y_{N}  \\
+    \end{array} } \right] 
+    - 
 
-\left[ {\begin{array}{cc}
-x_{11} & \cdots & x_{1(p+1)} \\
-\vdots \\
-x_{N1} & \cdots & x_{N(p+1)} \\
-\end{array} } \right]
+    \left[ {\begin{array}{cc}
+    x_{11} & \cdots & x_{1(p+1)} \\
+    \vdots \\
+    x_{N1} & \cdots & x_{N(p+1)} \\
+    \end{array} } \right]
 
-\left[ {\begin{array}{cc}
-\beta_{0}  \\
-\vdots \\
-\beta_{p}  \\
-\end{array} } \right] 
-\right)^T
-\left(\left[ {\begin{array}{cc}
-y_{1}  \\
-\vdots \\
-y_{N}  \\
-\end{array} } \right] 
-- 
+    \left[ {\begin{array}{cc}
+    \beta_{0}  \\
+    \vdots \\
+    \beta_{p}  \\
+    \end{array} } \right] 
+    \right)^T
+    \left(\left[ {\begin{array}{cc}
+    y_{1}  \\
+    \vdots \\
+    y_{N}  \\
+    \end{array} } \right] 
+    - 
 
-\left[ {\begin{array}{cc}
-x_{11} & \cdots & x_{1(p+1)} \\
-\vdots \\
-x_{N1} & \cdots & x_{N(p+1)} \\
-\end{array} } \right]
+    \left[ {\begin{array}{cc}
+    x_{11} & \cdots & x_{1(p+1)} \\
+    \vdots \\
+    x_{N1} & \cdots & x_{N(p+1)} \\
+    \end{array} } \right]
 
-\left[ {\begin{array}{cc}
-\beta_{0}  \\
-\vdots \\
-\beta_{p}  \\
-\end{array} } \right] 
-\right)
+    \left[ {\begin{array}{cc}
+    \beta_{0}  \\
+    \vdots \\
+    \beta_{p}  \\
+    \end{array} } \right] 
+    \right)
 \end{equation}
 $$
 {{< /rawhtml >}}
@@ -118,7 +131,7 @@ $$
 \pmb{X^T} (\pmb{y}  - \pmb{X}\beta) = 0
 \end{equation}
 $$
-The solution would be equation $\ref{beta_opt}$. For more details on this derivation, please refer to [1].  
+The solution would be equation $\ref{beta_opt}$. For more details on this derivation, please refer to [^the_elements_of_stat_learning_ch3].  
 
 $$
 \begin{equation}
@@ -150,7 +163,7 @@ $$
 - Explain how to use previous equation with one input
 To determine the 
 
-## Ridge
+# Ridge
 - ridge (3.41)
 
 $$
@@ -192,7 +205,7 @@ $$
 $$
 
 
-## The lasso
+# The lasso
 $$
 \begin{equation}
 \hat{\beta}^{lasso} = argmin_\beta  \sum_{i = 1}^{N} \left(y_i - \beta_0 - \sum_{j = 1}^{p} x_{ij} \beta_j \right)^2
@@ -218,7 +231,7 @@ $$
 - Add and discuss fig 3.11
 
 
-## Generalize ridge and lasso as Bayes estimates
+# Generalize ridge and lasso as Bayes estimates
 
 $$
 \begin{equation}
@@ -230,7 +243,7 @@ $$
 - Discuss 3.12 
 
 
-## Elastic net 
+# Elastic net 
 $$
 \begin{equation}
 \lambda \sum_{j = 1}^{p} \left(\alpha \beta^{2}_j  + (1 - \alpha) \vert \beta_j \vert  \right)
@@ -241,4 +254,4 @@ $$
 
 
 # Bibliography
-[1] Hastie, Trevor, et al. _The Elements of Statistical Learning: Data Mining, Inference, and Prediction_. Springer, 2017.
+[^the_elements_of_stat_learning_ch3]: Hastie, Trevor, et al. _The Elements of Statistical Learning: Data Mining, Inference, and Prediction_. Springer, 2017.
