@@ -22,13 +22,11 @@ ShowBreadCrumbs: true
 
 
 
-
-
 # Intro to Regularization and why it is important
 
-Linear regression is a foundational model in Statistics and Machine Learning. However, it has
+Linear regression is a foundational model in Statistics and Machine Learning. However, it has 
 
-[^the_elements_of_stat_learning_ch3]
+WIP:  Properly credit [^the_elements_of_stat_learning_ch3]
 
 
 # Linear regression models  and Least squares
