@@ -259,6 +259,86 @@ $$
 - discuss  3.13
 
 
+# 2-dimentional analysis
+
+Use now use $p=2$
+
+$$
+\begin{equation} 
+    \label{lin_reg_eq_2d}
+    f(x) = \beta_0 + \sum^{p}_{j = 1} x_j \beta_j
+\end{equation}
+$$
+
+$$
+\begin{equation} 
+    \label{lin_reg_eq_2d_extended}
+    f(x) = \beta_0(1) + x_1 \beta_1 +  x_2 \beta_2
+\end{equation}
+$$
+
+
+
+$$
+\begin{equation}
+    \label{rss_p2}
+    RSS(\beta) = \sum_{i=1}^{N} (y_i - \beta_0 - \sum^{p}_{j = 1} X_j \beta_j )^2
+\end{equation}
+$$
+
+{{< rawhtml >}}
+$$
+\begin{equation}
+    \label{rss_matrix_ext_p_2}
+    RSS(\beta) =
+    \left(\left[ {\begin{array}{cc}
+    y_{1}  \\
+    \vdots \\
+    y_{N}  \\
+    \end{array} } \right] 
+    - 
+
+    \left[ {\begin{array}{cc}
+    x_{11} & x_{12} & x_{13} \\
+    \vdots \\
+    x_{N1} & x_{N2} & x_{N3} \\
+    \end{array} } \right]
+
+    \left[ {\begin{array}{cc}
+    \beta_{0}  \\
+    \beta_{1} \\
+    \beta_{2}  \\
+    \end{array} } \right] 
+    \right)^T
+    \left(\left[ {\begin{array}{cc}
+    y_{1}  \\
+    \vdots \\
+    y_{N}  \\
+    \end{array} } \right] 
+    - 
+
+    \left[ {\begin{array}{cc}
+    x_{11} & \cdots & x_{1(p+1)} \\
+    \vdots \\
+    x_{N1} & \cdots & x_{N(p+1)} \\
+    \end{array} } \right]
+
+    \left[ {\begin{array}{cc}
+    \beta_{0}  \\
+    \vdots \\
+    \beta_{p}  \\
+    \end{array} } \right] 
+    \right)
+\end{equation}
+$$
+{{< /rawhtml >}}
+
+
+
+
+{{< figure id="lasso_regularization" src="./lasso_regularization.png" alt="lasso_regularization" caption="Visualization of RSS. Adapted from Hastie, Trevor, et al. The Elements of Statistical Learning: Data Mining, Inference, and Prediction." >}}
+
+
 
 # Bibliography
 [^the_elements_of_stat_learning_ch3]: Hastie, Trevor, et al. _The Elements of Statistical Learning: Data Mining, Inference, and Prediction_. Springer, 2017.
