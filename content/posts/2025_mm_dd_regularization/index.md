@@ -8,11 +8,20 @@ ShowToc: true
 ShowBreadCrumbs: true
 ---
 
-# Notation
-| Symbol         | Name                                   |
-| -------------- | -------------------------------------- |
-| $\textbf{X}^T$ | Input vector: $(X_1, X_2, \dots, X_p)$ |
-| $RSS$            | Residual sum of squares                |
+# Notation - WIP
+
+
+| Symbol       | Name                                                                                     |
+| ------------ | ---------------------------------------------------------------------------------------- |
+| $\textbf{X}$ | Input matrix: $[N \times (p+1)]$:                                                        |
+| $\textbf{y}$ | N-vector: $[N \times 1]$                                                                 |
+| $RSS$        | Residual Sum of Squares                                                                  |
+| $x_i$        | Vector of feature measurements for $ith - case$: $x_i=(x_{i1}, x_{i2}, \dots, x_{ip})^T$ |
+| $\beta$      | Model parameters: $\beta = (\beta_0,  \beta_1, \dots, \beta_p)^T$                        |
+
+
+
+
 
 
 # Intro to Regularization and why it is important
@@ -24,7 +33,7 @@ Linear regression is a foundational model in Statistics and Machine Learning. Ho
 
 # Linear regression models  and Least squares
 Let's assume we have the following training data $(x_1, y_1), \dots, (x_N, y_N)$.
-Linear regression is represented by equation $\ref{lin_reg_eq}$ where $x^T = (x_1, x_2, \dots, x_p)$ is a vector with dimension $p$,  $y$ is a real-valued output, and the values for $\beta_j$'s  are the unknown parameters of the model. [1]
+Linear regression is represented by equation ($\ref{lin_reg_eq}$) where $x^T = (x_1, x_2, \dots, x_p)$ is a vector with dimension $p$,  $y$ is a real-valued output, and the values for $\beta_j$'s  are the unknown parameters of the model. [1]
 
 $$
 \begin{equation} 
@@ -33,7 +42,7 @@ $$
 \end{equation}
 $$
 
-The least squares method is commonly used to determine the  parameters $\beta_j$'s  by minimizing the difference $y_i - f(x_i)$ for each of the points in the training dataset $(x_1, y_1), \dots, (x_N, y_N)$ as in equation $\eqref{rss_1}$, where the Residual sum-of-squares (RSS) is defined as: 
+The least squares method is commonly used to determine the  parameters $\beta_j$'s  by minimizing the difference $y_i - f(x_i)$ for each of the points in the training dataset $(x_1, y_1), \dots, (x_N, y_N)$ as in equation ($\eqref{rss_1}$), where the Residual sum-of-squares (RSS) is defined as: 
 
 $$
 \begin{equation}
@@ -52,10 +61,10 @@ $$
 $$
 
 
-{{< figure id="rss_visualization" src="./rss_visualization.png" alt="rss_visualization" caption="Visualization of RSS when."  footnote="[^the_elements_of_stat_learning_ch3]"  >}}
+{{< figure id="rss_visualization" src="./rss_visualization.png" alt="rss_visualization" caption="Visualization of RSS. Adapted from Hastie, Trevor, et al. The Elements of Statistical Learning: Data Mining, Inference, and Prediction." >}}
 
 
-We can represent  equation $\ref{rss_2}$  in matrix form by using all the samples in our training set at once. We stack all the $N$ inputs of $p+1$-dimensional $x_i$ vectors in our training data to create $\pmb{X}$, all the  $N$  $y_i$ outputs into  a $\pmb{y}$ vector, and the  $p + 1$ parameters into $\beta$ . Note that  the  first element $x_{i1}$  is  always a 1 which multiplies with $\beta_0$.  The matrix equation are shown in equation $\ref{rss_matrix}$ and the extended version on $\ref{rss_matrix_ext}$
+We can represent  equation ($\ref{rss_2}$)  in matrix form by using all the samples in our training set at once. We stack all the $N$ inputs of $p+1$-dimensional $x_i$ vectors in our training data to create $\pmb{X}$, all the  $N$  $y_i$ outputs into  a $\pmb{y}$ vector, and the  $p + 1$ parameters into $\beta$ . Note that  the  first element $x_{i1}$  is  always a 1 which multiplies with $\beta_0$.  The matrix equation are shown in equation $\ref{rss_matrix}$ and the extended version on $\ref{rss_matrix_ext}$
 
 $$
 \begin{equation}
@@ -131,7 +140,7 @@ $$
 \pmb{X^T} (\pmb{y}  - \pmb{X}\beta) = 0
 \end{equation}
 $$
-The solution would be equation $\ref{beta_opt}$. For more details on this derivation, please refer to [^the_elements_of_stat_learning_ch3].  
+The solution would be equation ($\ref{beta_opt}$). For more details on this derivation, please refer to [^the_elements_of_stat_learning_ch3].  
 
 $$
 \begin{equation}
@@ -142,7 +151,7 @@ $$
 $$
 
 
-We can use $\hat{\beta}$   back in equation  $\ref{lin_reg_eq}$. We result with equation $\ref{y_pred}$, where $\hat{y}$  is a $(N\times1)$ vector with  the predicted values at the training inputs. 
+We can use $\hat{\beta}$   back in equation  ($\ref{lin_reg_eq}$). We result with equation ($\ref{y_pred}$), where $\hat{y}$  is a $(N\times1)$ vector with  the predicted values at the training inputs. 
 
 $$
 \begin{equation}
