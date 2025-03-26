@@ -31,7 +31,7 @@ WIP:  Properly credit [^the_elements_of_stat_learning_ch3]
 
 # Linear regression models  and Least squares
 Let's assume we have the following training data $(x_1, y_1), \dots, (x_N, y_N)$.
-Linear regression is represented by equation ($\ref{lin_reg_eq}$) where $x^T = (x_1, x_2, \dots, x_p)$ is a vector with dimension $p$,  $y$ is a real-valued output, and the values for $\beta_j$'s  are the unknown parameters of the model. [1]
+Linear regression is represented by equation ($\eqref{lin_reg_eq}$) where $x^T = (x_1, x_2, \dots, x_p)$ is a vector with dimension $p$,  $y$ is a real-valued output, and the values for $\beta_j$'s  are the unknown parameters of the model. [1]
 
 $$
 \begin{equation} 
@@ -49,7 +49,7 @@ $$
 \end{equation}
 $$
 
-Substituting ($\ref{lin_reg_eq}$) into ($\ref{rss_1}$) we obtain ($\ref{rss_2}$):
+Substituting ($\eqref{lin_reg_eq}$) into ($\eqref{rss_1}$) we obtain ($\eqref{rss_2}$):
 
 $$
 \begin{equation}
@@ -62,7 +62,7 @@ $$
 {{< figure id="rss_visualization" src="./rss_visualization.png" alt="rss_visualization" caption="Visualization of RSS. Adapted from Hastie, Trevor, et al. The Elements of Statistical Learning: Data Mining, Inference, and Prediction." >}}
 
 
-We can represent  equation ($\ref{rss_2}$)  in matrix form by using all the samples in our training set at once. We stack all the $N$ inputs of $p+1$-dimensional $x_i$ vectors in our training data to create $\pmb{X}$, all the  $N$  $y_i$ outputs into  a $\pmb{y}$ vector, and the  $p + 1$ parameters into $\beta$ . Note that  the  first element $x_{i1}$  is  always a 1 which multiplies with $\beta_0$.  The matrix equation are shown in equation $\ref{rss_matrix}$ and the extended version on $\ref{rss_matrix_ext}$
+We can represent  equation ($\eqref{rss_2}$)  in matrix form by using all the samples in our training set at once. We stack all the $N$ inputs of $p+1$-dimensional $x_i$ vectors in our training data to create $\pmb{X}$, all the  $N$  $y_i$ outputs into  a $\pmb{y}$ vector, and the  $p + 1$ parameters into $\beta$ . Note that  the  first element $x_{i1}$  is  always a 1 which multiplies with $\beta_0$.  The matrix equation are shown in equation $\eqref{rss_matrix}$ and the extended version on $\eqref{rss_matrix_ext}$
 
 $$
 \begin{equation}
@@ -138,7 +138,7 @@ $$
 \pmb{X^T} (\pmb{y}  - \pmb{X}\beta) = 0
 \end{equation}
 $$
-The solution would be equation ($\ref{beta_opt}$). For more details on this derivation, please refer to [^the_elements_of_stat_learning_ch3].  
+The solution would be equation ($\eqref{beta_opt}$). For more details on this derivation, please refer to [^the_elements_of_stat_learning_ch3].  
 
 $$
 \begin{equation}
@@ -149,7 +149,7 @@ $$
 $$
 
 
-We can use $\hat{\beta}$   back in equation  ($\ref{lin_reg_eq}$). We result with equation ($\ref{y_pred}$), where $\hat{y}$  is a $(N\times1)$ vector with  the predicted values at the training inputs. 
+We can use $\hat{\beta}$   back in equation  ($\eqref{lin_reg_eq}$). We result with equation ($\eqref{y_pred}$), where $\hat{y}$  is a $(N\times1)$ vector with  the predicted values at the training inputs. 
 
 $$
 \begin{equation}
