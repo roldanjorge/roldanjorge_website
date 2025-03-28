@@ -85,11 +85,7 @@ params:
       
       > 
 
-      Through this blog and newsletter, I want to share what I care about, what I learn, what I build, what I'd like to see more of in the world, and what I'd like to see less of.
-
-      > 
-
-      🔋 Pilas, the newsletter's name, is a Spanish slang term commonly used in Colombia to mean 'watch out,' 'be alert,' or 'stay sharp.' However, it also means 'battery.' I chose this name because now, more than ever, we need to stay engaged and vigilant to keep up with the changes. I hope this content energizes you to do so.
+      Through this blog I want to share what I care about, what I learn, what I build, what I'd like to see more of in the world, and what I'd like to see less of.
 
       > 
 
@@ -135,26 +131,22 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: pilas 
-      name:  🔋 Pilas Newsletter
-      url: /categories/newsletter/
-      weight: 10
     - identifier: categories 
       name: Categories
       url: /categories/
-      weight: 20
+      weight: 10
     - identifier: tags
       name: Tags
       url: /tags/
-      weight: 30
+      weight: 20
     - identifier: search 
       name: Search
       url: /search/
-      weight: 40
+      weight: 30
     - identifier: archives
       name: Archives 
       url: /archives/
-      weight: 50
+      weight: 40
     # - identifier: resources 
       # name: Resources 
       # url: /resources/
