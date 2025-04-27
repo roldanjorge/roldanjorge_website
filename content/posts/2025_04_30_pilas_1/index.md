@@ -10,13 +10,14 @@ draft: true
 ---
 
 
-# Model Releases
+# 1️⃣ Model Releases
 ## OpenAI
-### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/17/25
-[^gpt4_1] 
-
 ### OpenAI o3 and o4-mini - 04/16/25
 [^o3_o4_mini]
+
+
+### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/17/25
+[^gpt4_1] 
 
 ## Google
 ### Gemini 2.5 Pro - 03/25/25
@@ -38,9 +39,11 @@ draft: true
 ### V7 Alpha - 04/05/25
 [^v7_alpha]
 
-# Agents
-## Advances and Challenges of Foundation Agents
-[^advances_and_challenges_of_foundation_agents]
+# 2️⃣ Agents
+
+# Google's Agent2Agent Protocol (A2A)
+[^google_agent2agent]
+
 
 ## Guides for Building AI Agents
 
@@ -50,20 +53,36 @@ draft: true
 ### Building effective agents by Anthropic
 [^building_effective_ai_agents_anthropic]
 
-
-# Privacy/Security/Safety
+# 3️⃣ Privacy/Security/Safety
 ## Cybersecurity Challenges of AI agents 
 [^cyberattacks_by_ai_agents]
 
+## Models generate exploits
 [^ai_models_generate_exploits]
 
-# Awesome Textbooks
-## AI Engineering book
+## DNA company 23&ME Bankrups 
+[^23andme_brankrups], 
+[^23andme_bankruptcy_cnbc]
+
+## Waymo may use interior camera data to train generative AI models, but riders will be able to opt out
+[^waymo_interior_camera]
+
+## OpenAI slashes AI model safety testing time
+[^openai_slashes_safety]
+
+# 4️⃣ Awesome Textbooks
+## AI Engineering book by Chip Huyen
 [^ai_engineering_book]
 
+## Reinforcement Learning from Human Feedback by Nathan Lambert  
+[^rlhf_book_lambert]
 
-## 
+# 5️⃣ Awesome Papers
+## Welcome to the Era of Experience by David Silver and Richard S. Sutton
+[^welcome_to_the_era_of_experience]
 
+## Advances and Challenges of Foundation Agents
+[^advances_and_challenges_of_foundation_agents]
 
 # References
 [^gpt4_1]: “Introducing GPT-4.1 in the API.” Accessed: Apr. 27, 2025. [Online]. Available: https://openai.com/index/gpt-4-1/
@@ -93,3 +112,21 @@ draft: true
 
 
 [^building_effective_ai_agents_anthropic]: “Building Effective AI Agents.” Accessed: Apr. 27, 2025. [Online]. Available: https://www.anthropic.com/engineering/building-effective-agents
+
+
+[^23andme_brankrups]: Breaking Points, 23&ME BANKRUPT: DNA SAMPLES FOR SALE, (Mar. 25, 2025). Accessed: Apr. 27, 2025. [Online Video]. Available: https://www.youtube.com/watch?v=Y-2-TZzRJU0
+
+
+[^rlhf_book_lambert]: N. Lambert, “Reinforcement Learning from Human Feedback”.
+
+[^welcome_to_the_era_of_experience]: D. Silver and R. S. Sutton, “Welcome to the Era of Experience”.
+
+[^waymo_interior_camera]: R. Bellan, “Waymo may use interior camera data to train generative AI models, but riders will be able to opt out,” TechCrunch. Accessed: Apr. 27, 2025. [Online]. Available: https://techcrunch.com/2025/04/08/waymo-may-use-interior-camera-data-to-train-generative-ai-models-sell-ads/
+
+
+[^openai_slashes_safety]: C. Criddle, “OpenAI slashes AI model safety testing time,” Financial Times, Apr. 11, 2025.
+
+[^23andme_bankruptcy_cnbc]: K. Williams, “23andMe bankruptcy: With America’s DNA put on sale, market panic gets a new twist,” CNBC. Accessed: Apr. 27, 2025. [Online]. Available: https://www.cnbc.com/2025/03/30/23andme-bankruptcy-selling-deleting-dna-genetic-testing.html
+
+
+[^google_agent2agent]: “Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog.” Accessed: Apr. 27, 2025. [Online]. Available: https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/?utm_source=tldrai
