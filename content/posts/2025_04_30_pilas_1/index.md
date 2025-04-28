@@ -14,6 +14,7 @@ draft: true
 ## OpenAI
 ### OpenAI o3 and o4-mini - 04/16/25
 [^o3_o4_mini]
+[OpenAI o3 and o4-mini System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf)
 
 
 ### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/17/25
@@ -78,11 +79,17 @@ draft: true
 [^rlhf_book_lambert]
 
 # 5️⃣ Awesome Papers
-## Welcome to the Era of Experience by David Silver and Richard S. Sutton
+## Welcome to the Era of Experience
 [^welcome_to_the_era_of_experience]
 
 ## Advances and Challenges of Foundation Agents
 [^advances_and_challenges_of_foundation_agents]
+
+## Protocols not Platforms
+[^protocols_not_platforms]
+
+## A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice
+[^rec_systems_review]
 
 # References
 [^gpt4_1]: “Introducing GPT-4.1 in the API.” Accessed: Apr. 27, 2025. [Online]. Available: https://openai.com/index/gpt-4-1/
@@ -130,3 +137,7 @@ draft: true
 
 
 [^google_agent2agent]: “Announcing the Agent2Agent Protocol (A2A)- Google Developers Blog.” Accessed: Apr. 27, 2025. [Online]. Available: https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/?utm_source=tldrai
+
+[^protocols_not_platforms]: “Protocols, Not Platforms: A Technological Approach to Free Speech,” Knight First Amendment Institute. Accessed: Apr. 27, 2025. [Online]. Available: http://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech
+
+[^rec_systems_review]: S. Raza et al., “A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice,” Feb. 23, 2025, arXiv: arXiv:2407.13699. doi: 10.48550/arXiv.2407.13699.
