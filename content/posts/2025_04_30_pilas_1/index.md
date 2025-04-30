@@ -27,6 +27,8 @@ draft: true
 ### Gemini 2.5 Flash - 04/17/25
 [^gemini_2_5_flash]
 
+{{< figure id="pipeline_positive_review" src="./gemini_2_5_flash_benchmarks.png" alt="gemini_2_5_flash_benchmarks" caption="2.5 Flash has comparable metrics to other leading models for a fraction of the cost and size" >}}
+
 ## Meta
 ### The LLama 4 Herd - 04/05/25
 [^the_llama4_herd]
