@@ -44,7 +44,7 @@ draft: true
 
 # 2️⃣ Agents
 
-# Google's Agent2Agent Protocol (A2A)
+## Google's Agent2Agent Protocol (A2A)
 [^google_agent2agent]
 
 
