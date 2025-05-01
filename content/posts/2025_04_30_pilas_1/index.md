@@ -30,7 +30,7 @@ draft: true
 {{< figure id="pipeline_positive_review" src="./gemini_2_5_flash_benchmarks.png" alt="gemini_2_5_flash_benchmarks" caption="2.5 Flash has comparable metrics to other leading models for a fraction of the cost and size" >}}
 
 ## Meta
-### The LLama 4 Herd - 04/05/25
+### The Llama 4 Herd - 04/05/25
 Meta released the Llama 4 herd on April 5th which consists of three open-weight multimodal models: Llama 4 Behemoth, Llama 4 Maverick and  Llama 4 Scout.  Maverick and Scout are available to download in [Huggingface](https://huggingface.co/meta-llama). However, Behemoth has not being released yet. Here are the main highlights: [^the_llama4_herd]
  [^llama4_model_card]
 
@@ -39,19 +39,21 @@ The Llama 4 models leverage the mixture-of-experts (MoE) architecture which allo
 
 | Model            | Active Parameters | Total Parameters | Experts |
 | ---------------- | ----------------- | ---------------- | ------- |
-| Llama 4 Behemoth | 288 B             | 2T               | 16      |
+| Llama 4 Behemoth | 288B             | 2T               | 16      |
 | Llama 4 Maverick | 17B               | 400B                | 128     |
-| Llama 4 Scout    | 17B               | ?                | 16     |
-
+| Llama 4 Scout    | 17B               | 109B                | 16     |
 
 #### Multimodal by design
-
+Both Maverick and scout accept text and a maximum of 5 images as inputs, and can only output text. The support the following languages Arabic, English, French, German, Hindi, Indonesian, Italian, Portuguese, Spanish, Tagalog, Thai, and Vietnamese. However, image understanding is limited to English.
 
 #### Inference Efficiency
-
+Meta claims that the int4-quantized version of Llama 4 Scout fits in a single H100 GPU with a context length of 10M tokens while Llama 4 Maverick requires a "single H100 DGX host with distributed inference" and has a context length of 1M. One caveat about the context length capabilities is that they are "evaluated across 512 GPUs using 5D parallelism". 
 
 #### Training techniques
-
+- Llama was pretrained on 200 languages. A total of more than 30 trillion tokens from a data mixture including text, image, and video datasets which is more than double the data used for Llama 3.
+- Meta optimized training by using FP8 precision during pre-training with 32K GPUs, achieving 390 TFLOPs/GPU.
+- Meta developed MetaP, a new training technique to set hyper-parameter values including per-layer learning rates and initialization scales. 
+- Meta using this pipelines of post-training techniques lightweight supervised fine-tuning (SFT), online reinforcement learning (RL), and lightweight direct preference optimization (DPO).
 
 ## Adobe
 ### Firefly new Image Model 4 - 04/24/25
