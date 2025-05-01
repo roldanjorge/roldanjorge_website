@@ -22,7 +22,9 @@ draft: true
 
 ## Google
 ### Gemini 2.5 Pro - 03/25/25
+Google announced on March 25 an experimental version of the Gemini 2.5 Pro thinking model. 
 [^gemini_2_5]
+
 
 ### Gemini 2.5 Flash - 04/17/25
 
