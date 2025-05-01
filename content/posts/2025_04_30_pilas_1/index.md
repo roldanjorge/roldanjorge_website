@@ -31,8 +31,27 @@ draft: true
 
 ## Meta
 ### The LLama 4 Herd - 04/05/25
-[^the_llama4_herd]
-[^llama4_model_card]
+Meta released the Llama 4 herd on April 5th which consists of three open-weight multimodal models: Llama 4 Behemoth, Llama 4 Maverick and  Llama 4 Scout.  Maverick and Scout are available to download in [Huggingface](https://huggingface.co/meta-llama). However, Behemoth has not being released yet. Here are the main highlights: [^the_llama4_herd]
+ [^llama4_model_card]
+
+#### Model Sizes
+The Llama 4 models leverage the mixture-of-experts (MoE) architecture which allows the model to only activate a subset of its total parameters during inference based on the selected expert. 
+
+| Model            | Active Parameters | Total Parameters | Experts |
+| ---------------- | ----------------- | ---------------- | ------- |
+| Llama 4 Behemoth | 288 B             | 2T               | 16      |
+| Llama 4 Maverick | 17B               | 400B                | 128     |
+| Llama 4 Scout    | 17B               | ?                | 16     |
+
+
+#### Multimodal by design
+
+
+#### Inference Efficiency
+
+
+#### Training techniques
+
 
 ## Adobe
 ### Firefly new Image Model 4 - 04/24/25
