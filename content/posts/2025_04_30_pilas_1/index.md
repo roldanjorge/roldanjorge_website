@@ -31,21 +31,21 @@ Google announced on March 25 an experimental version of the Gemini 2.5 Pro think
 
 {{< figure id="gemini_pro_benchmarks" src="./gemini_pro_benchmarks.png" alt="gemini_pro_benchmarks" caption="Gemini 2.5 Pro and benchmark results" >}}
 
-Figure  {{< figref "gemini_pro_benchmarks" >}} shows Gemini 2.5 Pro's performance in common benchmarks.
+{{< figref "gemini_pro_benchmarks" >}} shows Gemini 2.5 Pro's performance in common benchmarks.
 
 ### Gemini 2.5 Flash - 04/17/25 ⛔
 [Announcement](https://developers.googleblog.com/en/start-building-with-gemini-25-flash/) , [Gemini 2.5 Flash Preview Model Card](https://storage.googleapis.com/model-cards/documents/gemini-2.5-flash-preview.pdf)
 
-Google launched their latest Gemini 2.5 Flash model through the Gemini API on April 17. This hybrid reason model allows its users to deliverately swith thinking on and off, and even to set thinking budgets. [^gemini_2_5_flash]
+Google launched their latest Gemini 2.5 Flash model through the Gemini API on April 17. This hybrid reason model allows its users to deliverately swith thinking on and off, and even to set thinking budgets. Similarly to Gemini 2.5 Pro, this model's architecture is based on a sparse Mixture of Experts (MoE) and it was trained using [JAX](https://github.com/jax-ml/jax), [ML Pathways](https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/)  and [Google's Tensor Processing Unites (TPUs)](https://cloud.google.com/tpu?e=48754805&hl=en). [^gemini_2_5_flash]
 
 
 {{< figure id="gemini_2_5_flash_benchmarks" src="./gemini_2_5_flash_benchmarks.png" alt="gemini_2_5_flash_benchmarks" caption="Gemini 2.5 Flash cost and benchmark results" >}}
 
-Figure  {{< figref "gemini_2_5_flash_benchmarks" >}} shows the cost of input and output of Gemini 2.5 flash as well as its performance in common benchmarks.
+{{< figref "gemini_2_5_flash_benchmarks" >}} shows the Gemini 2.5 flash's performance in common benchmarks.
 
 ## Meta
 ### The Llama 4 Herd - 04/05/25
-[Announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) [Llama 4 - model card](https://www.llama.com/docs/model-cards-and-prompt-formats/llama4_omni/)
+[Announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/), [Llama 4 - model card](https://www.llama.com/docs/model-cards-and-prompt-formats/llama4_omni/)
 
 Meta released the Llama 4 herd on April 5 which consists of three open-weight multimodal models: Llama 4 Behemoth, Llama 4 Maverick and  Llama 4 Scout.  Maverick and Scout are available to download in [Huggingface](https://huggingface.co/meta-llama). However, Behemoth has not being released yet. Here are the main highlights: [^the_llama4_herd]
  [^llama4_model_card]
