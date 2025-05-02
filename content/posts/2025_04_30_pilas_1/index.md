@@ -18,15 +18,21 @@ draft: true
 
 
 ### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
+[Announcement](https://openai.com/index/gpt-4-1/)
+
 [^gpt4_1] 
 
 ## Google
 ### Gemini 2.5 Pro - 03/25/25
+[Announcement](https://blog.google/technology/google-deepmind/gemini-model-thinking-updates-march-2025/), [Gemini 2.5 Pro Preview Model Card](https://storage.googleapis.com/model-cards/documents/gemini-2.5-pro-preview.pdf) 
+
 Google announced on March 25 an experimental version of the Gemini 2.5 Pro thinking model. 
-[^gemini_2_5]
+[^gemini_2_5]. Some of its key features include enhanced reasoning, advanced coding, multimodal support for text, images, video, and audio, and a context window of 1-million tokens.
 
+{{< figure id="gemini_pro_benchmarks" src="./gemini_pro_benchmarks.png" alt="gemini_pro_benchmarks" caption="Gemini 2.5 Pro and benchmark results" >}}
 
-### Gemini 2.5 Flash - 04/17/25
+### Gemini 2.5 Flash - 04/17/25 ⛔
+[Announcement](https://developers.googleblog.com/en/start-building-with-gemini-25-flash/) , [Gemini 2.5 Flash Preview Model Card](https://storage.googleapis.com/model-cards/documents/gemini-2.5-flash-preview.pdf)
 
 Google launched their latest Gemini 2.5 Flash model through the Gemini API on April 17. This hybrid reason model allows its users to deliverately swith thinking on and off, and even to set thinking budgets. No details are included about model sizes, training techniques, or model architecture . [^gemini_2_5_flash]
 
@@ -36,6 +42,8 @@ Figure  {{< figref "gemini_2_5_flash_benchmarks" >}} shows the cost of input and
 
 ## Meta
 ### The Llama 4 Herd - 04/05/25
+[Announcement](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) [Llama 4 - model card]
+
 Meta released the Llama 4 herd on April 5 which consists of three open-weight multimodal models: Llama 4 Behemoth, Llama 4 Maverick and  Llama 4 Scout.  Maverick and Scout are available to download in [Huggingface](https://huggingface.co/meta-llama). However, Behemoth has not being released yet. Here are the main highlights: [^the_llama4_herd]
  [^llama4_model_card]
 
@@ -55,7 +63,7 @@ Both Maverick and scout accept text and a maximum of 5 images as inputs, and can
 Meta claims that the int4-quantized version of Llama 4 Scout fits in a single H100 GPU with a context length of 10M tokens while Llama 4 Maverick requires a "single H100 DGX host with distributed inference" and has a context length of 1M. One caveat about the context length capabilities is that they are "evaluated across 512 GPUs using 5D parallelism". 
 
 #### Training techniques
-- Llama was pretrained on 200 languages. A total of more than 30 trillion tokens from a data mixture including text, image, and video datasets which is more than double the data used for Llama 3.
+- Llama 4 was pretrained on 200 languages. A total of more than 30 trillion tokens from a data mixture including text, image, and video datasets which is more than double the data used for Llama 3.
 - Meta optimized training by using FP8 precision during pre-training with 32K GPUs, achieving 390 TFLOPs/GPU.
 - Meta developed MetaP, a new training technique to set hyper-parameter values including per-layer learning rates and initialization scales. 
 - Meta using this pipelines of post-training techniques lightweight supervised fine-tuning (SFT), online reinforcement learning (RL), and lightweight direct preference optimization (DPO).
