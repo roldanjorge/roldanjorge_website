@@ -12,15 +12,15 @@ draft: true
 
 # 1️⃣ Model Releases
 ## OpenAI
+### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
+[Announcement](https://openai.com/index/gpt-4-1/)
+
+[^gpt4_1] 
 ### OpenAI o3 and o4-mini - 04/16/25
 [^o3_o4_mini]
 [OpenAI o3 and o4-mini System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf)
 
 
-### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
-[Announcement](https://openai.com/index/gpt-4-1/)
-
-[^gpt4_1] 
 
 ## Google
 ### Gemini 2.5 Pro - 03/25/25
@@ -33,7 +33,7 @@ Google announced on March 25 an experimental version of the Gemini 2.5 Pro think
 
 {{< figref "gemini_pro_benchmarks" >}} shows Gemini 2.5 Pro's performance in common benchmarks.
 
-### Gemini 2.5 Flash - 04/17/25 ⛔
+### Gemini 2.5 Flash - 04/17/25
 [Announcement](https://developers.googleblog.com/en/start-building-with-gemini-25-flash/) , [Gemini 2.5 Flash Preview Model Card](https://storage.googleapis.com/model-cards/documents/gemini-2.5-flash-preview.pdf)
 
 Google launched their latest Gemini 2.5 Flash model through the Gemini API on April 17. This hybrid reason model allows its users to deliverately swith thinking on and off, and even to set thinking budgets. Similarly to Gemini 2.5 Pro, this model's architecture is based on a sparse Mixture of Experts (MoE) and it was trained using [JAX](https://github.com/jax-ml/jax), [ML Pathways](https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/)  and [Google's Tensor Processing Unites (TPUs)](https://cloud.google.com/tpu?e=48754805&hl=en). [^gemini_2_5_flash]
