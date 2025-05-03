@@ -15,12 +15,18 @@ draft: true
 ### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
 [Announcement](https://openai.com/index/gpt-4-1/)
 
+#### Reasoning models with tool capabilities
+- 
+
+#### Training
+- 
+
 [^gpt4_1] 
 ### OpenAI o3 and o4-mini - 04/16/25
+[Announcement](https://openai.com/index/introducing-o3-and-o4-mini/)
+, [OpenAI o3 and o4-mini System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf)
+
 [^o3_o4_mini]
-[OpenAI o3 and o4-mini System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf)
-
-
 
 ## Google
 ### Gemini 2.5 Pro - 03/25/25
