@@ -24,15 +24,21 @@ draft: true
 [^o3_o4_mini], [^openai_deliberative_alignment]
 
 #### Reasoning models with tool capabilities
-- 
-
+- Deep integration with tools
+  - Toward agentic use
+- Thinking with images
 
 #### Training
 - 
 
-
 #### Performance 
 - 
+
+
+#### Safety
+
+
+#### Codex CLI
 
 
 ## Google
