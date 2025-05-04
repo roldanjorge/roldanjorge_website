@@ -14,19 +14,26 @@ draft: true
 ## OpenAI
 ### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
 [Announcement](https://openai.com/index/gpt-4-1/)
-
-#### Reasoning models with tool capabilities
-- 
-
-#### Training
-- 
-
 [^gpt4_1] 
+
+
 ### OpenAI o3 and o4-mini - 04/16/25
 [Announcement](https://openai.com/index/introducing-o3-and-o4-mini/)
 , [OpenAI o3 and o4-mini System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf)
 
-[^o3_o4_mini]
+[^o3_o4_mini], [^openai_deliberative_alignment]
+
+#### Reasoning models with tool capabilities
+- 
+
+
+#### Training
+- 
+
+
+#### Performance 
+- 
+
 
 ## Google
 ### Gemini 2.5 Pro - 03/25/25
@@ -186,3 +193,5 @@ Meta claims that the int4-quantized version of Llama 4 Scout fits in a single H1
 [^protocols_not_platforms]: “Protocols, Not Platforms: A Technological Approach to Free Speech,” Knight First Amendment Institute. Accessed: Apr. 27, 2025. [Online]. Available: http://knightcolumbia.org/content/protocols-not-platforms-a-technological-approach-to-free-speech
 
 [^rec_systems_review]: S. Raza et al., “A Comprehensive Review of Recommender Systems: Transitioning from Theory to Practice,” Feb. 23, 2025, arXiv: arXiv:2407.13699. doi: 10.48550/arXiv.2407.13699.
+
+[^openai_deliberative_alignment]: M. Y. Guan et al., “Deliberative Alignment: Reasoning Enables Safer Language Models,” Jan. 08, 2025, arXiv: arXiv:2412.16339. doi: 10.48550/arXiv.2412.16339.
