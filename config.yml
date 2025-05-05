@@ -96,8 +96,6 @@ params:
       > 
 
       If you’d like to share your thoughts or just say hello, you can reach me at roldanjrg@protonmail.com
-
-
   socialIcons:
     - name: x
       url: "https://x.com/roldan__jorge"
@@ -105,6 +103,8 @@ params:
       url: "https://github.com/roldanjorge"
     - name: linkedin
       url: "https://www.linkedin.com/in/roldanjorge/"
+    - name: bluesky 
+      url: "https://bsky.app/profile/roldan-jorge.bsky.social"
 
   analytics:
     google:
