@@ -1,7 +1,7 @@
 ---
 author: "Jorge Roldan"
 date: '2025-04-27'
-title: 'Pilas Issue 1'
+title: '🔋 Pilas: Issue 3'
 # tags: ['ngram', 'language_models', 'nlp']
 categories: ['newsletter']
 ShowToc: true
