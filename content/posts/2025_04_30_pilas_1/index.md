@@ -24,6 +24,8 @@ draft: true
 [^o3_o4_mini], [^openai_deliberative_alignment]
 
 #### Reasoning models with tool capabilities
+OpenAI announced on April 16 the new reasoning models o3 and o4-mini. These are the main highlights: 
+
 - Deep integration with tools
   - Toward agentic use
 - Thinking with images
