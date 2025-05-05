@@ -21,26 +21,12 @@ draft: true
 [Announcement](https://openai.com/index/introducing-o3-and-o4-mini/)
 , [OpenAI o3 and o4-mini System Card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf)
 
-[^o3_o4_mini], [^openai_deliberative_alignment]
+OpenAI announced on April 16 the new reasoning models o3 and o4-mini. These are the main highlights: [^o3_o4_mini]
 
-#### Reasoning models with tool capabilities
-OpenAI announced on April 16 the new reasoning models o3 and o4-mini. These are the main highlights: 
-
-- Deep integration with tools
-  - Toward agentic use
-- Thinking with images
-
-#### Training
-- 
-
-#### Performance 
-- 
-
-
-#### Safety
-
-
-#### Codex CLI
+- o3 and o4-mini are the first models from OpenAI with access to all ChatGPT internal tools, they can use the browser, Python, and can do image and file analysis, and even customized tools using [function calling](https://platform.openai.com/docs/guides/function-calling?api-mode=responses). They use [chain-of-thought](https://www.ibm.com/think/topics/chain-of-thoughts) reasoning to decide when to use the tools to formulate their answers.
+- These new models are taking chain-of-thought reasoning to the next level by thinking with images improving their capabilities of solving problems that require visual understanding, they included additional details [here](https://openai.com/index/thinking-with-images/)
+- OpenAI continues to scale Reinforcement Learning leveraging chain-of-thought. OpenAI claims that o3 and o4-mini are also safer by being able to reason better about safety policies through deliberative alignment [^openai_deliberative_alignment]
+- OpenAI shared multiple benchmark results for o3 and o4-mini in the [release announcement](https://openai.com/index/introducing-o3-and-o4-mini/) as well as safety and evaluations results in the [system card](https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf).
 
 
 ## Google
