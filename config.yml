@@ -60,7 +60,7 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: true # needs to be explicitly set
+    enabled: false # needs to be explicitly set
     title: Jorge Roldán
     subtitle: "Machine Learning Engineer, NYC"
     imageUrl: "/bio-photo-v2.png"
@@ -76,7 +76,9 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Jorge Roldán"
-    Content: >
+    Content: |
+      <img src="/bio-photo-v2.png" alt="Jorge Roldán" width="250" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%;margin-bottom:1rem;">
+
       I am a machine learning engineer who loves building safe, robust, and awesome AI-powered tools, applications, and services. I have an M.S. in Computer Science with a focus on machine learning from [New York University—Courant Institute of Mathematical Sciences](https://cs.nyu.edu/home/index.html). I also studied Computer Science and Mechanical Engineering at [The City College of New York—Grove School of Engineering](https://www.ccny.cuny.edu/engineering). I am originally from [Santa Rosa de Osos](https://en.wikipedia.org/wiki/Santa_Rosa_de_Osos), Colombia 🇨🇴, and currently live in New York City 🗽.
 
       > 
