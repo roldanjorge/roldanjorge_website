@@ -60,12 +60,12 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
+    enabled: true # needs to be explicitly set
+    title: Jorge Roldán
+    subtitle: "Machine Learning Engineer, NYC"
+    imageUrl: "/bio-photo-v2.png"
+    imageWidth: 300 
+    imageHeight: 300 
     imageTitle: my image
     buttons:
       - name: Posts
