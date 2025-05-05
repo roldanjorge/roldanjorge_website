@@ -36,7 +36,7 @@ OpenAI announced on April 16 the new reasoning models o3 and o4-mini. These are 
 Google announced on March 25 an experimental version of the Gemini 2.5 Pro thinking model. 
 [^gemini_2_5]. Some of its key features include enhanced reasoning, advanced coding, multimodal input support for text, images, video, and audio, and a context window of 1-million tokens as well as text-only output with a maximum of 64K tokens. Gemini 2.5 Pro leverages the sparse Mixture-of-Experts (MoE) architecture, and it was trained using [JAX](https://github.com/jax-ml/jax), [ML Pathways](https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/)  and [Google's Tensor Processing Unites (TPUs)](https://cloud.google.com/tpu?e=48754805&hl=en).
 
-{{< figure id="gemini_pro_benchmarks" src="./gemini_pro_benchmarks.png" alt="gemini_pro_benchmarks" caption="Gemini 2.5 Pro and benchmark results" >}}
+{{< figure id="gemini_pro_benchmarks" src="./gemini_pro_benchmarks.png" alt="gemini_pro_benchmarks" caption="Gemini 2.5 Pro and benchmark results" width="700"  >}}
 
 {{< figref "gemini_pro_benchmarks" >}} shows Gemini 2.5 Pro's performance in common benchmarks.
 
