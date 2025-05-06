@@ -15,7 +15,10 @@ draft: true
 ### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
 [Announcement](https://openai.com/index/gpt-4-1/)
 [^gpt4_1] 
+OpenAI announced on April 14 three new models in their GPT series: GPT-4.1, GPT-4.1 mini, and GPT 4.1 nano. These are the hightlights:
 
+- The three GPT 4-1 models now have a longer context window of up to 1  million tokens, a significant improvement from the 128,000 window of GPT 4-o
+-  and their knowledge cutoff is June 2024.
 
 ### OpenAI o3 and o4-mini - 04/16/25
 [Announcement](https://openai.com/index/introducing-o3-and-o4-mini/)
@@ -78,13 +81,13 @@ Meta claims that the int4-quantized version of Llama 4 Scout fits in a single H1
 - Meta developed MetaP, a new training technique to set hyper-parameter values including per-layer learning rates and initialization scales. 
 - Meta using this pipelines of post-training techniques lightweight supervised fine-tuning (SFT), online reinforcement learning (RL), and lightweight direct preference optimization (DPO).
 
-## Adobe
+<!-- ## Adobe
 ### Firefly new Image Model 4 - 04/24/25
 [^adobe_firefly]
  
 ## MidJourney
 ### V7 Alpha - 04/05/25
-[^v7_alpha]
+[^v7_alpha] -->
 
 # 2️⃣ Agents
 
