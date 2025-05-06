@@ -15,10 +15,12 @@ draft: true
 ### GPT-4.1, GPT-4.1 mini, GPT-4.1 nano - 04/14/25
 [Announcement](https://openai.com/index/gpt-4-1/)
 [^gpt4_1] 
-OpenAI announced on April 14 three new models in their GPT series: GPT-4.1, GPT-4.1 mini, and GPT 4.1 nano. These are the hightlights:
+OpenAI announced on April 14 three new models in their GPT series: GPT-4.1, GPT-4.1 mini, and GPT 4.1 nano with a longer context, improved vision capabilities, better results across benchmarks, and a knowledge cuttoff of June 2024. These are the hightlights:
 
-- The three GPT 4-1 models now have a longer context window of up to 1  million tokens, a significant improvement from the 128,000 window of GPT 4-o
--  and their knowledge cutoff is June 2024.
+- The three GPT 4-1 models now have a longer context window of up to 1  million tokens, a significant improvement from the 128,000 window of GPT 4-o. OpenAI claims their models to understand and attend to relevant information across the full context.
+- GPT 4.1 are more reliable at following instructions in areas such as following specified formats such as JSON, XML, avoiding negative behaviour, following ordered instructions, adhering to content requirements, ranking, and restraining from being too overconfident.
+- For the details benchmark results and additional informaction check the [announcement](https://openai.com/index/gpt-4-1/).
+
 
 ### OpenAI o3 and o4-mini - 04/16/25
 [Announcement](https://openai.com/index/introducing-o3-and-o4-mini/)
