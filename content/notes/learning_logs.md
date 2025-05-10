@@ -10,7 +10,7 @@ layout: "other"
 
 # y25_w19
 - **papers**
-    - 100_Open (For Business) Big Tech, Concentrated Power, and the Political Economy of Open AI
+    - [100_Open (For Business) Big Tech, Concentrated Power, and the Political Economy of Open AI](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4543807)
 - **textbook**
     - 32_Reinforcement Learning an Introduction - 2nd edition
         - chapter3:
