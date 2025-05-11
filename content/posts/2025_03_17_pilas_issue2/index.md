@@ -4,6 +4,7 @@ date: '2025-03-17'
 title: '🔋 Pilas: Issue 2'
 layout: "pilas"
 categories: "newsletter"
+draft: true
 ---
 
 # Signal's President Meredith Whittaker warns about the security risks of AI Agents
