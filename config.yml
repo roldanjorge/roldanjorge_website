@@ -137,10 +137,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: pilas 
-      name:  🔋 Pilas Newsletter
-      url: /categories/newsletter/
-      weight: 10
+    # - identifier: pilas 
+    #   name:  🔋 Pilas Newsletter
+    #   url: /categories/newsletter/
+    #   weight: 10
     - identifier: categories 
       name: Categories
       url: /categories/
