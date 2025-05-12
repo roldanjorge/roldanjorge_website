@@ -21,20 +21,25 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 
 ## Kevin-32B: Multi-Turn RL for Writing CUDA Kernels  - 05/06/25
 - **Organization**: Stanford University, Cognition AI
-- State-of-the-art real-time object model originally 
-
+- [Announcement](https://cognition.ai/blog/kevin-32b)
 
 ## Mistral 3 medium - 05/07/25
 -  **Organization**: [Mistral AI](https://mistral.ai/)
 -  [Announcement](https://mistral.ai/news/mistral-medium-3)
 -  Easy-to-deploy, and state-of-the-art model at 8X lower costs.
 
-<div style="text-align:center;">
 {{< x user="MistralAI" id="1920119463430500541" >}}
-</div>
 
+## Nvidia Radio Embedding Models 🔍
+- Nvidia has a suite of text and image embedding models that match SigLIP in many cases.
+- https://huggingface.co/collections/nvidia/radio-669f77f1dd6b153f007dd1c6
 
 # Papers
+## Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era - 05/05/25
+- [paper](https://arxiv.org/abs/2505.02583)
+
+<!-- ## DDT: Decoupled Diffusion Transformer
+- [paper](https://arxiv.org/pdf/2504.05741) -->
 
 # Agents
 ## Hugging Face new agentic tool
