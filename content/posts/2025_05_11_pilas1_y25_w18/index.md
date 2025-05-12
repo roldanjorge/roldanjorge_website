@@ -21,3 +21,7 @@ ShowBreadCrumbs: false
 
 ## F Lite - 04/29/25
 - [F Lite - freepik - 04/29/25](https://github.com/fal-ai/f-lite/blob/main/README.md)
+
+
+# Papers
+- [The Leaderboard Illusion - 04/29/25](https://arxiv.org/abs/2504.20879)

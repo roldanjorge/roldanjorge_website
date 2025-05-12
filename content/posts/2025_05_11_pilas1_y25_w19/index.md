@@ -10,11 +10,6 @@ ShowBreadCrumbs: false
 ---
 
 # Models/Systems
-## Mistral 3 medium - 05/07/25
--  **Organization**: [Mistral AI](https://mistral.ai/)
--  [Announcement](https://mistral.ai/news/mistral-medium-3)
--  Easy-to-deploy, and state-of-the-art model at 8X lower costs.
-
 ## D-FINE: realtime object detector - 05/05/25
 - **Organization**: [University of Science and Technology of China](https://en.ustc.edu.cn/)
 - **Paper**: [D-FINE: REDEFINE REGRESSION TASK IN DETRS AS
@@ -28,13 +23,23 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 - **Organization**: Stanford University, Cognition AI
 - State-of-the-art real-time object model originally 
 
+
+## Mistral 3 medium - 05/07/25
+-  **Organization**: [Mistral AI](https://mistral.ai/)
+-  [Announcement](https://mistral.ai/news/mistral-medium-3)
+-  Easy-to-deploy, and state-of-the-art model at 8X lower costs.
+
+<div style="text-align:center;">
+{{< x user="MistralAI" id="1920119463430500541" >}}
+</div>
+
+
 # Papers
-- [The Leaderboard Illusion - 04/29/25](https://arxiv.org/abs/2504.20879)
 
 # Agents
 ## Hugging Face new agentic tool
 -  [Hugging Face releases a free Operator-like agentic AI tool](https://techcrunch.com/2025/05/06/hugging-face-releases-a-free-operator-like-agentic-ai-tool/)
-   -  [demo](https://huggingface.co/spaces/smolagents/computer-agent)
+-  [demo](https://huggingface.co/spaces/smolagents/computer-agent)
 
 # Products
 
