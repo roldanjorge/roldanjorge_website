@@ -1,12 +1,12 @@
 ---
 author: "Jorge Roldan"
-date: '2025-04-28'
-title: '🔋Pilas Issue1: y25_w18'
+date: '2025-05-05'
+title: '🔋Pilas: y25_w18'
 # tags: ['ngram', 'language_models', 'nlp']
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
-# draft: true
+draft: true
 ---
 
 # Models/Systems
