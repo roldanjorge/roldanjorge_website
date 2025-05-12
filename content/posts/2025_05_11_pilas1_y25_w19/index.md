@@ -11,20 +11,22 @@ ShowBreadCrumbs: false
 
 # Models/Systems
 ## Mistral 3 medium - 05/07/25
--  **Released by**: [Mistral AI](https://mistral.ai/)
+-  **Organization**: [Mistral AI](https://mistral.ai/)
 -  [Announcement](https://mistral.ai/news/mistral-medium-3)
 -  Easy-to-deploy, and state-of-the-art model at 8X lower costs.
 
-<!-- ## F Lite - 04/29/25 -->
-<!-- - [F Lite - freepik - 04/29/25](https://github.com/fal-ai/f-lite/blob/main/README.md) -->
+## D-FINE: realtime object detector - 05/05/25
+- **Organization**: [University of Science and Technology of China](https://en.ustc.edu.cn/)
+- **Paper**: [D-FINE: REDEFINE REGRESSION TASK IN DETRS AS
+FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
+- [**Hugging Face space**](https://huggingface.co/collections/ustc-community/d-fine-68109b427cbe6ee36b4e7352)
 
-## D-FINE realtime object detector
-- **Released by**: 
+{{< x user="mervenoyann" id="1919431751689998348" >}}
+
+
+## Kevin-32B: Multi-Turn RL for Writing CUDA Kernels  - 05/06/25
+- **Organization**: Stanford University, Cognition AI
 - State-of-the-art real-time object model originally 
-
-# i45:  Model - Alibaba unveils Qwen3, a family of ‘hybrid’ AI reasoning models ⭐️
--  https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/
-- https://qwenlm.github.io/blog/qwen3/
 
 # Papers
 - [The Leaderboard Illusion - 04/29/25](https://arxiv.org/abs/2504.20879)
