@@ -38,17 +38,15 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 
 {{< x user="MistralAI" id="1920119463430500541" >}}
 
-## Nvidia Radio Embedding Models 🔍
-- Nvidia has a suite of text and image embedding models that match SigLIP in many cases.
-- https://huggingface.co/collections/nvidia/radio-669f77f1dd6b153f007dd1c6
-
-
 # Papers
 ## Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era - 05/05/25
 - [paper](https://arxiv.org/abs/2505.02583)
 
-<!-- ## DDT: Decoupled Diffusion Transformer
-- [paper](https://arxiv.org/pdf/2504.05741) -->
+## Absolute Zero: Reinforced Self-play Reasoning with Zero Data
+- [paper](https://arxiv.org/abs/2505.03335)
+
+## RM-R1: Reward Modeling as Reasoning
+- [paper](https://arxiv.org/abs/2505.02387)
 
 # Agents
 ## Hugging Face new agentic tool

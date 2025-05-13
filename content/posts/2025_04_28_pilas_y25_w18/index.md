@@ -10,7 +10,7 @@ draft: true
 ---
 
 # Models/Systems
-# i45: Qwen3 - 04/29/25  
+# Qwen3 - 04/29/25  
 - Released by: 
 - [Announcement]
 - [Model - Alibaba unveils Qwen3, a family of ‘hybrid’ AI reasoning models](https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/)
@@ -19,9 +19,17 @@ draft: true
 
 {{< x user="Alibaba_Qwen" id="1916962087676612998" >}}
 
+## Llama-Nemotron: Efficient Reasoning Models - 05/02/25
+- [Paper](https://arxiv.org/abs/2505.00949)
+- [NVIDIA Llama Nemotron Ultra Open Model Delivers Groundbreaking Reasoning Accuracy](https://developer.nvidia.com/blog/nvidia-llama-nemotron-ultra-open-model-delivers-groundbreaking-reasoning-accuracy/)
+- [Hugging Face space](https://huggingface.co/collections/nvidia/llama-nemotron-67d92346030a2691293f200b)
+
+
 ## F Lite - 04/29/25
 - [F Lite - freepik - 04/29/25](https://github.com/fal-ai/f-lite/blob/main/README.md)
 
 
 # Papers
-- [The Leaderboard Illusion - 04/29/25](https://arxiv.org/abs/2504.20879)
+- [The Leaderboard Illusion](https://arxiv.org/abs/2504.20879) - 04/29/25
+- [All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning](https://arxiv.org/abs/2503.01067) - 05/03/25
+- [WebThinker: Empowering Large Reasoning Models with Deep Research Capability](https://arxiv.org/abs/2504.21776)
