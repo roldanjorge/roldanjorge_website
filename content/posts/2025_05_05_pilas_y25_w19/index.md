@@ -18,10 +18,18 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 
 {{< x user="mervenoyann" id="1919431751689998348" >}}
 
-
 ## Kevin-32B: Multi-Turn RL for Writing CUDA Kernels  - 05/06/25
 - **Organization**: Stanford University, Cognition AI
 - [Announcement](https://cognition.ai/blog/kevin-32b)
+
+{{< figure id="kevin32b_benchmarks.png" src="./kevin32b_benchmarks.png" alt="kevin32b_benchmarks" caption="Kevin-32B correctess and performance results " width="700"  >}}
+
+## Gemini 2.5 Pro (I/O Edition) - 05/06/25
+- **Organization**: Google
+- [Announcement](https://blog.google/products/gemini/gemini-2-5-pro-updates/)
+
+{{< x user="demishassabis" id="1919779362980692364" >}}
+
 
 ## Mistral 3 medium - 05/07/25
 -  **Organization**: [Mistral AI](https://mistral.ai/)
@@ -33,6 +41,7 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 ## Nvidia Radio Embedding Models 🔍
 - Nvidia has a suite of text and image embedding models that match SigLIP in many cases.
 - https://huggingface.co/collections/nvidia/radio-669f77f1dd6b153f007dd1c6
+
 
 # Papers
 ## Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era - 05/05/25
