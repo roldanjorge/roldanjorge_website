@@ -30,7 +30,6 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 
 {{< x user="demishassabis" id="1919779362980692364" >}}
 
-
 ## Mistral 3 medium - 05/07/25
 -  **Organization**: [Mistral AI](https://mistral.ai/)
 -  [Announcement](https://mistral.ai/news/mistral-medium-3)
@@ -39,21 +38,19 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 {{< x user="MistralAI" id="1920119463430500541" >}}
 
 # Papers
-## Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era - 05/05/25
-- [paper](https://arxiv.org/abs/2505.02583)
-
-## Absolute Zero: Reinforced Self-play Reasoning with Zero Data
-- [paper](https://arxiv.org/abs/2505.03335)
-
-## RM-R1: Reward Modeling as Reasoning
-- [paper](https://arxiv.org/abs/2505.02387)
+- [RM-R1: Reward Modeling as Reasoning](https://arxiv.org/abs/2505.02387) - 05-05-25
+- [Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era](https://arxiv.org/abs/2505.02583) - 05/05/25
+- [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) - 05/06/25
+- [ZeroSearch: Incentivize the Search Capability of LLMs without Searching](https://arxiv.org/abs/2505.04588) - 05/07/25
 
 # Agents
-## Hugging Face new agentic tool
 -  [Hugging Face releases a free Operator-like agentic AI tool](https://techcrunch.com/2025/05/06/hugging-face-releases-a-free-operator-like-agentic-ai-tool/)
--  [demo](https://huggingface.co/spaces/smolagents/computer-agent)
+   -  [demo](https://huggingface.co/spaces/smolagents/computer-agent)
+- [From Retrieval to Reasoning: Advancing AI Agents for Knowledge Discovery and Collaboration](http://i.stanford.edu/~jure/pub/talks2/leskovec-relational-www_keynote-apr25v2.pdf)
 
 # Products
+- [OpenAI releases Reinforcement Fine-tuning (RFT) for the OpenAI o4-mini allowing users to improve model performance on specific tasks](https://platform.openai.com/docs/guides/rft-use-cases)
+
 
 # Safety
 - [Separating Fact from Fiction: Here’s How AI Is Transforming Cybercrime](https://www.fortinet.com/blog/industry-trends/separating-fact-from-fiction-how-ai-is-transforming-cybercrime)

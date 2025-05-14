@@ -30,6 +30,9 @@ draft: true
 
 
 # Papers
-- [The Leaderboard Illusion](https://arxiv.org/abs/2504.20879) - 04/29/25
+- [The Leaderboard Illusion](https://arxiv.org/abs/2504.20879) - 04/29/2
 - [All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning](https://arxiv.org/abs/2503.01067) - 05/03/25
 - [WebThinker: Empowering Large Reasoning Models with Deep Research Capability](https://arxiv.org/abs/2504.21776)
+- [Talk Before You Retrieve: Agent-Led Discussions for Better RAG in
+Medical QA](https://arxiv.org/pdf/2504.21252)
+- [Practical Efficiency of Muon for Pretraining](https://arxiv.org/abs/2505.02222) - 05/04/25
