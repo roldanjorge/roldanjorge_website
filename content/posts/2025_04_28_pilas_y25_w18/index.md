@@ -29,6 +29,9 @@ draft: true
 - [F Lite - freepik - 04/29/25](https://github.com/fal-ai/f-lite/blob/main/README.md)
 
 
+# Agents
+- [AMIE gains vision: A research AI agent for multimodal diagnostic dialogue](https://research.google/blog/amie-gains-vision-a-research-ai-agent-for-multi-modal-diagnostic-dialogue/)
+
 # Papers
 - [The Leaderboard Illusion](https://arxiv.org/abs/2504.20879) - 04/29/2
 - [All Roads Lead to Likelihood: The Value of Reinforcement Learning in Fine-Tuning](https://arxiv.org/abs/2503.01067) - 05/03/25
