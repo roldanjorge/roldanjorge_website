@@ -11,7 +11,6 @@ draft: true
 # Models/Systems
 # Qwen3 - 04/29/25  
 - Released by: 
-- [Announcement]
 - [Model - Alibaba unveils Qwen3, a family of ‘hybrid’ AI reasoning models](https://techcrunch.com/2025/04/28/alibaba-unveils-qwen-3-a-family-of-hybrid-ai-reasoning-models/)
  ⭐️
 -  https://qwenlm.github.io/blog/qwen3/
