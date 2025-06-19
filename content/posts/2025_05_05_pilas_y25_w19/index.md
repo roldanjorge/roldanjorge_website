@@ -72,5 +72,4 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 - [Evolving OpenAI’s structure](https://openai.com/index/evolving-our-structure/)
  - [Sepating Fact from Fiction: Here’s How AI Is Transforming Cybercrime](https://www.fortinet.com/blog/industry-trends/separating-fact-from-fiction-how-ai-is-transforming-cybercrime)
 - [Advancing the frontier of video understanding with Gemini 2.5](https://developers.googleblog.com/en/gemini-2-5-video-understanding/?utm_source=tldrai)
-
 - [How to organize ML code like a pro](https://x.com/paulabartabajo_/status/1922532915461681390)
