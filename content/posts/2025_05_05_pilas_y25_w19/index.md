@@ -1,7 +1,7 @@
 ---
 author: "Jorge Roldan"
-date: '2025-05-12'
-title: '🔋Pilas: y25_w19'
+date: '2025-05-05'
+title: '🔋 Pilas: y25-w19'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
@@ -35,12 +35,17 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 
 {{< x user="MistralAI" id="1920119463430500541" >}}
 
+## Meta 3D AssetGen 2.0 - 05/08/25
+- [Introducing Meta 3D AssetGen 2.0: A new foundation model for 3D content creation](https://developers.meta.com/horizon/blog/AssetGen2?utm_source=tldrai)
+
+
 # Papers
 - [RM-R1: Reward Modeling as Reasoning](https://arxiv.org/abs/2505.02387) - 05-05-25
 - [Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era](https://arxiv.org/abs/2505.02583) - 05/05/25
 - [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) - 05/06/25
 - [ZeroSearch: Incentivize the Search Capability of LLMs without Searching](https://arxiv.org/abs/2505.04588) - 05/07/25
 - [Generating Physically Stable and Buildable LEGO Designs from Text](https://arxiv.org/abs/2505.05469) - 05/08/25
+- [LLMs Get Lost In Multi-Turn Conversation](https://arxiv.org/abs/2505.06120)
 
 # Agents
 -  [Hugging Face releases a free Operator-like agentic AI tool](https://techcrunch.com/2025/05/06/hugging-face-releases-a-free-operator-like-agentic-ai-tool/) - 05/06/25
@@ -66,3 +71,5 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 - [11 Alignment and Optimization Algorithms for LLMs](https://huggingface.co/posts/Kseniase/849940009274643)
 - [Evolving OpenAI’s structure](https://openai.com/index/evolving-our-structure/)
  - [Sepating Fact from Fiction: Here’s How AI Is Transforming Cybercrime](https://www.fortinet.com/blog/industry-trends/separating-fact-from-fiction-how-ai-is-transforming-cybercrime)
+- [Advancing the frontier of video understanding with Gemini 2.5](https://developers.googleblog.com/en/gemini-2-5-video-understanding/?utm_source=tldrai)
+- [How to organize ML code like a pro](https://x.com/paulabartabajo_/status/1922532915461681390)
