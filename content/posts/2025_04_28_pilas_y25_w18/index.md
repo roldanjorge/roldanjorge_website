@@ -1,11 +1,10 @@
 ---
 author: "Jorge Roldan"
 date: '2025-04-28'
-title: '🔋 Pilas: y25_w18'
+title: '🔋 Pilas: y25-w18'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
-draft: true
 ---
 
 # Models/Systems
