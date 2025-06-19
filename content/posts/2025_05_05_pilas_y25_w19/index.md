@@ -45,6 +45,7 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 - [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) - 05/06/25
 - [ZeroSearch: Incentivize the Search Capability of LLMs without Searching](https://arxiv.org/abs/2505.04588) - 05/07/25
 - [Generating Physically Stable and Buildable LEGO Designs from Text](https://arxiv.org/abs/2505.05469) - 05/08/25
+- [LLMs Get Lost In Multi-Turn Conversation](https://arxiv.org/abs/2505.06120)
 
 # Agents
 -  [Hugging Face releases a free Operator-like agentic AI tool](https://techcrunch.com/2025/05/06/hugging-face-releases-a-free-operator-like-agentic-ai-tool/) - 05/06/25
@@ -71,3 +72,5 @@ FINE-GRAINED DISTRIBUTION REFINEMENT](https://arxiv.org/pdf/2410.13842)
 - [Evolving OpenAI’s structure](https://openai.com/index/evolving-our-structure/)
  - [Sepating Fact from Fiction: Here’s How AI Is Transforming Cybercrime](https://www.fortinet.com/blog/industry-trends/separating-fact-from-fiction-how-ai-is-transforming-cybercrime)
 - [Advancing the frontier of video understanding with Gemini 2.5](https://developers.googleblog.com/en/gemini-2-5-video-understanding/?utm_source=tldrai)
+
+- [How to organize ML code like a pro](https://x.com/paulabartabajo_/status/1922532915461681390)

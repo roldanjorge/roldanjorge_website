@@ -1,11 +1,11 @@
 ---
 author: "Jorge Roldan"
 date: '2025-06-16'
-title: '🔋 Pilas: y25-w25'
-categories: ['newsletter']
+title: 'LeRobot Hackathon 2025'
+categories: ['article']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
 ---
 
-# Models/Systems
+# Ttest
