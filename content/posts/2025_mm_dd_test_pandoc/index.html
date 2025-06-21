@@ -1,0 +1,318 @@
+---
+title: "The Math Behind Transformers"
+date: 2025-06-21
+slug: math-transformers
+tags: ["transformers", "math"]
+math: true      % PaperMod loads KaTeX when this flag is present
+---
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jorge Roldan" />
+  <meta name="dcterms.date" content="2025-06-21" />
+  <title>Speech and Language Processing Notes</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Speech and Language Processing Notes</h1>
+<p class="author">Jorge Roldan</p>
+<p class="date">2025-06-21</p>
+</header>
+<h1 class="unnumbered" id="n-gram-language-models">3. N-gram Language
+Models</h1>
+<h2 class="unnumbered" id="n-grams">3.1. N-Grams</h2>
+<p>N-gram models are the simplest type of language models. The N-gram
+term has two meanings. One meaning refers to a sequence of n words, so a
+2-gram, and 3-gram are sequences of 2, and 3 words, respectively. The
+second meaning refers to a probabilistic model that estimates the
+probability of a word given the n-1 previous words.</p>
+<p>We represent a sequence of n words as <span class="math inline">\(w_1
+\dots w_n\)</span> or <span class="math inline">\(w_{1:n}\)</span> , and
+the join probability of each word in a sequence having a value: <span
+class="math inline">\(P(W_1 = w_1, X_2=w_2, X_3=w_3, \dots, X_n =
+w_n\)</span></p>
+<p>To compute the probability of <span class="math inline">\(P(w_1, w_2,
+\dots, w_n)\)</span> we use the chain rule of probability</p>
+<div class="tcolorbox">
+<p><span class="math display">\[P(X_1, \dots, X_n) = P(X_1) P(X_2 | X_1)
+P(X_3 | X_{1:2} \dots P(X_n | X_1:{n-1})\]</span> <span
+class="math display">\[P(X_1, \dots, X_n) = \prod_{k=1}^{n} P(X_k |
+X_{1:k-1})\]</span></p>
+</div>
+<p>We apply this to words:</p>
+<p><span class="math display">\[P(w_{1:n}) = P(w_1) P(w_2|w_1)
+P(w_3|w_{1:2}) \dots P(w_n|w_{1:n-1})\]</span></p>
+<p><span class="math display">\[P(w_{1:n}) = \prod_{k=1}^{n}
+P(w_k|w_{1:k-1})\]</span></p>
+<p>It is still hard to compute <span
+class="math inline">\(P(w_{1:n})\)</span> using the chain rule. The key
+insight of the n-gram model is that we can approximate the history just
+using the last few words. In the case of a bigram model, we approximate
+<span class="math inline">\(P(w_n  | w_{1:n-1})\)</span> by using only
+the probability of the preceding word <span
+class="math inline">\(P(w_n|w_{n-1})\)</span></p>
+<div class="tcolorbox">
+<p><span class="math display">\[P(w_n|w_{1:n-1}) \approx
+P(w_n|w_{n-1})\]</span> An example of a <strong>Markov
+assumption</strong> is when the probability of a word depends only on
+the previous word in the case of a bigram, a trigram, and a n-gram looks
+two words, and <span class="math inline">\(n-1\)</span> words into the
+past, respectively.</p>
+<p>Generalization:</p>
+<p><span class="math display">\[P(w_n|w_{1:n-1}) \approx
+P(w_n|w_{n-N+1:n-1})\]</span></p>
+</div>
+<p>In the case of the bigram, we have:</p>
+<p><span class="math display">\[\label{bigram_aprox}
+    P(w_{1:n}) = \prod_{k=1}^{n} P(w_k|w_{1:k-1})
+\approx  \prod_{k=1}^{n} P(w_k|w_{k-1})\]</span></p>
+<p>We can estimate equation<a href="#bigram_aprox"
+data-reference-type="ref"
+data-reference="bigram_aprox">[bigram_aprox]</a> using the MLE (Maximum
+likelihood estimation)</p>
+<p><span class="math display">\[P(w_n | w_{n-1}) =
+\frac{C(w_{n-1}w_n)}{\sum_{w} C(w_{n-1} w)}\]</span> Which can be
+simplified to</p>
+<p><span class="math display">\[P(w_n | w_{n-1}) =
+\frac{C(w_{n-1}w_n)}{C(w_{n-1} )}\]</span></p>
+<p>We can generalize the estimation of the MLE n-gram parameter as
+follows:</p>
+<div class="tcolorbox">
+<p><span class="math display">\[P(w_n|w_{n-N+1:n-1}) =
+\frac{C(w_{n-N+1:n-1} \  w_n)}{C(w_{n-N+1:n-1})}\]</span> This ratio is
+called the <strong>relative frequency</strong></p>
+</div>
+<h2 class="unnumbered"
+id="evaluating-language-models-training-and-test-sets">3.2. Evaluating
+Language models: Training and Test sets</h2>
+<p>There are different ways of evaluating a language model such as
+extrinsic, and intrinsic evaluation. In extrinsic evaluation we embed
+the language model i an application and measure how the application’s
+performance improves, this is a very efficient way of evaluating models,
+but it is unfortunately very expensive. On the other hand, a intrinsic
+evaluation metric measures the quality of a model independent of an
+application, one of this metrics is the <strong>perplexity</strong>.</p>
+<h3 class="unnumbered" id="types-of-datasets-for-model-evaluation">Types
+of datasets for model evaluation</h3>
+<p>We need at least three types of datasets for evaluating a language
+model: training, development, and test sets.</p>
+<div class="tcolorbox">
+<p><strong>Training set:</strong> Dataset we use to learn the parameters
+of our model.</p>
+<p><strong>Test set:</strong> Separate dataset from the training set
+used to evaluate the model. This test should reflect the language we
+want to use the model for. After training two models in the training
+set, we can compare how the two trained models fit the test set by
+determining which model assigns a higher probability to the test set. We
+only want to test the model once or very few times once on using the
+test set once the model is ready.</p>
+<p><strong>Development set:</strong> We use the development set to do
+preliminary testing and when we are ready we only use the test set once
+or very few times.</p>
+</div>
+<h2 class="unnumbered" id="evaluating-language-models-perplexity">3.3.
+Evaluating Language models: Perplexity</h2>
+<div class="tcolorbox">
+<p><strong>Perplexity</strong>: The perplexity (PP, PPL) of a language
+model on a test set is the inverse probability of the test set (one over
+the probability of the test set), normalized by the number of words.
+This is why sometimes it is called per-word perplexity.</p>
+<p>For a test set <span class="math inline">\(W=w_1 w_2 \dots
+w_N\)</span>:</p>
+<p><span class="math display">\[\begin{aligned}
+perplexity(W) &amp;= P(w_1 w_2 \dots w_N)^{-\frac{1}{N}} \\
+&amp; = \sqrt[N]{\frac{1}{P(w_1 w_2 \dots w_N)}}
+\end{aligned}\]</span></p>
+<p>Using the chain rule we obtain: <span
+class="math display">\[perplexity(W) = \sqrt[N]{\prod_{i=1}^{N}
+\frac{1}{P(w_i|w_1\dots w_{i-1})}}\]</span></p>
+</div>
+<p>Note that the higher the probability of a word sequence, the lower
+the perplexity. Thus, the <strong>lower the perplexity of a model on the
+data, the better the model.</strong>. Minimizing the perplexity is
+equivalent to maximizing the test set probability according to the
+language model.</p>
+<p>This is how we can calculate the perplexity of a unigram language
+model:</p>
+<p><span class="math display">\[perplexity(W) = \sqrt[N]{\prod_{i=1}^{N}
+\frac{1}{P(w_i)}}\]</span></p>
+<p>And the same for a bigram model: <span
+class="math display">\[perplexity(W) = \sqrt[N]{\prod_{i=1}^{N}
+\frac{1}{P(w_i|w_{i-1})}}\]</span></p>
+<h2 class="unnumbered"
+id="sampling-sentences-from-a-language-model">3.4. Sampling sentences
+from a language model</h2>
+<p>One technique to visualize the knowledge of a model is to sample from
+it. Sampling from a distribution means to choose random points according
+to their likelihood. Sampling from a language model, which represents a
+distribution over sentences, means to generate some sentences, choosing
+each sentence according to its likelihood as defined by the model.</p>
+</body>
+</html>
