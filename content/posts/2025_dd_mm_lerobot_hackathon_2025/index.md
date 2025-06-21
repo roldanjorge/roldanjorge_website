@@ -8,4 +8,19 @@ ShowBreadCrumbs: false
 draft: true
 ---
 
-# Ttest
+# Intro
+
+
+# LeRobot Library an SO-101 robot arms
+
+
+# Build Arms
+## Setup of motors
+
+## Calibrate
+
+
+## Arms setup for data collection
+
+
+# Training 
