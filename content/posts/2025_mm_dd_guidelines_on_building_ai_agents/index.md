@@ -1,13 +1,10 @@
 ---
 author: "Jorge Roldan"
-date: '2025-06-16'
-title: 'Modern Python Development with Astral'
+date: '2025-06-24'
+title: 'Guidelines on Building AI Agents'
 categories: ['article']
-tags: ['python']
+tags: ['ai_agents']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
 ---
-
-# Intro
-

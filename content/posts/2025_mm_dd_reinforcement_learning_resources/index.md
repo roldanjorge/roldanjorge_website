@@ -1,8 +1,9 @@
 ---
 author: "Jorge Roldan"
 date: '2025-06-16'
-title: 'LeRobot Hackathon 2025'
-categories: ['article']
+title: 'Reinforcement Learning Resources'
+categories: ['resources']
+tags: ['reinforcement_learning']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true

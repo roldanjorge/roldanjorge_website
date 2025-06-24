@@ -3,6 +3,7 @@ author: "Jorge Roldan"
 date: '2025-06-23'
 title: 'The Math of (Transformer-based) Language Models'
 categories: ['article']
+tags: ['math', 'transformers']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
