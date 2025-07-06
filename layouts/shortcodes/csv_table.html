@@ -1,0 +1,27 @@
+{{ $file := .Get "file" }}
+{{ $csv := resources.Get $file | transform.Unmarshal (dict "delimiter" ",") }}
+
+{{ if $csv }}
+<table class="csv-table">
+  <thead>
+    <tr>
+      {{ range index $csv 0 }}
+        <th>{{ . }}</th>
+      {{ end }}
+    </tr>
+  </thead>
+  <tbody>
+    {{ range $i, $row := $csv }}
+      {{ if gt $i 0 }}
+        <tr>
+          {{ range $row }}
+            <td>{{ . }}</td>
+          {{ end }}
+        </tr>
+      {{ end }}
+    {{ end }}
+  </tbody>
+</table>
+{{ else }}
+<p>Error: Could not load CSV file "{{ $file }}"</p>
+{{ end }} 

@@ -1,0 +1,6 @@
+Week,Title,Authors,ArXiv,DOI,Category,Summary
+y25_w25,SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics,M. Shukor et al.,arXiv:2506.01844,10.48550/arXiv.2506.01844,Robotics,Vision-language-action model for affordable robotics
+y25_w24,Attention Is All You Need,A. Vaswani et al.,arXiv:1706.03762,10.48550/arXiv.1706.03762,NLP,Transformer architecture for sequence modeling
+y25_w23,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,J. Devlin et al.,arXiv:1810.04805,10.48550/arXiv.1810.04805,NLP,Bidirectional transformer for language understanding
+y25_w22,GPT-3: Language Models are Few-Shot Learners,T. Brown et al.,arXiv:2005.14165,10.48550/arXiv.2005.14165,NLP,Large language model with few-shot learning capabilities
+y25_w21,ResNet: Deep Residual Learning for Image Recognition,K. He et al.,arXiv:1512.03385,10.48550/arXiv.1512.03385,Computer Vision,Residual connections for deep neural networks 
