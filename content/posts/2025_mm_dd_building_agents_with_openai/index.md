@@ -1,7 +1,7 @@
 ---
 author: "Jorge Roldan"
-date: '2025-06-23'
-title: 'Sofware 3.0'
+date: '2025-07-07'
+title: 'Building Agents with OpenAI'
 categories: ['article']
 ShowToc: true
 ShowBreadCrumbs: false
