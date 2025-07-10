@@ -1,7 +1,7 @@
 ---
 author: "Jorge Roldan"
 date: '2025-07-08'
-title: 'Dangers of Generative AI'
+title: 'Karpathy's Advice on building the future of AI'
 categories: ['article']
 ShowToc: true
 ShowBreadCrumbs: false
