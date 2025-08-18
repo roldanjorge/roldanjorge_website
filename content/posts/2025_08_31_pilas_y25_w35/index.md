@@ -1,7 +1,7 @@
 ---
 author: "Jorge Roldan"
-date: '2025-06-09'
-title: '🔋 Pilas: y25-w24'
+date: '2025-08-31'
+title: '🔋Pilas: y25-w35'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
