@@ -1,0 +1,68 @@
+<h1 id="the-math-of-transformer-based-language-models">The Math of
+(Transformer-based) Language Models</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Symbol</strong></th>
+<th style="text-align: left;"><strong>Meaning /
+Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(\mathbf{x}_i\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(i^{\text{th}}\)</span> input vector, <span
+class="math inline">\(\mathbf{x}_i \in \mathbb{R}^d\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(\hat{y}_i\)</span></td>
+<td style="text-align: left;">Predicted output for sample <span
+class="math inline">\(i\)</span>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(\mathcal{L}\)</span></td>
+<td style="text-align: left;">Loss function.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(\theta\)</span></td>
+<td style="text-align: left;">Model parameters to be learned.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="single-attention-head">Single Attention Head</h2>
+<p><span class="math display">\[\textbf{q}_i = \textbf{x}_i
+\textbf{W}^Q\]</span></p>
+<p><span class="math display">\[\textbf{k}_j = \textbf{x}_j
+\textbf{W}^K\]</span></p>
+<p><span class="math display">\[\textbf{v}_j = \textbf{x}_j
+\textbf{W}^V\]</span></p>
+<p><span class="math display">\[score(\textbf{x}_i, \textbf{x}_j) =
+\frac{\textbf{q}_i \cdot \textbf{k}_j}{\sqrt{d_k}}\]</span></p>
+<p><span class="math display">\[\alpha_{ij} =
+softmax(score(\textbf{x}_i, \textbf{x}_j))  \ \forall j \leq
+i\]</span></p>
+<p><span class="math display">\[\textbf{head}_i = \sum_{j \leq i}
+\alpha_{ij} \textbf{v}_j\]</span></p>
+<p><span class="math display">\[\textbf{a}_i = \textbf{head}_i
+\textbf{W}^O\]</span></p>
+<h2 id="multi-head-attention">Multi-head Attention</h2>
+<p><span class="math display">\[\textbf{q}_i^c = \textbf{x}_i
+\textbf{W}^{Qc} \ \forall c \ 1 \leq c \leq A\]</span></p>
+<p><span class="math display">\[\textbf{k}_j^c = \textbf{x}_j
+\textbf{W}^{Kc} \ \forall c \ 1 \leq c \leq A\]</span></p>
+<p><span class="math display">\[\textbf{v}_j^c = \textbf{x}_j
+\textbf{W}^{Vc} \ \forall c \ 1 \leq c \leq A\]</span></p>
+<p><span class="math display">\[score(\textbf{x}_i, \textbf{x}_j) =
+\frac{\textbf{q}_i \cdot \textbf{k}_j}{\sqrt{d_k}}\]</span></p>
+<p><span class="math display">\[\alpha_{ij} =
+softmax(score(\textbf{x}_i, \textbf{x}_j))  \ \forall j \leq
+i\]</span></p>
+<p><span class="math display">\[\textbf{head}_i = \sum_{j \leq i}
+\alpha_{ij} \textbf{v}_j\]</span></p>
+<p><span class="math display">\[\textbf{a}_i = \textbf{head}_i
+\textbf{W}^O\]</span></p>
