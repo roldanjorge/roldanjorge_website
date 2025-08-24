@@ -119,7 +119,7 @@
 .home-info-title {
     font-size: 4rem;
     font-weight: 900;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: var(--primary);
     text-align: center;
     position: relative;
@@ -160,7 +160,7 @@
     background: linear-gradient(white, white) padding-box,
                 var(--gradient-primary) border-box;
     box-shadow: var(--card-shadow);
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: block;
 }
 

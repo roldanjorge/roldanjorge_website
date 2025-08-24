@@ -336,7 +336,7 @@ code, pre {
 .home-info-title {
     font-size: 5rem;
     font-weight: 900;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--primary);
     text-align: center;
     position: relative;
@@ -363,7 +363,7 @@ code, pre {
                 var(--gradient-primary) border-box;
     transition: all var(--transition-bounce);
     box-shadow: var(--card-shadow);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .home-info img:hover {
