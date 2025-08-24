@@ -202,6 +202,7 @@
     border: 1px solid var(--border);
     transition: all var(--transition-bounce);
     overflow: hidden;
+    min-height: 200px; /* Ensure minimum height for right-side images */
 }
 
 .entry::before {

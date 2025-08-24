@@ -385,13 +385,15 @@ code, pre {
     transition: box-shadow var(--transition-normal);
 }
 
-/* Featured Image Styling */
+/* Featured Image Styling - Right Side Layout */
 .entry .entry-cover {
-    width: 100%;
-    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
     overflow: hidden;
-    position: relative;
-    margin-bottom: 1rem;
+    margin: 0;
     display: block !important;
 }
 
@@ -400,7 +402,7 @@ code, pre {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    border-radius: var(--radius);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 }
 
 .entry:hover .entry-cover img {
@@ -418,17 +420,70 @@ code, pre {
     pointer-events: none;
 }
 
-/* Ensure cover images are visible in post widgets */
+/* Ensure cover images are visible in post widgets - Right Side */
 .post-entry .entry-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
     display: block !important;
-    margin-bottom: 1rem;
 }
 
 .post-entry .entry-cover img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
-    border-radius: var(--radius);
+    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+/* Adjust content positioning for right-side images */
+.entry .entry-header,
+.entry .entry-content,
+.entry .entry-footer {
+    padding-right: 220px; /* Make room for the 200px image + 20px margin */
+}
+
+.post-entry .entry-header,
+.post-entry .entry-content,
+.post-entry .entry-footer {
+    padding-right: 220px;
+}
+
+/* Responsive design for right-side images */
+@media (max-width: 768px) {
+    .entry .entry-cover,
+    .post-entry .entry-cover {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        top: auto;
+        right: auto;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    
+    .entry .entry-cover img,
+    .post-entry .entry-cover img {
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    
+    .entry .entry-header,
+    .entry .entry-content,
+    .entry .entry-footer,
+    .post-entry .entry-header,
+    .post-entry .entry-content,
+    .post-entry .entry-footer {
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .entry .entry-cover,
+    .post-entry .entry-cover {
+        height: 150px;
+    }
 }
 
 .entry::before {
