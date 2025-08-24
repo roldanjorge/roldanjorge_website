@@ -451,9 +451,7 @@ code, pre {
 
 /* Enhanced Profile Image */
 .home-info img {
-    border: 6px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-                var(--gradient-primary) border-box;
+    border: none;
     transition: all var(--transition-bounce);
     box-shadow: var(--card-shadow);
     margin-bottom: 1rem;

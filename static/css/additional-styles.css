@@ -162,17 +162,14 @@
 
 /* Enhanced Home Info Images */
 .home-info .entry-content img {
-    border: 6px solid transparent;
-    background: linear-gradient(white, white) padding-box,
-                var(--gradient-primary) border-box;
+    border: none;
     box-shadow: var(--card-shadow);
     margin: 1rem auto;
     display: block;
 }
 
 .dark .home-info .entry-content img {
-    background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
-                var(--gradient-primary) border-box;
+    border: none;
 }
 
 .home-info .entry-content img:hover {
