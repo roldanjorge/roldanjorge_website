@@ -46,10 +46,10 @@
     --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
     --card-shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
-    --gradient-hero: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
-    --gradient-subtle: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    --gradient-primary: var(--primary-color);
+    --gradient-accent: var(--accent-color);
+    --gradient-hero: var(--primary-color);
+    --gradient-subtle: var(--gray-100);
     
     /* Enhanced Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -93,7 +93,7 @@
     --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
     --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
     --card-shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-    --gradient-subtle: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+    --gradient-subtle: #0a0a0a;
 }
 
 /* Enhanced Global Typography */
@@ -236,7 +236,7 @@ code, pre {
 .home-info {
     text-align: center;
     padding: 6rem 0;
-    background: var(--gradient-subtle);
+    background: var(--gray-100);
     position: relative;
     overflow: hidden;
     margin-bottom: 3rem;
@@ -452,6 +452,8 @@ code, pre {
     box-shadow: var(--card-shadow);
     margin: 2rem 0;
     position: relative;
+    background: var(--code-block-bg);
+    border: 1px solid var(--border);
 }
 
 .highlight::before {
@@ -461,14 +463,76 @@ code, pre {
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--gradient-primary);
+    background: var(--primary-color);
 }
 
 .highlight pre {
     margin: 0;
-    padding: 2rem;
-    font-size: 0.95rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
     line-height: 1.6;
+    background: transparent;
+}
+
+/* Code block with line numbers */
+.highlighttable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    background: var(--code-block-bg);
+    border: 1px solid var(--border);
+}
+
+.highlighttable td {
+    padding: 0;
+    border: none;
+    vertical-align: top;
+}
+
+.highlighttable td:first-child {
+    width: 60px;
+    background: var(--gray-100);
+    border-right: 1px solid var(--border);
+}
+
+.dark .highlighttable td:first-child {
+    background: var(--gray-800);
+    border-right-color: var(--gray-600);
+}
+
+.highlighttable td .linenodiv {
+    padding: 1.5rem 0.75rem;
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    font-family: var(--font-mono);
+    user-select: none;
+}
+
+.highlighttable td .highlight {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+}
+
+.highlighttable td .highlight pre {
+    margin: 0;
+    padding: 1.5rem;
+    background: transparent;
+}
+
+/* Inline code within code blocks */
+.highlight pre code {
+    background: transparent;
+    padding: 0;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 /* Enhanced Inline Code */
@@ -477,12 +541,31 @@ code {
     padding: 0.25rem 0.5rem;
     border-radius: 6px;
     font-size: 0.9em;
-    color: var(--error-color);
+    color: var(--primary-color);
     font-weight: 500;
     border: 1px solid var(--gray-200);
+    font-family: var(--font-mono);
 }
 
 .dark code {
+    background: var(--gray-800);
+    color: var(--gray-200);
+    border-color: var(--gray-600);
+}
+
+/* Inline code within paragraphs */
+p code {
+    background: var(--code-bg);
+    color: var(--primary-color);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+    border: 1px solid var(--gray-200);
+}
+
+.dark p code {
+    background: var(--gray-800);
+    color: var(--gray-200);
     border-color: var(--gray-600);
 }
 
@@ -533,13 +616,59 @@ table {
     overflow: hidden;
     box-shadow: var(--card-shadow);
     margin: 2rem 0;
+    background: var(--theme);
+    border: 1px solid var(--border);
 }
 
 th, td {
     padding: 1rem 1.5rem;
     text-align: left;
     border-bottom: 1px solid var(--border);
+    vertical-align: top;
 }
+
+th {
+    background: var(--gray-100);
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.dark th {
+    background: var(--gray-800);
+    color: var(--gray-200);
+}
+
+td {
+    background: var(--theme);
+    color: var(--content);
+}
+
+.dark td {
+    background: var(--theme);
+    color: var(--content);
+}
+
+/* Table hover effects */
+tr:hover td {
+    background: var(--gray-50);
+}
+
+.dark tr:hover td {
+    background: var(--gray-800);
+}
+
+/* Responsive tables */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.75rem 1rem;
+    }
+}
+
 
 th {
     background: var(--gradient-primary);
@@ -854,6 +983,77 @@ button:focus {
     border-radius: var(--radius);
 }
 
+/* Post Content Styling */
+.post-content {
+    line-height: 1.7;
+    color: var(--content);
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.post-content h1 {
+    font-size: 2.25rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.post-content h2 {
+    font-size: 1.875rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.25rem;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.post-content ul,
+.post-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.post-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin: 2rem auto;
+    display: block;
+    box-shadow: var(--card-shadow);
+}
+
+.post-content figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.post-content figcaption {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    font-style: italic;
+}
+
 /* Additional Dark Mode Styles */
 .dark body {
     background-color: #000000;
@@ -861,7 +1061,7 @@ button:focus {
 }
 
 .dark .home-info {
-    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+    background: #0a0a0a;
 }
 
 .dark .home-info::before {
@@ -912,7 +1112,7 @@ button:focus {
 }
 
 .dark blockquote {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    background: #0a0a0a;
     border-left-color: var(--primary-color);
 }
 
@@ -928,6 +1128,20 @@ button:focus {
 
 .dark .social-icons a:hover {
     background: #333333;
+}
+
+/* Dark mode for post content */
+.dark .post-content h1,
+.dark .post-content h2 {
+    border-bottom-color: #333333;
+}
+
+.dark .post-content img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dark .post-content figcaption {
+    color: #cccccc;
 }
 
 /* Enhanced Loading States */

@@ -142,7 +142,7 @@
 .home-info .entry-content blockquote {
     margin: 2.5rem 0;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    background: var(--gray-100);
     border-left: 5px solid var(--primary-color);
     border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
     font-style: italic;
@@ -151,7 +151,7 @@
 }
 
 .dark .home-info .entry-content blockquote {
-    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
+    background: #0a0a0a;
 }
 
 /* Enhanced Home Info Images */
@@ -180,7 +180,7 @@
 .home-info-content-text blockquote {
     margin: 2.5rem 0;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+    background: var(--gray-100);
     border-left: 5px solid var(--primary-color);
     border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
     font-style: italic;
