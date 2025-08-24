@@ -56,7 +56,7 @@ params:
     disableHLJS: true
 
   label:
-    text: "Home"
+    text: "Jorge Roldán"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
