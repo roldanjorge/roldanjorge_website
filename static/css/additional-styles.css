@@ -320,7 +320,7 @@
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -361,8 +361,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
     background: var(--gray-100);
     border-radius: 50%;
     transition: all var(--transition-bounce);

@@ -899,9 +899,9 @@ tr:hover {
 .footer {
     background: var(--theme);
     border-top: 1px solid var(--border);
-    padding: 4rem 0;
+    padding: 2rem 0;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .footer-content {
@@ -910,7 +910,7 @@ tr:hover {
     padding: 0 var(--gap);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -947,8 +947,8 @@ tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     background: var(--gray-100);
     border-radius: 50%;
     transition: all var(--transition-bounce);
