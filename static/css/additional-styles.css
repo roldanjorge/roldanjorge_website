@@ -151,7 +151,7 @@
 }
 
 .dark .home-info .entry-content blockquote {
-    background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
 }
 
 /* Enhanced Home Info Images */
@@ -162,6 +162,11 @@
     box-shadow: var(--card-shadow);
     margin: 2rem auto;
     display: block;
+}
+
+.dark .home-info .entry-content img {
+    background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                var(--gradient-primary) border-box;
 }
 
 .home-info .entry-content img:hover {
@@ -584,6 +589,41 @@ blockquote::after {
         max-width: 1200px;
         padding: 3rem var(--gap);
     }
+}
+
+/* Additional Dark Mode Enhancements */
+.dark .nav a {
+    color: #e0e0e0;
+}
+
+.dark .nav a:hover {
+    color: var(--primary-color);
+}
+
+.dark .header-title {
+    color: #ffffff;
+}
+
+.dark .home-info-title {
+    color: #ffffff;
+}
+
+.dark .entry-meta span {
+    background: #1a1a1a;
+    color: #cccccc;
+}
+
+.dark .entry-meta span:hover {
+    background: #333333;
+}
+
+.dark .post-entry .entry-meta span {
+    background: #1a1a1a;
+    color: #cccccc;
+}
+
+.dark .post-entry .entry-meta span:hover {
+    background: #333333;
 }
 
 @media (max-width: 1024px) {
