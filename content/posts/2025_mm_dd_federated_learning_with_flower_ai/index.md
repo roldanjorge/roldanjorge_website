@@ -7,7 +7,9 @@ ShowToc: true
 ShowBreadCrumbs: false
 draft: true
 cover:
-  image: "/images/sample-cover.svg"
+  # image: "/images/sample-cover.svg"
+  image: "/images/flower_ai.png"
+  # image: "content/posts/2025_mm_dd_federated_learning_with_flower_ai/image.png
 ---
 
 

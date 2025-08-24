@@ -263,9 +263,32 @@ code, pre {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    align-items: center;
+    min-height: var(--header-height);
 }
 
 .header .logo {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header .logo a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    height: 100%;
     font-weight: 800;
     color: var(--primary);
     font-size: 1.5rem;
@@ -280,23 +303,93 @@ code, pre {
     max-width: var(--nav-width);
     margin: 0 auto;
     padding: 0 var(--gap);
-    height: var(--header-height);
+    height: 100%;
+    width: 100%;
 }
 
 .nav-links {
     display: flex;
     gap: 3rem;
     align-items: center;
+    height: 100%;
 }
 
-.nav a {
-    position: relative;
+.nav-links a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color: var(--primary);
     font-weight: 500;
-    padding: 0.5rem 0;
+    transition: color var(--transition-fast);
 }
 
-.nav a:hover {
+.nav-links a:hover {
     color: var(--primary-color);
+}
+
+.nav-controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    transition: color var(--transition-fast);
+    border-radius: var(--radius);
+    min-width: 40px;
+}
+
+.nav-controls button:hover {
+    color: var(--primary-color);
+    background: var(--gray-100);
+}
+
+.nav-controls button:active {
+    transform: scale(0.95);
+}
+
+.nav-controls svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+/* Theme toggle specific styling */
+.theme-toggle {
+    position: relative;
+}
+
+.theme-toggle svg {
+    transition: opacity var(--transition-fast);
+}
+
+.theme-toggle .theme-toggle-light {
+    opacity: 0;
+}
+
+.dark .theme-toggle .theme-toggle-dark {
+    opacity: 0;
+}
+
+.dark .theme-toggle .theme-toggle-light {
+    opacity: 1;
+}
+
+/* Search toggle specific styling */
+.search-toggle {
+    position: relative;
 }
 
 /* Enhanced Home Info Section */

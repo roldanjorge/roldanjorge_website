@@ -75,7 +75,8 @@
     max-width: var(--nav-width);
     margin: 0 auto;
     padding: 0 2rem;
-    height: var(--header-height);
+    height: 100%;
+    width: 100%;
     position: relative;
 }
 
@@ -83,29 +84,34 @@
     display: flex;
     gap: 3rem;
     align-items: center;
+    height: 100%;
 }
 
 .nav-controls {
     display: flex;
     gap: 0.75rem;
     align-items: center;
+    height: 100%;
 }
 
 /* Enhanced Logo with Better Typography */
 .header .logo a {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    height: 100%;
     text-decoration: none;
     font-weight: 800;
     font-size: 1.5rem;
-    position: relative;
-    overflow: hidden;
+    color: var(--primary);
+    transition: color var(--transition-fast);
 }
 
 .header-title {
     color: var(--primary);
-    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-weight: 800;
 }
 
 /* Enhanced Home Info with Premium Design */
