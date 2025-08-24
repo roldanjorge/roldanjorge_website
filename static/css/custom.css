@@ -79,21 +79,21 @@
 /* Enhanced Dark Mode Colors - Fully Dark */
 .dark {
     --theme: #000000;
-    --entry: #0a0a0a;
+    --entry: #111111;
     --primary: #ffffff;
     --secondary: #cccccc;
     --tertiary: #333333;
     --content: #e0e0e0;
     --code-block-bg: #0a0a0a;
     --code-bg: #1a1a1a;
-    --border: #1a1a1a;
+    --border: #222222;
     
     --header-bg: rgba(0, 0, 0, 0.95);
-    --header-border: #1a1a1a;
+    --header-border: #222222;
     --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
     --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
     --card-shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-    --gradient-subtle: #0a0a0a;
+    --gradient-subtle: #111111;
 }
 
 /* Enhanced Global Typography */
@@ -130,11 +130,41 @@ body {
 
 .posts-entry .entry {
     margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+/* Make posts-entry entries fully clickable */
+.posts-entry .entry a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.posts-entry .entry a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.posts-entry .entry .entry-header,
+.posts-entry .entry .entry-content,
+.posts-entry .entry .entry-footer {
+    pointer-events: none;
+}
+
+.posts-entry .entry .entry-header a,
+.posts-entry .entry .entry-content a,
+.posts-entry .entry .entry-footer a,
+.posts-entry .entry button,
+.posts-entry .entry .btn {
+    pointer-events: auto;
 }
 
 /* Fix for PaperMod post structure */
 .post-entry {
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .post-entry .entry-header {
@@ -146,6 +176,15 @@ body {
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.3;
+}
+
+.post-entry .entry-title a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.post-entry .entry-title a:hover {
+    color: var(--primary-color);
 }
 
 .post-entry .entry-meta {
@@ -161,6 +200,34 @@ body {
 
 .post-entry .entry-content {
     padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+/* Make post-entry fully clickable */
+.post-entry a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.post-entry a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-entry .entry-header,
+.post-entry .entry-content,
+.post-entry .entry-footer {
+    pointer-events: none;
+}
+
+.post-entry .entry-header a,
+.post-entry .entry-content a,
+.post-entry .entry-footer a,
+.post-entry button,
+.post-entry .btn {
+    pointer-events: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -314,6 +381,8 @@ code, pre {
     margin-bottom: 3rem;
     max-width: 100%;
     display: block;
+    cursor: pointer;
+    transition: box-shadow var(--transition-normal);
 }
 
 .entry::before {
@@ -323,11 +392,41 @@ code, pre {
     left: 0;
     right: 0;
     height: 4px;
-    background: var(--gradient-primary);
+    background: var(--primary-color);
 }
 
 .entry:hover {
     box-shadow: var(--card-shadow-hover);
+}
+
+/* Make entire entry clickable */
+.entry a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+.entry a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ensure all entry content is clickable */
+.entry .entry-header,
+.entry .entry-content,
+.entry .entry-footer {
+    pointer-events: none;
+}
+
+/* Make specific interactive elements clickable again */
+.entry .entry-header a,
+.entry .entry-content a,
+.entry .entry-footer a,
+.entry button,
+.entry .btn {
+    pointer-events: auto;
 }
 
 /* Ensure proper post layout */
@@ -1178,8 +1277,32 @@ button:focus {
 }
 
 .dark .entry {
-    background: #0a0a0a;
-    border-color: #1a1a1a;
+    background: #111111;
+    border-color: #222222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.dark .entry:hover {
+    background: #151515;
+    border-color: #333333;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Add subtle visual enhancements for dark mode widgets */
+.dark .entry::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%, rgba(255, 255, 255, 0.01) 100%);
+    pointer-events: none;
+    border-radius: var(--radius-xl);
+}
+
+.dark .entry:hover::after {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 50%, rgba(255, 255, 255, 0.02) 100%);
 }
 
 .dark .entry::before {

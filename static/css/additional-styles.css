@@ -626,6 +626,50 @@ blockquote::after {
     background: #333333;
 }
 
+/* Dark mode for post widgets */
+.dark .post-entry {
+    background: #111111;
+    border-color: #222222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.dark .post-entry:hover {
+    background: #151515;
+    border-color: #333333;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.dark .posts-entry .entry {
+    background: #111111;
+    border-color: #222222;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.dark .posts-entry .entry:hover {
+    background: #151515;
+    border-color: #333333;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Add subtle visual enhancements for dark mode post widgets */
+.dark .post-entry::after,
+.dark .posts-entry .entry::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%, rgba(255, 255, 255, 0.01) 100%);
+    pointer-events: none;
+    border-radius: var(--radius-xl);
+}
+
+.dark .post-entry:hover::after,
+.dark .posts-entry .entry:hover::after {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 50%, rgba(255, 255, 255, 0.02) 100%);
+}
+
 @media (max-width: 1024px) {
     .home-info-content {
         max-width: 1000px;
