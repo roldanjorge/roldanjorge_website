@@ -535,6 +535,115 @@ code, pre {
     font-weight: inherit;
 }
 
+/* Ensure code colors don't change on hover or copy button interaction */
+.highlight:hover,
+.highlight:hover pre,
+.highlight:hover code,
+.highlight:hover .chroma,
+.highlight:hover .chroma *,
+.highlighttable:hover,
+.highlighttable:hover .highlight,
+.highlighttable:hover .highlight pre,
+.highlighttable:hover .highlight code,
+.highlighttable:hover .chroma,
+.highlighttable:hover .chroma * {
+    color: inherit !important;
+    background: inherit !important;
+}
+
+/* Preserve syntax highlighting colors */
+.chroma,
+.chroma *,
+.chroma .hl,
+.chroma .lnt,
+.chroma .ln,
+.chroma .lntd,
+.chroma .line,
+.chroma .cl {
+    color: inherit !important;
+    background: inherit !important;
+}
+
+/* Override any PaperMod hover effects on code */
+.post-content .highlight:hover,
+.post-content .highlight:hover pre,
+.post-content .highlight:hover code,
+.post-content .highlight:hover .chroma,
+.post-content .highlight:hover .chroma *,
+.post-content .highlighttable:hover,
+.post-content .highlighttable:hover .highlight,
+.post-content .highlighttable:hover .highlight pre,
+.post-content .highlighttable:hover .highlight code,
+.post-content .highlighttable:hover .chroma,
+.post-content .highlighttable:hover .chroma * {
+    color: inherit !important;
+    background: inherit !important;
+}
+
+/* Ensure syntax highlighting colors are preserved */
+.post-content pre code {
+    color: rgb(213, 213, 214) !important;
+    background: var(--code-block-bg) !important;
+}
+
+.dark .post-content pre code {
+    color: #e0e0e0 !important;
+    background: var(--code-block-bg) !important;
+}
+
+/* Ensure copy button doesn't affect code colors */
+.copy-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--secondary);
+    font-size: 0.8rem;
+    transition: none;
+    z-index: 10;
+}
+
+.copy-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--primary);
+}
+
+.dark .copy-button {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--gray-600);
+    color: var(--gray-300);
+}
+
+.dark .copy-button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--gray-100);
+}
+
+/* Prevent any copy button state changes from affecting code */
+.copy-button:active,
+.copy-button:focus,
+.copy-button.copied,
+.copy-button:hover {
+    /* These styles only affect the button, not the code */
+}
+
+/* Ensure code colors remain stable during any button interactions */
+.highlight .copy-button:active ~ .chroma,
+.highlight .copy-button:focus ~ .chroma,
+.highlight .copy-button.copied ~ .chroma,
+.highlight .copy-button:hover ~ .chroma,
+.highlighttable .copy-button:active ~ .highlight,
+.highlighttable .copy-button:focus ~ .highlight,
+.highlighttable .copy-button.copied ~ .highlight,
+.highlighttable .copy-button:hover ~ .highlight {
+    color: inherit !important;
+    background: inherit !important;
+}
+
 /* Enhanced Inline Code */
 code {
     background: var(--code-bg);
