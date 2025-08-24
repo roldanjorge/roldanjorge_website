@@ -7,6 +7,8 @@ tags: ['ml_interpretability']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 # Intro

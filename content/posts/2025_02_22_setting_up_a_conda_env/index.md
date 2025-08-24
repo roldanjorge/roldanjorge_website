@@ -6,6 +6,8 @@ tags: ['python', 'conda']
 categories: ['tutorials']
 ShowToc: true
 ShowBreadCrumbs: false
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 # TLDR

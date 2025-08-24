@@ -7,6 +7,8 @@ tags: ['math', 'transformers']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
+cover:
+  image: "/images/sample-cover.svg"
 ---
 <h1 id="the-math-of-transformer-based-language-models">The Math of
 (Transformer-based) Language Models</h1>

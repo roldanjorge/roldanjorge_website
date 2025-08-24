@@ -6,6 +6,8 @@ categories: ['article']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 

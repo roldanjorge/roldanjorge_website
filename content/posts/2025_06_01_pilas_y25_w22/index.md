@@ -7,6 +7,8 @@ categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 # Models/Systems

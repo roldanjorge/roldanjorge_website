@@ -6,6 +6,8 @@ tags: ['sequence_classification', 'nlp', 'huggingface', 'transformers']
 categories: ['tutorials']
 ShowToc: true
 ShowBreadCrumbs: true
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 # Introduction

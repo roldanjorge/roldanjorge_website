@@ -5,6 +5,8 @@ title: '🔋 Pilas: y25-w19'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 # Models/Systems

@@ -109,9 +109,9 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hidden: false # show everywhere
+    hiddenInList: false # show on list pages and home
+    hiddenInSingle: false # show on single page
 
   # editPost:
   #   URL: "https://github.com/<path_to_repo>/content"

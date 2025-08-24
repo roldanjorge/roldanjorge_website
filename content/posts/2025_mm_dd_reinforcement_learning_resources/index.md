@@ -7,6 +7,8 @@ tags: ['reinforcement_learning']
 ShowToc: true
 ShowBreadCrumbs: false
 draft: true
+cover:
+  image: "/images/sample-cover.svg"
 ---
 
 # Intro
