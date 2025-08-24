@@ -3,34 +3,41 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Enhanced theme toggle functionality
     const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
+    const body = document.body;
     
     if (themeToggle) {
         themeToggle.addEventListener('click', function() {
-            const currentTheme = html.getAttribute('data-theme');
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             
-            // Add transition class for smooth theme change
-            html.classList.add('theme-transitioning');
+            if (newTheme === 'dark') {
+                body.classList.add('dark');
+            } else {
+                body.classList.remove('dark');
+            }
             
-            html.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
-            
-            // Update theme toggle icon with animation
             updateThemeIcon(newTheme);
-            
-            // Remove transition class after animation
-            setTimeout(() => {
-                html.classList.remove('theme-transitioning');
-            }, 300);
         });
     }
     
-    // Initialize theme with smooth transition
+    // Initialize theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-        html.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+        } else {
+            body.classList.remove('dark');
+        }
         updateThemeIcon(savedTheme);
+    } else {
+        // Check system preference
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            body.classList.add('dark');
+            updateThemeIcon('dark');
+        } else {
+            updateThemeIcon('light');
+        }
     }
     
     function updateThemeIcon(theme) {
@@ -40,15 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (theme === 'dark') {
             darkIcon.style.display = 'none';
             lightIcon.style.display = 'block';
-            lightIcon.style.animation = 'fadeInScale 0.3s ease';
         } else {
             darkIcon.style.display = 'block';
             lightIcon.style.display = 'none';
-            darkIcon.style.animation = 'fadeInScale 0.3s ease';
         }
     }
     
-    // Enhanced smooth scrolling for anchor links
+    // Simple anchor link scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -59,108 +64,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 window.scrollTo({
                     top: targetPosition,
-                    behavior: 'smooth'
+                    behavior: 'auto'
                 });
             }
         });
     });
     
-    // Enhanced hover effects for post cards with parallax
-    const entries = document.querySelectorAll('.entry');
-    entries.forEach((entry, index) => {
-        // Add staggered animation delay
-        entry.style.animationDelay = `${index * 0.1}s`;
-        
-        entry.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-12px) scale(1.02)';
-            this.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.25)';
-        });
-        
-        entry.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-            this.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)';
-        });
-        
-        // Add subtle parallax effect on scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * -0.1;
-            const entryTop = entry.offsetTop;
-            const entryHeight = entry.offsetHeight;
-            
-            if (scrolled + window.innerHeight > entryTop && scrolled < entryTop + entryHeight) {
-                entry.style.transform = `translateY(${rate * 0.5}px)`;
-            }
-        });
-    });
+
     
-    // Enhanced typing animation for home title
-    const homeTitle = document.querySelector('.home-info-title');
-    if (homeTitle) {
-        const text = homeTitle.textContent;
-        homeTitle.textContent = '';
-        homeTitle.style.opacity = '1';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                homeTitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 80);
-            } else {
-                // Add cursor blink effect after typing
-                homeTitle.style.borderRight = '2px solid transparent';
-            }
-        };
-        
-        // Start typing animation after a short delay
-        setTimeout(typeWriter, 800);
-    }
+
     
-    // Enhanced parallax effect for header
-    const header = document.querySelector('.header');
-    if (header) {
-        let lastScrollY = window.pageYOffset;
-        
-        window.addEventListener('scroll', function() {
-            const currentScrollY = window.pageYOffset;
-            
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                // Scrolling down - hide header
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                // Scrolling up - show header
-                header.style.transform = 'translateY(0)';
-            }
-            
-            lastScrollY = currentScrollY;
-        });
-    }
+
     
-    // Enhanced intersection observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                entry.target.classList.add('animate-in');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all entries for enhanced fade-in animation
-    entries.forEach((entry, index) => {
-        entry.style.opacity = '0';
-        entry.style.transform = 'translateY(30px)';
-        entry.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        entry.style.transitionDelay = `${index * 0.1}s`;
-        observer.observe(entry);
-    });
+
     
     // Enhanced copy button for code blocks with better feedback
     document.querySelectorAll('pre').forEach(block => {
@@ -180,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 try {
                     await navigator.clipboard.writeText(code.textContent);
                     
-                    // Enhanced success feedback
                     button.innerHTML = `
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="20,6 9,17 4,12"></polyline>
@@ -189,9 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     button.title = 'Copied!';
                     button.style.background = 'rgba(16, 185, 129, 0.2)';
                     button.style.color = '#10b981';
-                    
-                    // Add success animation
-                    button.style.animation = 'copySuccess 0.5s ease';
                     
                     setTimeout(() => {
                         button.innerHTML = `
@@ -203,12 +115,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         button.title = 'Copy code';
                         button.style.background = 'rgba(255, 255, 255, 0.1)';
                         button.style.color = 'inherit';
-                        button.style.animation = '';
                     }, 2000);
                 } catch (err) {
                     console.error('Failed to copy code:', err);
                     
-                    // Error feedback
                     button.style.background = 'rgba(239, 68, 68, 0.2)';
                     button.style.color = '#ef4444';
                     button.title = 'Failed to copy';
@@ -226,31 +136,20 @@ document.addEventListener('DOMContentLoaded', function() {
         block.appendChild(button);
     });
     
-    // Enhanced search functionality
+    // Simple search functionality
     const searchToggle = document.getElementById('search-toggle');
     if (searchToggle) {
         searchToggle.addEventListener('click', function() {
-            // Add click animation
-            this.style.animation = 'buttonPulse 0.3s ease';
-            setTimeout(() => {
-                this.style.animation = '';
-            }, 300);
-            
-            // Implement search modal or redirect to search page
             window.location.href = '/search/';
         });
     }
     
-    // Enhanced keyboard shortcuts with better feedback
+    // Simple keyboard shortcuts
     document.addEventListener('keydown', function(e) {
         // Ctrl/Cmd + / for theme toggle
         if ((e.ctrlKey || e.metaKey) && e.key === '/') {
             e.preventDefault();
             if (themeToggle) {
-                themeToggle.style.animation = 'buttonPulse 0.3s ease';
-                setTimeout(() => {
-                    themeToggle.style.animation = '';
-                }, 300);
                 themeToggle.click();
             }
         }
@@ -259,10 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
             e.preventDefault();
             if (searchToggle) {
-                searchToggle.style.animation = 'buttonPulse 0.3s ease';
-                setTimeout(() => {
-                    searchToggle.style.animation = '';
-                }, 300);
                 searchToggle.click();
             }
         }
