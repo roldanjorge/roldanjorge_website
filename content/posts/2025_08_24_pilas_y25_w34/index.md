@@ -12,7 +12,15 @@ ShowBreadCrumbs: false
 
 ## DINOv3
 - Paper: [Hugging Face](https://huggingface.co/papers/2508.10104) [Arxiv](https://arxiv.org/abs/2508.10104)
-- Models:
+- [Huggin Face Collection](https://huggingface.co/collections/facebook/dinov3-68924841bd6b561778e31009)
+- Blog post: [DINOv3: Self-supervised learning for vision at unprecedented scale](https://ai.meta.com/blog/dinov3-self-supervised-vision-model/)
+- Website:  [Self-supervised learning for vision at unprecedented scale](https://ai.meta.com/dinov3/)
+
+DINOv3 is a generalist, computer vision foundation model that scales self-supervised learning (SSL) and produces high-resolution visual features eliminating the need for labeled data.
+
+
+{{< figure id="dinov3_benchmarks.png" src="./dinov3_benchmarks.png" alt="dinov3_benchmarks" caption="DINOv3 benchmarks" width="700"  >}}
+
 
 ## Intern-S1: A Scientific Multimodal Foundation Model
 - Paper: [Hugging Face](https://huggingface.co/papers/2508.15763) -- [Arxiv](https://arxiv.org/abs/2508.15763)
@@ -20,21 +28,26 @@ ShowBreadCrumbs: false
 
 Intern-S1 is a large-scale multimodal Mixture-of-Experts (MoE) foundation model released by The Shanghai AI Laboratory. It is designed to close the gap between general-purpose open-source models and expert-level closed-source models in scientific domains. The model has 28 billion active parameters, 241 billion total parameters, and it was pretrained on 5T tokens. The authors used Mixture-of-Rewards (MoR), a novel RL technique to train simultaneously on more than 1000 tasks.
 
-## MatchAnything-ELOFTR
-- Paper: [MatchAnything: Universal Cross-Modality Image Matching with Large-Scale Pre-Training](https://arxiv.org/abs/2501.07556)
+## Ovis2.5 
+- Paper: [Hugging Face](https://huggingface.co/papers/2508.11737) -- [Arxiv: Ovis2.5 Technical Report](https://arxiv.org/abs/2508.11737)
 
+Ovis2.5 is an open-source multimodal model released by Alibaba that introduces native-resolution vision and reflective reasoning. It achieves state-of-the-art performance in STEM, chart analysis, and multimodal benchmarks. 
 
-# Organizations
-Polymathic AI is an awesome 
+# Thyme: Think Beyond Image
+- Paper: [Hugging Face](https://huggingface.co/papers/2508.11630) -- [Arxiv](https://arxiv.org/abs/2508.11630)
+
+Thyme enables multimodal LLMs to autonomously generate code for image manipulation and math, and with its GRPO-ATS training strategy, achieves strong gains on high-resolution perception and complex reasoning benchmarks.
+
+# Organization Highlight
 ## Polymathic AI
 - [Hugging Face Organization card](https://huggingface.co/polymathic-ai)
 - [Polymathic-AI](https://polymathic-ai.org/)
 - **Mission**: To usher in a new class of machine learning for scientific data, building models that can leverage shared concepts across disciplines. We aim to develop, train, and release such foundation models for use by researchers worldwide.
 - [@PolymathicAI - X](https://x.com/PolymathicAI)
 {{< figure id="polymathic.png" src="./polymathic.png" alt="Polymathic AI" caption="Polymathic-AI: Advancing Science through Multi‑Disciplinary AI" width="700"  >}}
- 
-# Datasets
-- [The Well](https://huggingface.co/collections/polymathic-ai/the-well-67e129f4ca23e0447395d74c)
+
+- Datasets released:
+  - [The Well](https://huggingface.co/collections/polymathic-ai/the-well-67e129f4ca23e0447395d74c)
     - A 15TB collection of physics simulation datasets.
 
 # Notable Papers
