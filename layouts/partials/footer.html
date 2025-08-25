@@ -1,0 +1,17 @@
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-text">
+            {{- if site.Copyright }}
+                <span>{{ site.Copyright | safeHTML }}</span>
+            {{- else }}
+                <span>&copy; {{ now.Year }} {{ site.Title }}</span>
+            {{- end }}
+            {{- if site.Params.showPowerBy }}
+                <span class="powerby">
+                    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> with <a href="https://github.com/adityatelange/hugo-PaperMod/" target="_blank" rel="noopener">PaperMod</a> theme
+                </span>
+            {{- end }}
+        </div>
+
+    </div>
+</footer>

@@ -41,7 +41,9 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: true 
-  tocopen: true 
+  tocopen: true
+  showPowerBy: true
+  disableSearch: false 
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -54,7 +56,7 @@ params:
     disableHLJS: true
 
   label:
-    text: "Home"
+    text: "Jorge Roldán"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -77,23 +79,15 @@ params:
   homeInfoParams:
     Title: "Jorge Roldán"
     Content: |
-      <img src="/bio-photo-v2.png" alt="Jorge Roldán" width="250" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%;margin-bottom:1rem;">
+      <img src="/bio-photo-v2.png" alt="Jorge Roldán" width="250" style="display:block;margin-left:auto;margin-right:auto;border-radius:50%;margin-bottom:5rem;">
 
       I am a machine learning engineer who loves building safe, robust, and awesome AI-powered tools, applications, and services. I have an M.S. in Computer Science with a focus on machine learning from [New York University—Courant Institute of Mathematical Sciences](https://cs.nyu.edu/home/index.html). I also studied Computer Science and Mechanical Engineering at [The City College of New York—Grove School of Engineering](https://www.ccny.cuny.edu/engineering). I am originally from [Santa Rosa de Osos](https://en.wikipedia.org/wiki/Santa_Rosa_de_Osos), Colombia 🇨🇴, and currently live in New York City 🗽.
 
-      > 
-
       My interests lie at the intersection of applied mathematics, machine learning, and software engineering. I believe that truly understanding mathematical and scientific foundations is essential for building great technology. As an engineer, I strive to balance diving deep into theory with getting my hands dirty by building things I love.
-      
-      > 
 
       Through this blog and newsletter, I want to share what I care about, what I learn, what I build, what I'd like to see more of in the world, and what I'd like to see less of.
 
-      > 
-
       🔋 Pilas, the newsletter's name, is a Spanish slang term commonly used in Colombia to mean 'watch out,' 'be alert,' or 'stay sharp.' However, it also means 'battery.' I chose this name because now, more than ever, we need to stay engaged and vigilant to keep up with the changes. I hope this content energizes you to do so.
-
-      > 
 
       If you’d like to share your thoughts or just say hello, you can reach me at roldanjrg@protonmail.com
   socialIcons:
@@ -115,8 +109,8 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
+    hidden: false # show everywhere
+    hiddenInList: false # show on list pages and home
     hiddenInSingle: true # hide on single page
 
   # editPost:
