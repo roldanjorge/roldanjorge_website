@@ -6,6 +6,8 @@ tags: ['ngram', 'language_models', 'nlp']
 categories: ['notes']
 ShowToc: true
 ShowBreadCrumbs: false
+cover:
+  image: "images/posts/2025_02_27_ngram_lms/image.png"
 ---
 
 This post is based chapter 3 from [Speech and Language Processing](https://web.stanford.edu/~jurafsky/slp3/) by Dan Jurafsky and James H. Martin
