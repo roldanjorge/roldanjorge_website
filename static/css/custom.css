@@ -312,6 +312,7 @@ code, pre {
     gap: 3rem;
     align-items: center;
     height: 100%;
+    flex-shrink: 0;
 }
 
 .nav-links a {
@@ -323,6 +324,7 @@ code, pre {
     color: var(--primary);
     font-weight: 500;
     transition: color var(--transition-fast);
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -1060,6 +1062,55 @@ tr:hover {
         --gap: 20px;
     }
     
+    /* Mobile Header Styles - Higher specificity */
+    .header.header {
+        min-height: auto !important;
+    }
+    
+    .header .nav.nav {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        padding: 0 var(--gap) !important;
+        height: auto !important;
+        min-height: var(--header-height) !important;
+        gap: 0 !important;
+    }
+    
+    .header .nav .nav-links.nav-links {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1.5rem !important;
+        padding: 1rem 0 !important;
+        width: 100% !important;
+        order: unset !important;
+        border-top: 1px solid var(--header-border) !important;
+        margin-top: 0.5rem !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .header .nav .nav-links a {
+        height: auto !important;
+        padding: 0.75rem 1rem !important;
+        white-space: nowrap !important;
+        border-radius: var(--radius) !important;
+        background: transparent !important;
+        transition: all var(--transition-fast) !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .header .nav .nav-links a:hover {
+        background: var(--gray-100) !important;
+        color: var(--primary-color) !important;
+    }
+    
+    .dark .header .nav .nav-links a:hover {
+        background: var(--gray-800) !important;
+    }
+    
     .home-info-title {
         font-size: 3rem;
     }
@@ -1086,14 +1137,6 @@ tr:hover {
         font-size: 2rem;
     }
     
-    .nav {
-        padding: 0 var(--gap);
-    }
-    
-    .nav-links {
-        gap: 1.5rem;
-    }
-    
     .btn {
         padding: 1rem 2rem;
         font-size: 1rem;
@@ -1103,6 +1146,16 @@ tr:hover {
 @media (max-width: 480px) {
     :root {
         --gap: 16px;
+    }
+    
+    .header .nav .nav-links.nav-links {
+        gap: 1rem !important;
+        padding: 0.75rem 0 !important;
+    }
+    
+    .header .nav .nav-links a {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.9rem !important;
     }
     
     .home-info-title {
@@ -1469,3 +1522,118 @@ button:focus {
 .rounded-md { border-radius: var(--radius-lg); }
 .rounded-lg { border-radius: var(--radius-xl); }
 .rounded-full { border-radius: 9999px; }
+
+/* Mobile Header Fix - Ensure navigation is always visible */
+@media (max-width: 768px) {
+    /* Force mobile header layout */
+    .header {
+        min-height: auto !important;
+        height: auto !important;
+    }
+    
+    /* Force mobile navigation layout */
+    .header .nav {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        padding: 0 var(--gap) !important;
+        height: auto !important;
+        min-height: var(--header-height) !important;
+        gap: 0 !important;
+        align-items: stretch !important;
+    }
+    
+    /* Ensure logo and controls stay on top row */
+    .header .logo,
+    .header .nav-controls {
+        flex-shrink: 0 !important;
+    }
+    
+    /* Force navigation links to be visible and properly laid out */
+    .header .nav .nav-links {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 1.5rem !important;
+        padding: 1rem 0 !important;
+        width: 100% !important;
+        order: unset !important;
+        border-top: 1px solid var(--header-border) !important;
+        margin-top: 0.5rem !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    
+    /* Ensure each navigation link is visible and properly styled */
+    .header .nav .nav-links a,
+    .header .nav .nav-links .nav-dropdown {
+        height: auto !important;
+        padding: 0.75rem 1rem !important;
+        white-space: nowrap !important;
+        border-radius: var(--radius) !important;
+        background: transparent !important;
+        transition: all var(--transition-fast) !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 1 !important;
+        overflow: visible !important;
+    }
+    
+    /* Hover effects for navigation links */
+    .header .nav .nav-links a:hover,
+    .header .nav .nav-links .nav-dropdown:hover {
+        background: var(--gray-100) !important;
+        color: var(--primary-color) !important;
+    }
+    
+    /* Dark mode hover effects */
+    .dark .header .nav .nav-links a:hover,
+    .dark .header .nav .nav-links .nav-dropdown:hover {
+        background: var(--gray-800) !important;
+    }
+    
+    /* Ensure dropdown content is visible on mobile */
+    .header .nav .nav-links .nav-dropdown-content {
+        position: static !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+        box-shadow: none !important;
+        border: none !important;
+        background: transparent !important;
+        margin-top: 0.5rem !important;
+        padding-left: 1rem !important;
+    }
+    
+    .header .nav .nav-links .nav-dropdown-content a {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.9rem !important;
+        margin: 0.25rem 0 !important;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .header .nav .nav-links {
+        gap: 1rem !important;
+        padding: 0.75rem 0 !important;
+    }
+    
+    .header .nav .nav-links a,
+    .header .nav .nav-links .nav-dropdown {
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .header .nav .nav-links .nav-dropdown-content a {
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.85rem !important;
+    }
+}

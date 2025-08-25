@@ -648,35 +648,7 @@ blockquote::after {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 50%, rgba(255, 255, 255, 0.02) 100%);
 }
 
-@media (max-width: 1024px) {
-    .home-info-content {
-        max-width: 1000px;
-        padding: 3rem var(--gap);
-    }
-    
-    .home-info-title {
-        font-size: 4rem;
-    }
-    
-    .nav-links {
-        gap: 2rem;
-    }
-}
-
 @media (max-width: 768px) {
-    .header .nav {
-        flex-direction: column;
-        height: auto;
-        padding: 1.5rem;
-        gap: 1.5rem;
-    }
-    
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-    
     .home-info-title {
         font-size: 3rem;
     }
@@ -697,10 +669,6 @@ blockquote::after {
     
     .entry-title {
         font-size: 2rem;
-    }
-    
-    .nav {
-        padding: 0 var(--gap);
     }
     
     .btn {
