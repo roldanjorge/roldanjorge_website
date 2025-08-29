@@ -184,9 +184,7 @@ Note: All animations were created  for this lecture using the open source [manim
     </aside>
     
 - 🎬 Matrix Multiplication Animation
-    
-    [https://www.youtube.com/watch?v=jL9VG4XSRlU](https://www.youtube.com/watch?v=jL9VG4XSRlU)
-    
+{{< youtube jL9VG4XSRlU >}}
 
 ### The Meaning of query, key and value vectors
 
@@ -219,9 +217,9 @@ $$
     - $d = 512$
     - $d_k = d_v = 64$
 - animation
-    
     [https://www.youtube.com/watch?v=SLWrevk6_Us](https://www.youtube.com/watch?v=SLWrevk6_Us)
     
+{{< youtube SLWrevk6_Us >}}
 
 ## 2. Compare  $x^{(3)}$ ‘s query with the keys for  $x^{(1)}$ , $x^{(2)}$ and $x^{(3)}$
 
@@ -259,7 +257,8 @@ Note: We will have a scalar value for each comparison (a total of 3 values)
 - animation
     
     [https://www.youtube.com/watch?v=Cx_jClD7L-A](https://www.youtube.com/watch?v=Cx_jClD7L-A)
-    
+ 
+{{< youtube Cx_jClD7L-A >}}
 
 ## 3. Divide scalar score by  $\sqrt{d_k}$
 
@@ -278,6 +277,7 @@ Note: We will have a scalar value for each comparison (a total of 3 values)
     
     [https://www.youtube.com/watch?v=QLXT6NvHPII](https://www.youtube.com/watch?v=QLXT6NvHPII)
     
+{{< youtube QLXT6NvHPII >}}
 
 ## 4. Turn into $\alpha_{i, j}$ weights via Softmax
 
@@ -309,6 +309,7 @@ $$
     
     [https://www.youtube.com/watch?v=V0SkmVAXWRI](https://www.youtube.com/watch?v=V0SkmVAXWRI)
     
+{{< youtube V0SkmVAXWRI>}}
 
 Note: We will have a scalar value for each comparison (a total of 3 values)
 
@@ -329,6 +330,7 @@ Note: We will have a total of three vectors
     
     [https://www.youtube.com/watch?v=vCc9SPIBWSY](https://www.youtube.com/watch?v=vCc9SPIBWSY)
     
+{{< youtube vCc9SPIBWSY>}}
 
 ## 6. Sum the weighted value vectors
 
@@ -347,6 +349,8 @@ Note: We will have a total of 1 vector
     
     [https://www.youtube.com/watch?v=2mlKY-0i6b8](https://www.youtube.com/watch?v=2mlKY-0i6b8)
     
+{{< youtube 2mlKY-0i6b8 >}}
+
 
 ## 7. Reshape and output attention
 
@@ -365,3 +369,5 @@ Note: We will have a total of 1 vector
 - animation
     
     [https://www.youtube.com/watch?v=0fx4-wibHJA](https://www.youtube.com/watch?v=0fx4-wibHJA)
+
+{{< youtube 0fx4-wibHJA >}}
