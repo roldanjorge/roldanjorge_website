@@ -217,7 +217,7 @@ $$
     - $d = 512$
     - $d_k = d_v = 64$
 - animation
-    [https://www.youtube.com/watch?v=SLWrevk6_Us](https://www.youtube.com/watch?v=SLWrevk6_Us)
+    <!-- [https://www.youtube.com/watch?v=SLWrevk6_Us](https://www.youtube.com/watch?v=SLWrevk6_Us) -->
     
 {{< youtube SLWrevk6_Us >}}
 
@@ -256,7 +256,7 @@ Note: We will have a scalar value for each comparison (a total of 3 values)
 
 - animation
     
-    [https://www.youtube.com/watch?v=Cx_jClD7L-A](https://www.youtube.com/watch?v=Cx_jClD7L-A)
+    <!-- [https://www.youtube.com/watch?v=Cx_jClD7L-A](https://www.youtube.com/watch?v=Cx_jClD7L-A) -->
  
 {{< youtube Cx_jClD7L-A >}}
 
@@ -275,7 +275,7 @@ Note: We will have a scalar value for each comparison (a total of 3 values)
 
 - animation
     
-    [https://www.youtube.com/watch?v=QLXT6NvHPII](https://www.youtube.com/watch?v=QLXT6NvHPII)
+    <!-- [https://www.youtube.com/watch?v=QLXT6NvHPII](https://www.youtube.com/watch?v=QLXT6NvHPII) -->
     
 {{< youtube QLXT6NvHPII >}}
 
@@ -307,7 +307,7 @@ $$
     - $i$ is 3
 - animation
     
-    [https://www.youtube.com/watch?v=V0SkmVAXWRI](https://www.youtube.com/watch?v=V0SkmVAXWRI)
+    <!-- [https://www.youtube.com/watch?v=V0SkmVAXWRI](https://www.youtube.com/watch?v=V0SkmVAXWRI) -->
     
 {{< youtube V0SkmVAXWRI>}}
 
@@ -328,7 +328,7 @@ Note: We will have a total of three vectors
 
 - animation
     
-    [https://www.youtube.com/watch?v=vCc9SPIBWSY](https://www.youtube.com/watch?v=vCc9SPIBWSY)
+    <!-- [https://www.youtube.com/watch?v=vCc9SPIBWSY](https://www.youtube.com/watch?v=vCc9SPIBWSY) -->
     
 {{< youtube vCc9SPIBWSY>}}
 
@@ -347,7 +347,7 @@ Note: We will have a total of 1 vector
 
 - animation
     
-    [https://www.youtube.com/watch?v=2mlKY-0i6b8](https://www.youtube.com/watch?v=2mlKY-0i6b8)
+    <!-- [https://www.youtube.com/watch?v=2mlKY-0i6b8](https://www.youtube.com/watch?v=2mlKY-0i6b8) -->
     
 {{< youtube 2mlKY-0i6b8 >}}
 
@@ -368,6 +368,6 @@ Note: We will have a total of 1 vector
 
 - animation
     
-    [https://www.youtube.com/watch?v=0fx4-wibHJA](https://www.youtube.com/watch?v=0fx4-wibHJA)
+    <!-- [https://www.youtube.com/watch?v=0fx4-wibHJA](https://www.youtube.com/watch?v=0fx4-wibHJA) -->
 
 {{< youtube 0fx4-wibHJA >}}
