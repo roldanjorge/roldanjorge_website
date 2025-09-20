@@ -5,28 +5,3 @@
     (window.plausible.q = window.plausible.q || []).push(arguments) 
   }
 </script>
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="/css/custom.css">
-<link rel="stylesheet" href="/css/additional-styles.css">
-
-<!-- Reading Progress Bar -->
-<div class="reading-progress" id="reading-progress"></div>
-
-<!-- Reading Progress JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const progressBar = document.getElementById('reading-progress');
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        
-        progressBar.style.width = scrollPercent + '%';
-    });
-});
-</script>
-
-<!-- Custom JavaScript -->
-<script src="/js/custom.js" defer></script>
