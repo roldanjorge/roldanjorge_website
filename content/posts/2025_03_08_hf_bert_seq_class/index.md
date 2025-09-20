@@ -6,6 +6,8 @@ tags: ['sequence_classification', 'nlp', 'huggingface', 'transformers']
 categories: ['tutorials']
 ShowToc: true
 ShowBreadCrumbs: true
+cover:
+  image: "images/posts/2025_03_08_hf_bert_seq_class/cover.png"
 ---
 
 # Introduction

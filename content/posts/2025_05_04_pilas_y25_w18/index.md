@@ -1,10 +1,12 @@
 ---
 author: "Jorge Roldan"
-date: '2025-04-28'
+date: '2025-05-04'
 title: '🔋 Pilas: y25-w18'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
+cover:
+  image: "images/posts/2025_05_04_pilas_y25_w18/image.png"
 ---
 
 # Models/Systems
