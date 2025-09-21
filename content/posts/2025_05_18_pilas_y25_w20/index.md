@@ -5,6 +5,8 @@ title: '🔋Pilas: y25-w20'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
+cover:
+  image: "images/posts/2025_05_18_pilas_y25_w20/image.png"
 ---
 
 

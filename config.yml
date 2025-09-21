@@ -41,7 +41,7 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: true 
-  tocopen: true 
+  tocopen: true
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -54,7 +54,7 @@ params:
     disableHLJS: true
 
   label:
-    text: "Home"
+    text: "Jorge Roldán"
     icon: /apple-touch-icon.png
     iconHeight: 35
 
@@ -115,8 +115,8 @@ params:
       SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
+    hidden: false # show everywhere
+    hiddenInList: false # show on list pages and home
     hiddenInSingle: true # hide on single page
 
   # editPost:

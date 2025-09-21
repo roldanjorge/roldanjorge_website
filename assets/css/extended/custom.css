@@ -1,0 +1,84 @@
+/* Custom styles for right-positioned cover images in post lists */
+
+.entry-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap);
+}
+
+.entry-text {
+    flex: 1;
+    min-width: 0; /* Prevent overflow issues */
+}
+
+.entry-cover {
+    flex-shrink: 0;
+    width: 200px;
+    margin-bottom: 0;
+    margin-left: var(--gap);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.entry-cover img {
+    border-radius: var(--radius);
+    pointer-events: none;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.entry-cover img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive behavior - stack on mobile */
+@media screen and (max-width: 768px) {
+    .entry-content-wrapper {
+        flex-direction: column;
+    }
+
+    .entry-cover {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: var(--gap);
+        order: -1; /* Move cover to top on mobile */
+    }
+}
+
+/* First entry special handling */
+.first-entry .entry-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--gap);
+}
+
+.first-entry .entry-cover {
+    width: 250px;
+}
+
+.first-entry .entry-cover img {
+    height: 140px;
+}
+
+@media screen and (max-width: 768px) {
+    .first-entry .entry-content-wrapper {
+        flex-direction: column;
+    }
+
+    .first-entry .entry-cover {
+        width: 100%;
+        margin-left: 0;
+        order: -1;
+    }
+}
+
+/* Override the original theme's rule that hides covers for tag entries */
+/* We want covers visible on all list pages including category pages */
+.tag-entry .entry-cover {
+    display: block !important;
+}
