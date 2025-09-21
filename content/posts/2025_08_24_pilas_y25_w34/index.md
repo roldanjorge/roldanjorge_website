@@ -5,12 +5,6 @@ title: '🔋Pilas: y25-w34'
 categories: ['newsletter']
 ShowToc: true
 ShowBreadCrumbs: false
-<<<<<<< HEAD
-draft: true
----
-
-# Models/Systems
-=======
 cover:
   image: "images/posts/2025_08_24_pilas_y25_w34/dinov3_benchmarks.png"
 ---
@@ -75,4 +69,3 @@ Thyme enables multimodal LLMs to autonomously generate code for image manipulati
 - [Prompt Engineering for LLMs: The Art and Science of Building Large Language Model-Based Applications: Berryman, John, Ziegler](https://www.amazon.com/Prompt-Engineering-LLMs-Model-Based-Applications/dp/1098156153?&linkCode=sl1&tag=arcturuslabs-20&linkId=3e15a95d446ba84d7fb173e0e8a0ce15&language=en_US&ref_=as_li_ss_tl)
 
 
->>>>>>> main
